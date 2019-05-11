@@ -30,6 +30,10 @@ h1, h2, h3, nav{
 
 }
 
+.parct p{
+    padding-right: 10px;
+}
+
 .parct img{
     max-width: 50%;
     height: auto;
@@ -70,4 +74,8 @@ h1, h2, h3, nav{
     border: 10px solid gray;
 
 }
+#p_identity ul{
+   padding: 20px; 
+}
+
 
