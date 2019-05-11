@@ -1,12 +1,7 @@
 body{
-    background-color:rgb(172, 241, 172);
+    background-color:whitesmoke;
 }
 
-/* img{
-    max-width: 50%;
-    height: auto;
-    float: right;
-} */
 
 h1, h2, h3{
     text-align: center;
@@ -17,13 +12,34 @@ h1, h2, h3{
 }
 
 #wrapper{
+    background-color:rgb(172, 241, 172);
+    width: auto;
+    padding: 50px;
+    margin: 20px;
 
 }
 
 .parct{
-
+    background-color: whitesmoke;
+    width: auto;
+    border: 15px solid gray;
+    padding: 50px;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
 
 }
+
+.parct img{
+    max-width: 50%;
+    height: auto;
+    float: right;
+    display:inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 10px solid gray;
+}
+
 
 .flex-container{
     display: flex;    
@@ -35,6 +51,23 @@ h1, h2, h3{
 }
 
 .identity{
+    background-color: whitesmoke;
+    width: auto;
+    border: 15px solid gray;
+    padding: 50px;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.identity img{
+    max-width: 50%;
+    height: auto;
+    float: right;
+    display:inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 10px solid gray;
 
 }
 
