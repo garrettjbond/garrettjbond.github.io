@@ -5,10 +5,15 @@ body{
 /* img{
     max-width: 50%;
     height: auto;
+    float: right;
 } */
 
-#footer li{
-    display: inline;
+h1, h2, h3{
+    text-align: center;
+}
+
+#footer{
+    text-align: center;
 }
 
 #wrapper{
@@ -17,20 +22,19 @@ body{
 
 .parct{
 
+
 }
 
 .flex-container{
-    
+    display: flex;    
 }
 
-#purpose{
+.flex-container li{
+    padding: 20px;
+    list-style-type: none;
+}
+
+.identity{
 
 }
 
-#targetAudience{
-
-}
-
-#persona{
-    
-}
