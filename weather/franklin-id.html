@@ -8,13 +8,13 @@
     <meta name="description" content="Weather for Franklin, Idaho">
     <title>Franklin, ID Weather</title>
     <meta name="author" content="Garrett Bond">
-    <link rel="stylesheet" type="text/css" href="/weather/css/screen.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="./css/screen.css" media="screen">
 </head>
 
 <body>
-    <header>
-        <img src="./images/logo.jpeg" alt="website logo">
-        <h1>The Weather Site</h1>
+    <header id = "page-header">
+        <div id="logo">&#9748</div>
+        <p id="site-brand">The Weather Site</p>
     </header>
     <nav>
         <ul>
@@ -25,11 +25,11 @@
         </ul>
     </nav>
     <main>
-        <section>
-            <h2>Franklin, Idaho</h2>
+        <section id="locInfo">
+            <h1 id=" locName ">Franklin, Idaho</h1>
             <dl>
                 <dt>Zip:</dt>
-                <dd>83237</dd>
+                <dd id=" locPstlCode ">83237</dd>
             </dl>
             <dl>
                 <dt>Elevation:</dt>
@@ -40,24 +40,24 @@
                 <dd>42.07 N, 111.79 W</dd>
             </dl>
         </section>
-        <div>
+        <div id="curWeather">
             <img src="./images/clear.jpg" alt="background-weather">
-            <section>
-                <h3>Temperature</h3>
-                <h4>40</h4>
+            <section id="temp" class = "tile">
+                <h2>Temperature</h2>
+                <h3>40</h3>
                 <p>F</p>
-                <h5>64</h5>
+                <h4>64</h4>
                 <p>F</p>
-                <h5>41</h5>
+                <h4>41</h4>
                 <p>F</p>
-                <p>Feels Like</p> 
-                <p>25</p> 
+                <p>Feels Like</p>
+                <p>25</p>
                 <p>F</p>
             </section>
-            <section>
-                <h3>Wind</h3>
+            <section id="wind" class = "tile">
+                <h2>Wind</h2>
                 <img src="./images/wind-pointer.png" alt="wind pointer">
-                <h4>5</h4>
+                <h3>5</h3>
                 <p>mph</p>
                 <dl>
                     <dt>
@@ -70,31 +70,31 @@
                     <dd>10-12 mph</dd>
                 </dl>
             </section>
-            <section>
-                <h3>Clear</h3>
+            <section id="summary" class = "tile">
+                <h2>Clear</h2>
                 <div>
                     <img src="./images/clear.jpg" alt="Clear Background Trees">
                 </div>
             </section>
-            <section>
-                <h3>Hourly Forecast</h3>
-                <ol>
-                    <li>10am: <span>30</span> F</li>
-                    <li>11am: <span>34</span> F</li>
-                    <li>12am: <span>35</span> F</li>
-                    <li>1pm: <span>37</span> F</li>
-                    <li>2pm: <span>37</span> F</li>
-                    <li>3pm: <span>37</span> F</li>
-                    <li>4pm: <span>37</span> F</li>
-                    <li>5pm: <span>37</span> F</li>
-                    <li>6pm: <span>37</span> F</li>
-                    <li>7pm: <span>37</span> F</li>
-                    <li>8pm: <span>37</span> F</li>
-                    <li>9pm: <span>37</span> F</li>
-                    <li>10pm: <span>37</span> F</li>
-                </ol>
-            </section>
         </div>
+        <section id="hourly">
+            <h2>Hourly Forecast</h2>
+            <ol>
+                <li>10am: <span>30</span> F</li>
+                <li>11am: <span>34</span> F</li>
+                <li>12am: <span>35</span> F</li>
+                <li>1pm: <span>37</span> F</li>
+                <li>2pm: <span>37</span> F</li>
+                <li>3pm: <span>37</span> F</li>
+                <li>4pm: <span>37</span> F</li>
+                <li>5pm: <span>37</span> F</li>
+                <li>6pm: <span>37</span> F</li>
+                <li>7pm: <span>37</span> F</li>
+                <li>8pm: <span>37</span> F</li>
+                <li>9pm: <span>37</span> F</li>
+                <li>10pm: <span>37</span> F</li>
+            </ol>
+        </section>
     </main>
     <footer>
         &copy;2019 — The Weather Site
