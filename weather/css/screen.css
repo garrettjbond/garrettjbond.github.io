@@ -75,26 +75,14 @@ footer {
     background-color: #0e89d5;
 }
 
-#site-brand {
-    font-size: 1.5em;
-    font-weight: 700;
-}
-
 #logo {
     font-size: 60px;
     padding: 15px;
 }
 
-#hourlyTemp li{
-    padding: 5px;
-    display: flex;
-}
-
-#hourlyTemp{
-    overflow-x:scroll;
-    overflow-y: hidden;
-    list-style: none;
-    display: flex;
+#site-brand {
+    font-size: 1.5em;
+    font-weight: 700;
 }
 
 #wind ul{
@@ -106,7 +94,7 @@ footer {
 }
 
 #curTempSt{
-    font-size: 15vw;
+    font-size: 3em;
 }
 
 #curHL{
@@ -116,7 +104,7 @@ footer {
 
 #locZEL{
     display:flex;
-    font-size: 3vw;
+    font-size: .5em;
     justify-content: center;
 }
 
@@ -131,7 +119,7 @@ footer {
 
 #locName {
     margin:.2em;
-    font-size: 5vw;
+    font-size: 2em;
 }
 
 #page-header{
@@ -140,9 +128,21 @@ footer {
     justify-content: center;
 }
 
-#clear img{
+#summary img{
     max-width: 50%;
     opacity: 0.5;
+}
+
+#hourlyTemp li{
+    padding: 5px;
+    display: flex;
+}
+
+#hourlyTemp{
+    overflow-x:scroll;
+    overflow-y: hidden;
+    list-style: none;
+    display: flex;
 }
 
 /*3.  Mobile First (styles specific to small screens)*/
