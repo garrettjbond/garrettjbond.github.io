@@ -36,6 +36,8 @@ html {
 body {
     font-family: helvetica, verdana, sans-serif;
     font-size: 20px;
+    display:flex;
+    flex-direction: column;
 }
 
 h1,
@@ -52,44 +54,89 @@ h6 {
     margin: .2em auto;
     border: 1px solid;
     border-radius: 15px;
+    text-align: center;
 }
 
-nav ul li {
-    display: inline-block;
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     list-style: none;
+    padding-left: 0;
+
+}
+
+nav ul li a{
+
+    color: white;
+    text-decoration: none;
 }
 
 nav {
-    position: fixed;
     bottom: 0;
     left: 0;
+    order:2;
+    background-color: dodgerblue;
 }
 
 footer {
-    margin-bottom: 2em;
+    margin-bottom: .5em;
+    background-color: dodgerblue;
 }
 
 #site-brand {
-    font-size: 2em;
-    font-weight: 600;
+    font-size: 1.5em;
+    font-weight: 700;
 }
 
 #logo {
-    font-size: 50px;
+    font-size: 60px;
+    padding: 15px;
 }
+
+#hourlyTemp li{
+    padding: 5px;
+    display: flex;
+}
+
 
 #hourlyTemp{
     overflow-x:scroll;
-    display: inline-block;
+    overflow-y: hidden;
+    list-style: none;
+    display: flex;
 }
 
 #curWeather{
-    background-image: url("./weather/images/clear.jpg")
+    background-image: url("../images/clear.jpg");
 }
 
-#locInfo dl{
-    display: inline-block;
+#locZEL{
+    display:flex;
+    font-size: .65em;
+    justify-content: center;
 }
+
+#locZEL dl{
+    display:flex;
+    padding: 2px;
+}
+
+#locZEL dd{
+    margin-left:5px;
+}
+
+#locName {
+    margin:.2em;
+}
+
+#page-header{
+    background-color:dodgerblue;
+    display:flex;
+}
+
+
+
 
 /*Header*/
 /*main*/

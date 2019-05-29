@@ -26,22 +26,23 @@
     </nav>
     <main>
         <section id="locInfo">
-            <h1 id=" locName ">Franklin, Idaho</h1>
-            <dl>
-                <dt>Zip:</dt>
-                <dd id=" locPstlCode ">83237</dd>
-            </dl>
-            <dl>
-                <dt>Elevation:</dt>
-                <dd>1514.246 ft.</dd>
-            </dl>
-            <dl>
-                <dt>Location:</dt>
-                <dd>42.07 N, 111.79 W</dd>
-            </dl>
+            <h1 id="locName">Franklin, Idaho</h1>
+            <div id="locZEL">
+                <dl>
+                    <dt><b>Zip:</b></dt>
+                    <dd id="locPstlCode">83237</dd>
+                </dl>
+                <dl>
+                    <dt><b>Elevation:</b></dt>
+                    <dd>1514.246 ft.</dd>
+                </dl>
+                <dl>
+                    <dt><b>Location:</b></dt>
+                    <dd>42.07 N, 111.79 W</dd>
+                </dl>
+            </div>
         </section>
         <div id="curWeather">
-            <img src="./images/clear.jpg" alt="background-weather">
             <section id="temp" class = "tile">
                 <h2>Temperature</h2>
                 <h3>40</h3>
@@ -72,12 +73,9 @@
             </section>
             <section id="summary" class = "tile">
                 <h2>Clear</h2>
-                <div>
-                    <img src="./images/clear.jpg" alt="Clear Background Trees">
-                </div>
             </section>
         </div>
-        <section id="hourly">
+        <section id="hourly" class="tile">
             <h2>Hourly Forecast</h2>
             <ul id = "hourlyTemp">
                 <li>10am: <span>30</span> F</li>
