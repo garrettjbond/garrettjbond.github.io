@@ -68,24 +68,13 @@ nav ul{
 
 nav ul li a{
 
-    color: white;
+    color: #fff;
     text-decoration: none;
-}
-
-nav {
-    bottom: 0;
-    left: 0;
-    order:2;
-    background-color: dodgerblue;
 }
 
 footer {
     margin-bottom: .5em;
-    background-color: dodgerblue;
-}
-
-#clear{
-    max-height: 40%;
+    background-color: #0e89d5;
 }
 
 #site-brand {
@@ -148,11 +137,18 @@ footer {
 }
 
 #page-header{
-    background-color:dodgerblue;
+    background-color:#0e89d5;
     display:flex;
     justify-content: center;
 }
 
+/*3.  Mobile First (styles specific to small screens)*/
+nav {
+    bottom: 0;
+    left: 0;
+    order:2;
+    background-color:#0e89d5;
+}
 
 
 
