@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header id = "page-header">
+    <header id="page-header">
         <div id="logo">&#9748;</div>
         <p id="site-brand">The Weather Site</p>
     </header>
@@ -31,10 +31,12 @@
                 <dl>
                     <dt><b>Zip:</b></dt>
                     <dd id="locPstlCode">83237</dd>
+                    <span>|</span>
                 </dl>
                 <dl>
                     <dt><b>Elevation:</b></dt>
                     <dd>1514.246 ft.</dd>
+                    <span>|</span>
                 </dl>
                 <dl>
                     <dt><b>Location:</b></dt>
@@ -43,54 +45,48 @@
             </div>
         </section>
         <div id="curWeather">
-            <section id="temp" class = "tile">
+            <section id="temp" class="tile">
                 <h2>Temperature</h2>
-                <h3>40</h3>
-                <p>F</p>
-                <h4>64</h4>
-                <p>F</p>
-                <h4>41</h4>
-                <p>F</p>
-                <p>Feels Like</p>
-                <p>25</p>
-                <p>F</p>
+                <div id="curTempSt">
+                    <p><span id="curTemp">40</span>&#176;F</p>
+                </div>
+                <div id=curHL>
+                    <p><span id="curHigh">64</span>&#176;F</p>
+                    <p><span id="curLow">41</span>&#176;F</p>
+                </div>
+                <p>Feels Like<span>25</span>&#176;F</p>
             </section>
-            <section id="wind" class = "tile">
+            <section id="wind" class="tile">
                 <h2>Wind</h2>
                 <img src="./images/wind-pointer.png" alt="wind pointer">
-                <h3>5</h3>
-                <p>mph</p>
-                <dl>
-                    <dt>
-                        Direction:
-                    </dt>
-                    <dd><span>SW</span></dd>
-                    <dt>
-                        Gusts:
-                    </dt>
-                    <dd>10-12 mph</dd>
-                </dl>
+                <div id="curWindSt">
+                    <p><span id="curWind">5</span>mph</p>
+                </div>
+                <ul>
+                    <li><b>Direction:</b><span>SW</span></li>
+                    <li><b>Gusts:</b><span>10-12</span>mph</li>
+                </ul>
             </section>
-            <section id="summary" class = "tile">
+            <section id="clear" class="tile">
                 <h2>Clear</h2>
             </section>
         </div>
         <section id="hourly" class="tile">
             <h2>Hourly Forecast</h2>
-            <ul id = "hourlyTemp">
-                <li>10am: <span>30</span> F</li>
-                <li>11am: <span>34</span> F</li>
-                <li>12am: <span>35</span> F</li>
-                <li>1pm: <span>37</span> F</li>
-                <li>2pm: <span>37</span> F</li>
-                <li>3pm: <span>37</span> F</li>
-                <li>4pm: <span>37</span> F</li>
-                <li>5pm: <span>37</span> F</li>
-                <li>6pm: <span>37</span> F</li>
-                <li>7pm: <span>37</span> F</li>
-                <li>8pm: <span>37</span> F</li>
-                <li>9pm: <span>37</span> F</li>
-                <li>10pm: <span>37</span> F</li>
+            <ul id="hourlyTemp">
+                <li>10am: <span id="weather10a">30</span>&#176; F</li>
+                <li>11am: <span id="weather11a">34</span>&#176; F</li>
+                <li>12am: <span id="weather12a">35</span>&#176; F</li>
+                <li>1pm: <span id="weather1p">37</span>&#176; F</li>
+                <li>2pm: <span id="weather2p">37</span>&#176; F</li>
+                <li>3pm: <span id="weather3p">37</span>&#176; F</li>
+                <li>4pm: <span id="weather4p">37</span>&#176; F</li>
+                <li>5pm: <span id="weather5p">37</span>&#176; F</li>
+                <li>6pm: <span id="weather6p">37</span>&#176; F</li>
+                <li>7pm: <span id="weather7p">37</span>&#176; F</li>
+                <li>8pm: <span id="weather8p">37</span>&#176; F</li>
+                <li>9pm: <span id="weather9p">37</span>&#176; F</li>
+                <li>10pm: <span id="weather10a">37</span>&#176; F</li>
             </ul>
         </section>
     </main>

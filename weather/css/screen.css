@@ -84,6 +84,10 @@ footer {
     background-color: dodgerblue;
 }
 
+#clear{
+    max-height: 40%;
+}
+
 #site-brand {
     font-size: 1.5em;
     font-weight: 700;
@@ -99,7 +103,6 @@ footer {
     display: flex;
 }
 
-
 #hourlyTemp{
     overflow-x:scroll;
     overflow-y: hidden;
@@ -107,13 +110,26 @@ footer {
     display: flex;
 }
 
+#wind ul{
+    list-style: none;
+}
+
 #curWeather{
     background-image: url("../images/clear.jpg");
 }
 
+#curTempSt{
+    font-size: 15vw;
+}
+
+#curHL{
+    display: flex;
+    justify-content: center;
+}
+
 #locZEL{
     display:flex;
-    font-size: .65em;
+    font-size: 3vw;
     justify-content: center;
 }
 
@@ -128,11 +144,13 @@ footer {
 
 #locName {
     margin:.2em;
+    font-size: 5vw;
 }
 
 #page-header{
     background-color:dodgerblue;
     display:flex;
+    justify-content: center;
 }
 
 
