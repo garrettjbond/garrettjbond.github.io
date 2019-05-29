@@ -140,6 +140,11 @@ footer {
     justify-content: center;
 }
 
+#clear img{
+    max-width: 50%;
+    opacity: 0.5;
+}
+
 /*3.  Mobile First (styles specific to small screens)*/
 nav {
     bottom: 0;
@@ -148,12 +153,3 @@ nav {
     background-color:#0e89d5;
 }
 
-
-
-/*Header*/
-/*main*/
-/*Temp*/
-/*Wind*/
-/*Clear*/
-/*Hourly Forecast*/
-/*Nav*/
