@@ -14,13 +14,15 @@
 *
 * ********************************/
 
-/* 1. Imports */
+/************** 1. Imports ********************/
 /* 1.1 Normalize Import */
 @import url('normalize.css');
 /* 1.2 Google Font Import*/
 @import url('https://fonts.googleapis.com/css?family=Sansita&display=swap');
 
-/* 2. General Styles */
+/************** 2. General Styles *****************/
+
+/*All*/
 html {
     box-sizing: border-box;
 }
@@ -71,3 +73,28 @@ footer {
     font-size: 2em;
     font-weight: 600;
 }
+
+#logo {
+    font-size: 50px;
+}
+
+#hourlyTemp{
+    overflow-x:scroll;
+    display: inline-block;
+}
+
+#curWeather{
+    background-image: url("./weather/images/clear.jpg")
+}
+
+#locInfo dl{
+    display: inline-block;
+}
+
+/*Header*/
+/*main*/
+/*Temp*/
+/*Wind*/
+/*Clear*/
+/*Hourly Forecast*/
+/*Nav*/
