@@ -90,7 +90,7 @@ footer {
 }
 
 #curWeather{
-    background-image: url("../images/clear.jpg");
+    background-image: url("../images/rain.jpg");
 }
 
 #curTempSt{
@@ -153,3 +153,9 @@ nav {
     background-color:#0e89d5;
 }
 
+/*  4.  Large Screen Styles (Media Queries begin here)*/
+/* @media screen and (min-width: 760px){
+    body{
+    flex-direction: row;
+    }
+} */
