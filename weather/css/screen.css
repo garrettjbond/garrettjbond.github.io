@@ -95,6 +95,10 @@ footer {
     align-items: center;
 }
 
+#wind img{
+    width: 40%;
+}
+
 
 #curWeather{
     background-image: url("../images/rain.jpg");
@@ -183,6 +187,16 @@ footer {
     flex-direction: row;
 }
 
+#summary{
+    display: flex;
+    flex-direction: column;
+}
+
+#summary img{
+    align-self: center;
+    width: 100%;
+}
+
 /*3.  Mobile First (styles specific to small screens)*/
 nav {
     bottom: 0;
@@ -206,7 +220,7 @@ nav {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-
+        height: 100%;
     }
 
     #curWeather section{
