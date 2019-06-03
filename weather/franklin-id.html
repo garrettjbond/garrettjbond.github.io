@@ -42,33 +42,35 @@
                 </dl>
             </div>
         </section>
-        <div id="curWeather">
-            <section id="temp" class="tile">
-                <h2>Temperature</h2>
-                <div id="curTempSt">
-                    <p><span id="curTemp">40</span>&#176;F</p>
-                </div>
-                <div id=curHL>
-                    <p><span id="curHigh">64</span>&#176;F</p>
-                    <p><span id="curLow">41</span>&#176;F</p>
-                </div>
-                <p>Feels Like<span>25</span>&#176;F</p>
-            </section>
-            <section id="wind" class="tile">
-                <h2>Wind</h2>
-                <img src="./images/wind-pointer.png" alt="wind pointer">
-                <div id="curWindSt">
-                    <p><span id="curWind">5</span>mph</p>
-                </div>
-                <ul>
-                    <li><b>Direction:</b><span>SW</span></li>
-                    <li><b>Gusts:</b><span>10-12</span>mph</li>
-                </ul>
-            </section>
-            <section id="summary" class="tile">
-                <h2>Rain</h2>
-                <img src="../weather/images/rain.jpg" alt="Displaying Clarity">
-            </section>
+        <div id="tileStructure">
+            <div id="curWeather">
+                <section id="temp" class="tile">
+                    <h2>Temperature</h2>
+                    <div id="curTempSt" ffffffffffffffffffffffffffffffffffffffff>
+                        <p><span id="curTempE">40</span>&#176;F</p>
+                    </div>
+                    <div id=curHL>
+                        <p id="curHighSt"><span id="curHigh">64</span>&#176;F</p>
+                        <p id="curLowSt"><span id="curLow">41</span>&#176;F</p>
+                    </div>
+                    <p id="feelsLikep">Feels Like <span>25</span>&#176;F</p>
+                </section>
+                <section id="wind" class="tile">
+                    <h2 id="windTitle">Wind</h2>
+                    <img src="./images/wind-pointer.png" alt="wind pointer">
+                    <div id="curWindSt">
+                        <p><span id="curWind">5</span>mph</p>
+                    </div>
+                    <ul>
+                        <li><b>Direction:</b><span>SW</span></li>
+                        <li><b>Gusts:</b><span>10-12</span>mph</li>
+                    </ul>
+                </section>
+                <section id="summary" class="tile">
+                    <h2>Rain</h2>
+                    <img src="../weather/images/rain.jpg" alt="Displaying Clarity">
+                </section>
+            </div>
         </div>
         <section id="hourly" class="tile">
             <h2>Hourly Forecast</h2>
