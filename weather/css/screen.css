@@ -65,7 +65,6 @@ nav ul{
 }
 
 nav ul li a{
-
     color: #fff;
     text-decoration: none;
 }
@@ -101,8 +100,6 @@ footer {
     margin: 0px;
 }
 
-
-
 #curHL{
     display: flex;
     justify-content: center;
@@ -125,10 +122,9 @@ footer {
     padding-right: 5px;
 }
 
-
 #locZEL{
     display:flex;
-    font-size: .5em;
+    font-size: .75em;
     justify-content: center;
 }
 
@@ -141,6 +137,11 @@ footer {
     margin-left:5px;
 }
 
+#locZEL dl b{
+    margin-left:5px;
+    font-weight: 700;
+}
+
 #locName {
     margin:.2em;
     font-size: 2em;
@@ -149,7 +150,7 @@ footer {
 #page-header{
     background-color:#0e89d5;
     display:flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 #summary img{
@@ -159,8 +160,8 @@ footer {
 
 #hourlyTemp li{
     display: flex;
-    padding-left: 15px;
-    
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
     
 }
 
@@ -170,10 +171,6 @@ footer {
     list-style: none;
     display: flex;
     flex-wrap: nowrap;
-}
-
-#hourlyTemp span{
-    padding-left: 10px;
 }
 
 /*3.  Mobile First (styles specific to small screens)*/
@@ -191,12 +188,30 @@ nav {
 
 /*  4.  Large Screen Styles (Media Queries begin here)*/
 @media screen and (min-width: 760px){
-    #tileStructure{
-        /* display: flex; */
+    #page-Header{
+        font-size: 5em;
+    }
+
+    #curWeather {
+        display: flex;
         flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    #curWeather section{
+        min-width: 33%;
+        min-height: auto;
     }
 
     nav{
         order: 0;
     }
+
+    #locZEL{
+        justify-content: flex-start;
+        font-size: 1.2em;
+    }
+
+
 }
