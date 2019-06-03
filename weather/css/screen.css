@@ -136,7 +136,7 @@ footer {
 
 #locZEL{
     display:flex;
-    font-size: .75em;
+    font-size: .4em;
     justify-content: center;
 }
 
@@ -194,7 +194,7 @@ footer {
 
 #summary img{
     align-self: center;
-    width: 100%;
+    width: 50%;
 }
 
 /*3.  Mobile First (styles specific to small screens)*/
