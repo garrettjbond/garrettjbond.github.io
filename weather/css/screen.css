@@ -136,8 +136,8 @@ footer {
 
 #locZEL{
     display:flex;
-    font-size: .4em;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 #locZEL dl{
@@ -203,6 +203,10 @@ nav {
     left: 0;
     order:2;
     background-color:#0e89d5;
+}
+
+#locZEL{
+    font-size: .5em;
 }
 
 #tileStructure{
