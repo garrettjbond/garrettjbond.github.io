@@ -137,13 +137,20 @@ footer {
 #locZEL{
     display:flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    font-size: .5em;
 }
 
 #locZEL dl{
     display:flex;
     padding: 2px;
 }
+
+/* #curWindSt{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+} */
 
 #locZEL dd{
     margin-left:5px;
