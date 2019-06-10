@@ -50,8 +50,8 @@ h1 {
 /*	Background Images - use with Small screens */
 
 .page-header {
-    background-image:	url(../weather/images/optimizedimages/nps-logo-small-50.jpg),
-    url(/weather/images/optimizedimages/banner-400.jpg);
+    background-image:	url(./images/optimizedimages/nps-logo-50.jpg),
+    url(./images/optimizedimages/banner-400.jpg);
 	background-repeat: no-repeat, no-repeat;
 	background-position: right, left;
 	background-size: contain, cover;
@@ -177,7 +177,7 @@ h1 {
 	}
 	/*	Background Images - Use with medium screens */
 	.page-header {
-		background-image: url("../weather/images/optimizedimages/nps-logo-large-150.jpg"), url("../weather/images/optimizedimages/banner-1200.jpg");
+		background-image: url("../images/optimizedimages/nps-logo-50.jpg"), url("../images/optimizedimages/banner-400.jpg");
 	}
 	.page-nav {
 		position: relative;
@@ -223,7 +223,9 @@ h1 {
 		line-height: 1.05;
 	}
 	/*	Background Images - Use with large screens */
-	.page-header {}
+	.page-header {
+        background-image: url("./images/optimizedimages/nps-logo-150.jpg"), url("./images/optimizedimages/banner-1200.jpg");
+    }
 	.page-nav li {
 		flex: 0 1 10%;
 	}

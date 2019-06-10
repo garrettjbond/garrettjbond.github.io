@@ -26,8 +26,11 @@
             <h1 class="main-title">Grand Canyon National Park</h1>
 
             <figure class="featured-image">
-                <img src="./weather/images/optimizedimages/grand-canyon-small-400.jpg"
-                    alt="Picture from the Grand Canyon">
+                <picture>
+					<source srcset="./images/optimizedimages/ruins-med-800.jpg" media="(min-width: 500px) and (max-width: 899px)">
+					<source srcset="./images/optimizedimages/ruins-large-1000.jpg" media="(min-width: 900px)">
+					<img src="./images/optimizedimages/ruins-small-400.jpg" alt="Picture of ruins">
+				</picture>
 
                 <figcaption class="image-caption">
                     Fun in the Grand Canyon
