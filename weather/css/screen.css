@@ -55,6 +55,7 @@ h6 {
     text-align: center;
 }
 
+
 nav ul{
     display: flex;
     flex-direction: row;
@@ -62,6 +63,13 @@ nav ul{
     list-style: none;
     padding-left: 0;
 
+}
+
+#littleWeatherImg{
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    background-image: cover;
 }
 
 nav ul li a{
@@ -146,8 +154,10 @@ footer {
 
 
 #curWeather{
-    background-image: url("../images/rain.jpg");
+    background-size: cover;
 }
+
+
 
 #curTempSt{
     font-size: 3.5em;
@@ -248,7 +258,9 @@ footer {
     width: 50%;
 }
 
-/*3.  Mobile First (styles specific to small screens)*/
+/***************************************************
+*  3. Mobile First Styles
+****************************************************/
 nav {
     bottom: 0;
     left: 0;
@@ -267,7 +279,30 @@ nav {
     flex-direction: column;
 }
 
-/*  4.  Large Screen Styles (Media Queries begin here)*/
+.clear{
+    background-image: url("../images/optimizedimages/clear-small.jpg");
+}
+
+.cloud{
+    background-image: url("../images/optimizedimages/clouds-small.jpg");
+}
+
+.fog{
+    background-image: url("../images/optimizedimages/fog-small.jpg");
+}
+
+.snow{
+    background-image: url("../images/optimizedimages/snow-small.jpg");
+}
+
+.rain{
+    background-image: url("../images/optimizedimages/rain-small.jpg");
+}
+
+
+/***************************************************
+*  4.  Large Screen Styles (Media Queries begin here)
+****************************************************/
 @media screen and (min-width: 760px){
     #page-Header{
         font-size: 5em;
@@ -293,5 +328,25 @@ nav {
         font-size: 1.2em;
     }
 
+    .clear{
+        background-image: url("../images/optimizedimages/clear-large.jpg");
+    }
+    
+    .cloud{
+        background-image: url("../images/optimizedimages/clouds-large.jpg");
+    }
+    
+    .fog{
+        background-image: url("../images/optimizedimages/fog-large.jpg");
+    }
+    
+    .snow{
+        background-image: url("../images/optimizedimages/snow-large.jpg");
+    }
+    
+    .rain{
+        background-image: url("../images/optimizedimages/rain-large.jpg");
+    }
+    
 
 }
