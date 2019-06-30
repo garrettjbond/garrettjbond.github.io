@@ -69,6 +69,7 @@ nav ul{
     width: 200px;
     height: 200px;
     margin: auto;
+    margin-bottom: 50px;
     background-image: cover;
 }
 
@@ -143,21 +144,10 @@ footer {
  .w {
     transform: rotate(270deg);
  }
- 
- 
- 
-
-/* #wind img{
-    width: 40%;
-
-} */
-
 
 #curWeather{
     background-size: cover;
 }
-
-
 
 #curTempSt{
     font-size: 3.5em;
@@ -256,6 +246,19 @@ footer {
 #summary img{
     align-self: center;
     width: 50%;
+}
+
+.hourlyTempSeparator{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.hourlyTimeTempSpacer{
+    padding-right: 5px;
+}
+
+.hide{
+    display: none;
 }
 
 /***************************************************
