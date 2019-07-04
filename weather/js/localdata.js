@@ -4,7 +4,7 @@ console.log("test1");
 let pageNav = document.getElementById('page-nav');
 let statusContainer = document.getElementById('status');
 let contentContainer = document.getElementById('main-content');
-let weatherURL = "./weather/js/weather.json";
+let weatherURL = "./js/weather.json";
 
 console.log("test2");
 fetchData(weatherURL);
@@ -27,7 +27,7 @@ function fetchData(weatherURL) {
       let g = data[cityName];
 
       // ************ Get the content ******************************
-
+      console.log("before getting content")
       // Get the location data
       let locName = g.City;
       let locState = g.State;
@@ -103,7 +103,7 @@ function fetchData(weatherURL) {
 
       // Set the hourly temperature information
       let hourly = document.getElementById("hourlyTemp");
-      hourly.innerHTML = hourlyTemp + " | ";
+      hourly.innerHTML = "time: " + hourlyTemp + " | ";
 
       // Change the status of the containers
       contentContainer.setAttribute('class', ''); // removes the hide class
