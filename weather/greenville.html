@@ -14,7 +14,7 @@
 <body>
     <header id="page-header">
         <div id="logo">&#9748;</div>
-        <p id="site-brand">The Weather Site</p>
+        <h1 id="site-brand">The Weather Site</h1>
     </header>
     <nav id="page-nav">
         <ul>
@@ -27,7 +27,7 @@
     <section id="status">Please be patient while I get your weather information.</section>
     <main id = "main-content" class = "hide">
         <section id="locInfo">
-            <h1 id="locName"></h1>
+            <h2 id="locName"></h2>
             <div id="locZEL">
                 <dl>
                     <dt><b>Zip:</b></dt>
@@ -45,7 +45,7 @@
         </section>
         <div id="curWeather">
             <section id="temp" class="tile">
-                <h2>Temperature</h2>
+                <h3>Temperature</h3>
                 <div id="curTempSt">
                     <p><span id="curTempE"></span></p>
                 </div>
@@ -56,8 +56,8 @@
                 <p id="feelsLikep">Feels Like <span id="feelTemp">25</span>&#176;F</p>
             </section>
             <section id="wind" class="tile">
-                <h2 id="windTitle">Wind</h2>
-                <div id="dial" class="w"></div>
+                <h3 id="windTitle">Wind</h3>
+                <div id="dial" class="w" alt="image resembling compass pointing direction of wind"></div>
                 <div id="curWindSt">
                     <p><span id="curWind"></span></p>
                     <P></P>
@@ -68,14 +68,14 @@
                 </ul>
             </section>
             <section id="summary" class="tile">
-                <h2 id = "summaryTitle"></h2>
+                <h3 id = "summaryTitle"></h3>
                 <picture> 
-                    <div id = "littleWeatherImg"></div>
+                    <div id = "littleWeatherImg" alt = "image representing current weather condition"></div>
                 </picture> 
             </section>
         </div>
         <section id="hourly" class="tile">
-            <h2>Hourly Forecast</h2>
+            <h3>Hourly Forecast</h3>
             <ul id="hourlyTemp"></ul>
         </section>
     </main>
