@@ -1,14 +1,15 @@
 "use strict";
 
-
+console.log("test1");
 let pageNav = document.getElementById('page-nav');
 let statusContainer = document.getElementById('status');
 let contentContainer = document.getElementById('main-content');
+let weatherURL = "./weather/js/weather.json";
 
-let weatherURL = "./js/weather.json";
-
+console.log("test2");
 fetchData(weatherURL);
 
+console.log("test3");
 function fetchData(weatherURL) {
   let cityName = 'Greenville'; // The data we want from the weather.json file
   fetch(weatherURL)
@@ -52,22 +53,24 @@ function fetchData(weatherURL) {
       let hourlyTemp = g.Hourly;
 
       // ************ Display the content ******************************
-      // Set the title with the location name at the first
-      // Gets the title element so it can be worked with
+      //! Set the title with the location name at the first
+      //! Gets the title element so it can be worked with
+      console.log("test4");
       let pageTitle = document.getElementById('page-title');
       // Create a text node containing the full name 
       let fullNameNode = document.createTextNode(fullName);
       // inserts the fullName value before any other content that might exist
       pageTitle.insertBefore(fullNameNode, pageTitle.childNodes[0]);
       // When this is done the title should look something like this:
-      // Greenville, SC | The Weather Site
+      //TODO Greenville, SC | The Weather Site
 
+      console.log("test4.5");
       // Set the Location information
       // Get the h1 to display the city location
-      let contentHeading = document.getElementById('contentHeading');
+      let contentHeading = document.getElementById('locName');
       contentHeading.innerHTML = fullName;
-      // The h1 in main h1 should now say "Greenville, SC"
-
+      console.log("test5");
+      //! The h1 in main h1 should now say "Greenville, SC"
 
       // Set the temperature information
       let curTemp = document.getElementById("curTempE");
