@@ -37,7 +37,8 @@ function fetchData(weatherURL) {
       console.log('fullName is: ' + fullName);
 
       // Get the temperature data
-      let curTempE = g.Temperature;
+      let curTempE = g.Temp;
+      console.log(curTempE);
       let curLow = g.Low;
       let curHigh = g.High;
 
@@ -103,7 +104,7 @@ function fetchData(weatherURL) {
 
       // Set the hourly temperature information
       let hourly = document.getElementById("hourlyTemp");
-      hourly.innerHTML = "time: " + hourlyTemp + " | ";
+      hourly.innerHTML = buildHourlyData(nextHour, hourlyTemp);
 
       // Change the status of the containers
       contentContainer.setAttribute('class', ''); // removes the hide class
