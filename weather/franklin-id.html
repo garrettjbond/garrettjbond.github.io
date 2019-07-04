@@ -13,7 +13,7 @@
 
 <body>
     <header id="page-header">
-        <div id="logo" alt = "website logo">&#9748;</div>
+        <div id="logo">&#9748;</div>
         <h1 id="site-brand">The Weather Site</h1>
     </header>
     <nav id="page-nav">
@@ -35,7 +35,7 @@
                 </dl>
                 <dl>
                     <dt>|<b>Elevation:</b></dt>
-                    <dd id = "elev"></dd>ft.
+                    <dd id = "elev">ft.</dd>
                 </dl>
                 <dl>
                     <dt>|<b>Location:</b></dt>
@@ -57,8 +57,7 @@
             </section>
             <section id="wind" class="tile">
                 <h3 id="windTitle">Wind</h3>
-                <!-- <img src="./images/wind-pointer.png" alt="wind pointer"> -->
-                <div id="dial" class="w" alt = "compass dial"></div>
+                <div id="dial" class="w"></div>
                 <div id="curWindSt">
                     <p><span id="curWind">5</span>mph</p>
                 </div>
@@ -71,7 +70,8 @@
             <section id="summary" class="tile">
                 <h3 id = "summaryTitle"></h3>
                 <picture> 
-                    <div id = "littleWeatherImg" alt= "image displaying current condition"></div>
+                    <section id = "littleWeatherImg" alt= "image displaying current condition"></section>
+                    <img>
                 </picture> 
             </section>
         </div>
