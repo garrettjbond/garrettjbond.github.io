@@ -31,10 +31,17 @@ function fetchData(weatherURL) {
       // Get the location data
       let locName = g.City;
       let locState = g.State;
+      let locPstlCode = g.Zip;
+      let elev = g.Elevation;
+      let lat = g.Latitude;
+      let long = g.Longitude; 
+
       // Put them together
       let fullName = locName + ', ' + locState;
+      let fullCoordinates = long + ', ' + lat;
       // See if it worked
       console.log('fullName is: ' + fullName);
+      console.log('Lat and long: ' + fullCoordinates);
 
       // Get the temperature data
       let curTempE = g.Temp;
@@ -54,8 +61,8 @@ function fetchData(weatherURL) {
       let hourlyTemp = g.Hourly;
 
       // ************ Display the content ******************************
-      //! Set the title with the location name at the first
-      //! Gets the title element so it can be worked with
+      // Set the title with the location name at the first
+      // Gets the title element so it can be worked with
       console.log("test4");
       let pageTitle = document.getElementById('page-title');
       // Create a text node containing the full name 
@@ -63,7 +70,7 @@ function fetchData(weatherURL) {
       // inserts the fullName value before any other content that might exist
       pageTitle.insertBefore(fullNameNode, pageTitle.childNodes[0]);
       // When this is done the title should look something like this:
-      //TODO Greenville, SC | The Weather Site
+      // Greenville, SC | The Weather Site
 
       console.log("test4.5");
       // Set the Location information
@@ -71,7 +78,16 @@ function fetchData(weatherURL) {
       let contentHeading = document.getElementById('locName');
       contentHeading.innerHTML = fullName;
       console.log("test5");
-      //! The h1 in main h1 should now say "Greenville, SC"
+      let areaCode = document.getElementById('locPstlCode');
+      areaCode.innerHTML = locPstlCode;
+      let areaElevation = document.getElementById('elev');
+      areaElevation.innerHTML = elev;
+      let areaCoord = document.getElementById('coordinates');
+      areaCoord.innerHTML = fullCoordinates;
+      // The h1 in main h1 should now say "Greenville, SC"
+
+
+
 
       // Set the temperature information
       let curTemp = document.getElementById("curTempE");
