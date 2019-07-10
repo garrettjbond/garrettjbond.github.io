@@ -17,10 +17,39 @@
 /************** 1. Imports ********************/
 /* 1.1 Normalize Import */
 @import url('normalize.css');
-/* 1.2 Google Fonts
+/* 1.2 Google Fonts*/
 
-/* 2. General Stying
+/* 2. General Stying*/
 
-/* 3. Mobile First
+body {
+    background-image: url(../images/site/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-/* 4. Large Screen Styles (Media Queries begin here)
+header{
+    color: #de2226;
+}
+
+#main-wrapper{
+    background-color:#ffffff;
+    margin: 30px;
+}
+
+#navBarList{
+    list-style-type: none;
+    display: flex;
+    background-color:#de2226;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #ffffff;
+}
+
+#navBarList li{
+    padding-right: 10px;
+}
+
+
+/* 3. Mobile First*/
+
+/* 4. Large Screen Styles (Media Queries begin here)*/
