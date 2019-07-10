@@ -83,11 +83,11 @@ function fetchData(weatherURL) {
 
     // Set the wind information
       let windStatus = document.getElementById("curWindSt");
-      windStatus.innerHTML = curWindSt;
+      windStatus.innerHTML = curWindSt + " mph";
       let windDirection = document.getElementById("windDirection");
       windDirection.innerHTML = wDirection;
       let windGusts = document.getElementById("gusts");
-      windGusts.innerHTML = gusts;
+      windGusts.innerHTML = "Gusts: " + gusts;
     //************************* */
     // Sample Getter
     // let realName = g.objectKey;
