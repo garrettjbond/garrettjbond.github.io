@@ -100,7 +100,7 @@ function fetchData(weatherURL) {
       let windDirection = document.getElementById("windDirection");
       windDirection.innerHTML = wDirection;
       let windGusts = document.getElementById("gusts");
-      windGusts.innerHTML = "Gusts: " + gusts + " mph";
+      windGusts.innerHTML = gusts + " mph";
     //************************* */
     // Sample Getter
     // let realName = g.objectKey;
