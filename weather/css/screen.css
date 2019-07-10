@@ -225,6 +225,7 @@ footer {
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: nowrap;
+    padding-right: 5px;
     
 }
 
