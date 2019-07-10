@@ -81,13 +81,10 @@ function fetchData(weatherURL) {
       let areaCode = document.getElementById('locPstlCode');
       areaCode.innerHTML = locPstlCode;
       let areaElevation = document.getElementById('elev');
-      areaElevation.innerHTML = elev;
+      areaElevation.innerHTML = elev + " ft.";
       let areaCoord = document.getElementById('coordinates');
       areaCoord.innerHTML = fullCoordinates;
       // The h1 in main h1 should now say "Greenville, SC"
-
-
-
 
       // Set the temperature information
       let curTemp = document.getElementById("curTempE");
@@ -103,7 +100,7 @@ function fetchData(weatherURL) {
       let windDirection = document.getElementById("windDirection");
       windDirection.innerHTML = wDirection;
       let windGusts = document.getElementById("gusts");
-      windGusts.innerHTML = "Gusts: " + gusts;
+      windGusts.innerHTML = "Gusts: " + gusts + " mph";
     //************************* */
     // Sample Getter
     // let realName = g.objectKey;
