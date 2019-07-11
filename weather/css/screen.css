@@ -225,12 +225,13 @@ footer {
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: nowrap;
-    padding-right: 5px;
+    padding-right: 8px;
+    width: auto;
     
 }
 
 #hourlyTemp{
-    overflow-x:scroll;
+    overflow-x:auto;
     overflow-y: hidden;
     list-style: none;
     display: flex;
