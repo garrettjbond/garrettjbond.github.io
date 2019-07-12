@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Weather for Current Location">
+    <title id = "page-title"> | Weather Site</title>
+    <meta name="author" content="Garrett Bond">
+    <link rel="stylesheet" type="text/css" href="./css/screen.css" media="screen">
+</head>
+
+<body>
+    <header id="page-header">
+        <div id="logo">&#9748;</div>
+        <h1 id="site-brand">The Weather Site</h1>
+    </header>
+    <nav id="page-nav">
+        <ul>
+            <li><a href="#" title="Go to theWeather Site homepage">Current</a></li>
+            <li><a href="#" title="SearchWeather Site homepage">Search</a></li>
+            <li><a href="./franklin-id.html" title="Go to theFranklin-Idaho WeatherSite homepage">Franklin</a></li>
+            <li><a href="#" title="Go to theGreenville-Idaho WeatherSitehome page">Greenville</a></li>
+        </ul>
+    </nav>
+    <section id="status">Please be patient while I get your weather information.</section>
+    <main id = "main-content" class = "hide">
+        <section id="locInfo">
+            <h2 id="locName"></h2>
+            <div id="locZEL">
+                <dl>
+                    <dt><b>Zip:</b></dt>
+                    <dd id="locPstlCode">Area Code</dd>
+                </dl>
+                <dl>
+                    <dt>|<b>Elevation:</b></dt>
+                    <dd id = "elev">Area Elevation</dd>
+                </dl>
+                <dl>
+                    <dt>|<b>Location:</b></dt>
+                    <dd id = "coordinates">Area Coordinates</dd>
+                </dl>
+            </div>
+        </section>
+        <div id="curWeather">
+            <section id="temp" class="tile">
+                <h3>Temperature</h3>
+                <div id="curTempSt">
+                    <p><span id="curTempE"></span></p>
+                </div>
+                <div id=curHL>
+                    <p id="curHighSt"><span id="curHigh">64</span>F</p>
+                    <p id="curLowSt"><span id="curLow">41</span>F</p>
+                </div>
+                <p id="feelsLikep">Feels Like <span id="feelTemp">25</span>&#176;F</p>
+            </section>
+            <section id="wind" class="tile">
+                <h3 id="windTitle">Wind</h3>
+                <div id="dial" class="w" ></div>
+                <div id="curWindSt">
+                    <p><span id="curWind"></span></p>
+                </div>
+                <ul>
+                    <li><b>Direction: </b><span id="windDirection"></span></li>
+                    <li><b>Gusts: </b><span id = "gusts"></span></li>
+                </ul>
+            </section>
+            <section id="summary" class="tile">
+                <h3 id = "summaryTitle"></h3>
+                <div id = "littleWeatherImg"> 
+                </div> 
+            </section>
+        </div>
+        <section id="hourly" class="tile">
+            <h3>Hourly Forecast</h3>
+            <ul id="hourlyTemp"></ul>
+        </section>
+    </main>
+    <footer>
+        &copy;2019 — The Weather Site
+    </footer>
+    <script src="../weather/js/localdata.js"></script>
+    <script src="../weather/js/functions.js"></script>
+    
+</body>
+
+</html>
