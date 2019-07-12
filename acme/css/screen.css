@@ -49,6 +49,12 @@ header{
     padding-right: 10px;
 }
 
+#site-logo{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
 
 /* 3. Mobile First*/
 
