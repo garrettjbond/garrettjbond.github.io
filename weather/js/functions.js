@@ -317,7 +317,7 @@ function buildPage() {
 
     // Put them together
     let fullName = locName + ', ' + locState;
-    let fullCoordinates = parseFloat(long).toFixed(2) + ', ' + parseFloat(lat).toFixed(2);
+    let fullCoordinates = parseFloat(long).toFixed(2) + '&deg N, ' + parseFloat(lat).toFixed(2) + '&deg W';
     // See if it worked
     console.log('fullName is: ' + fullName);
     console.log('Lat and long: ' + fullCoordinates);
