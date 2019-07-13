@@ -42,6 +42,8 @@ footer{
 
 hr{
     border: 2px solid black;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 #main-wrapper{
@@ -87,6 +89,8 @@ img{
     margin-bottom: 0%;
     margin-top: 2%;
     padding-bottom: 3%;
+    padding-left: 6px;
+    padding-right: 6px;
 }
 
 #copy-right{
