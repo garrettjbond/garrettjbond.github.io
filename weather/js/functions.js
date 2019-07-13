@@ -19,6 +19,7 @@ const direction = "S";
 const value = 1;
 const weatherDesc = "Rainy";
 
+
 // Set global variable for custom header required by NWS API
 var idHeader = {
     headers: {
@@ -34,6 +35,7 @@ buildWC(speed, temp);
 windDial(direction);
 const keyWord = getCondition(weatherDesc);
 changeSumaryImage(keyWord);
+console.log(keyWord);
 const feet = convertMeters(value);
 // Get the next hour based on the current time
 let date = new Date();
@@ -159,7 +161,8 @@ function changeSumaryImage(keyWord) {
     const weatherElement = document.getElementById("curWeather");
     const littleWeatherElement = document.getElementById("littleWeatherImg");
     const summaryElement = document.getElementById("summaryTitle");
-
+    littleWeatherElement.classList = ' ';
+    weatherElement.classList = ' ';
 
     switch (keyWord.toLowerCase()) {
         case "cloud":
@@ -262,7 +265,7 @@ function getHourly() {
                     data.properties.periods[i].temperature
                 );
             }
-            const formattedHourly = buildHourlyData(data.properties.periods[0].startTime, hourlyArray)
+            const formattedHourly = buildHourlyData(nextHour, hourlyArray)
             storage.setItem("locHourlyArray", formattedHourly);
             console.log(hourlyArray);
             storage.setItem('locWindDirection', data.properties.periods["0"].windDirection);
@@ -275,15 +278,23 @@ function getHourly() {
 
 }
 
+//converts celsius to fahrenheit
+function toFahrenheit(celsVar){
+    const fahrVar = (celsVar * (9/5)) + 32;
+    console.log(celsVar);
+
+    return fahrVar;
+}
 
 
+//builds page dynamically with api data
 function buildPage() {
     const curWindSt = storage.getItem('locWindSpeed');
     const wDirection = storage.getItem('locWindDirection');
     const summaryTitle = storage.getItem('locTextDescription');
     const elev = storage.getItem('locElevation');
     const hourlyArrayApi = storage.getItem('locHourlyArray');
-    const curTempE = storage.getItem('locTemperature');
+    let curTempE = toFahrenheit(parseFloat(storage.getItem('locTemperature')));
     const locPstlCode = storage.getItem('locZipCodeApi');
     const lat = storage.getItem('locLatApi');
     const long = storage.getItem('locLongApi');
@@ -293,13 +304,16 @@ function buildPage() {
     const locName = storage.getItem('locName');
     const locState = storage.getItem('locState');
 
+    curTempE = curTempE.toFixed(0); 
     buildWC(curWindSt, curTempE);
     windDial(wDirection);
     const keyWord = getCondition(summaryTitle);
-    console.log(keyWord);
+    console.log('keyWord', keyWord);
     changeSumaryImage(keyWord);
     const feet = convertMeters(elev);
     console.log(hourlyArrayApi);
+
+    
 
     // Put them together
     let fullName = locName + ', ' + locState;
