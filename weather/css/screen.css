@@ -65,6 +65,10 @@ nav ul{
 
 }
 
+.hide{
+    display: none;
+}
+
 #littleWeatherImg{
     width: 200px;
     height: 200px;

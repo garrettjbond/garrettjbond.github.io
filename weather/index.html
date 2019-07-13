@@ -10,7 +10,7 @@
     <meta name="author" content="Garrett Bond">
     <link rel="stylesheet" type="text/css" href="./css/screen.css" media="screen">
 </head>
-
+<!-- Worked with Austin (classmate) and Gabi Jackson (non-classmate) -->
 <body>
     <header id="page-header">
         <div id="logo">&#9748;</div>
@@ -21,11 +21,11 @@
             <li><a href="#" title="Go to theWeather Site homepage">Current</a></li>
             <li><a href="#" title="SearchWeather Site homepage">Search</a></li>
             <li><a href="./franklin-id.html" title="Go to theFranklin-Idaho WeatherSite homepage">Franklin</a></li>
-            <li><a href="#" title="Go to theGreenville-Idaho WeatherSitehome page">Greenville</a></li>
+            <li><a href="./greenville.html" title="Go to theGreenville-Idaho WeatherSitehome page">Greenville</a></li>
         </ul>
     </nav>
-    <section id="status">Please be patient while I get your weather information.</section>
     <main id = "main-content" class = "hide">
+        <p id="status"></p>
         <section id="locInfo">
             <h2 id="locName"></h2>
             <div id="locZEL">
@@ -80,9 +80,8 @@
     <footer>
         &copy;2019 — The Weather Site
     </footer>
-    <script src="../weather/js/localdata.js"></script>
     <script src="../weather/js/functions.js"></script>
-    
+    <script src="../weather/js/geo_loc.js"></script>
 </body>
 
 </html>
