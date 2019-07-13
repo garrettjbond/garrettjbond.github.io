@@ -22,9 +22,9 @@ const weatherDesc = "Rainy";
 // Set global variable for custom header required by NWS API
 var idHeader = {
     headers: {
-      "User-Agent": "Student Learning Project - gbond3@byui.edu"
+        "User-Agent": "Student Learning Project - gbond3@byui.edu"
     }
-  };
+};
 
 var storage = window.localStorage;
 
@@ -36,7 +36,7 @@ const keyWord = getCondition(weatherDesc);
 changeSumaryImage(keyWord);
 const feet = convertMeters(value);
 // Get the next hour based on the current time
-let date = new Date(); 
+let date = new Date();
 let nextHour = date.getHours() + 1;
 
 //Calculate windchill
@@ -46,6 +46,9 @@ function buildWC(speed, temp) {
     // Compute the windchill
     let wc = 35.74 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16);
     console.log(wc);
+    console.log(temp);
+    console.log(speed);
+
 
     // Round the answer down to integer
     wc = Math.floor(wc);
@@ -117,6 +120,7 @@ function windDial(direction) {
 
 //Gets the condition based off of phrase
 function getCondition(weatherDesc) {
+    console.log(weatherDesc);
     switch (weatherDesc.toLowerCase()) {
         case "cloudy":
         case "overcast":
@@ -138,10 +142,14 @@ function getCondition(weatherDesc) {
             console.log("snowy", weatherDesc);
             return "snow";
             break;
+        case "mostly clear":
         case "clear":
             console.log("clear", weatherDesc);
             return "clear";
             break;
+        default:
+            console.log(weatherDesc);
+            return "unavailable";        
 
     }
 }
@@ -200,22 +208,22 @@ function convertMeters(value) {
 
 
 //Convert and format hours to a 12 hour format.
-function format_time(hour){
-    if(hour > 23){ 
-        hour -= 24; 
-       } 
-       let amPM = (hour > 11) ? "pm" : "am"; 
-       if(hour > 12) { 
-        hour -= 12; 
-       } 
-       if(hour == 0) { 
-        hour = "12"; 
-       } 
-       return hour + amPM;
+function format_time(hour) {
+    if (hour > 23) {
+        hour -= 24;
+    }
+    let amPM = (hour > 11) ? "pm" : "am";
+    if (hour > 12) {
+        hour -= 12;
+    }
+    if (hour == 0) {
+        hour = "12";
+    }
+    return hour + amPM;
 }
 
 // Build the hourly temperature list
-function buildHourlyData(nextHour,hourlyTemps) {
+function buildHourlyData(nextHour, hourlyTemps) {
     // Data comes from a JavaScript object of hourly temp name - value pairs
     // Next hour should have a value between 0-23
     // The hourlyTemps variable holds an array of temperatures
@@ -226,90 +234,219 @@ function buildHourlyData(nextHour,hourlyTemps) {
     for (let i = 1, x = hourlyTemps.length; i < x; i++) {
         hourlyListItems += '<li> | ' + format_time(nextHour + i) + ': ' + hourlyTemps[i] + '&deg;F</li>';
     }
-     console.log('HourlyList is: ' + hourlyListItems);
-     return hourlyListItems;
+    console.log('HourlyList is: ' + hourlyListItems);
+    return hourlyListItems;
+}
+
+function getHourly() {
+    fetch(storage.getItem("locHourly"), idHeader)
+        .then(function (response) {
+            if (response.ok) {
+                return response.json();
+            }
+            throw new ERROR('Response not OK.');
+        })
+        .then(function (data) {
+            console.log(data);
+            var hourlyArray = [];
+            let curLow = 200;
+            let curHigh = -200;
+            for (let i = 0; i < 13; i++) {
+                if(curLow > data.properties.periods[i].temperature){
+                    curLow = data.properties.periods[i].temperature;
+                }
+                if(curHigh < data.properties.periods[i].temperature){
+                    curHigh = data.properties.periods[i].temperature;
+                }
+                hourlyArray.push(
+                    data.properties.periods[i].temperature
+                );
+            }
+            const formattedHourly = buildHourlyData(data.properties.periods[0].startTime, hourlyArray)
+            storage.setItem("locHourlyArray", formattedHourly);
+            console.log(hourlyArray);
+            storage.setItem('locWindDirection', data.properties.periods["0"].windDirection);
+            storage.setItem('curLow', curLow);
+            storage.setItem('curHigh', curHigh);
+
+            buildPage();
+        })
+
+
+}
+
+
+
+function buildPage() {
+    const curWindSt = storage.getItem('locWindSpeed');
+    const wDirection = storage.getItem('locWindDirection');
+    const summaryTitle = storage.getItem('locTextDescription');
+    const elev = storage.getItem('locElevation');
+    const hourlyArrayApi = storage.getItem('locHourlyArray');
+    const curTempE = storage.getItem('locTemperature');
+    const locPstlCode = storage.getItem('locZipCodeApi');
+    const lat = storage.getItem('locLatApi');
+    const long = storage.getItem('locLongApi');
+    const curLow = storage.getItem('curLow');
+    const curHigh = storage.getItem('curHigh');
+    
+    const locName = storage.getItem('locName');
+    const locState = storage.getItem('locState');
+
+    buildWC(curWindSt, curTempE);
+    windDial(wDirection);
+    const keyWord = getCondition(summaryTitle);
+    console.log(keyWord);
+    changeSumaryImage(keyWord);
+    const feet = convertMeters(elev);
+    console.log(hourlyArrayApi);
+
+    // Put them together
+    let fullName = locName + ', ' + locState;
+    let fullCoordinates = parseFloat(long).toFixed(2) + ', ' + parseFloat(lat).toFixed(2);
+    // See if it worked
+    console.log('fullName is: ' + fullName);
+    console.log('Lat and long: ' + fullCoordinates);
+
+    // ************ Display the content ******************************
+    // Set the title with the location name at the first
+    // Gets the title element so it can be worked with
+    console.log("test4");
+    let pageTitle = document.getElementById('page-title');
+    // Create a text node containing the full name 
+    let fullNameNode = document.createTextNode(fullName);
+    // inserts the fullName value before any other content that might exist
+    pageTitle.insertBefore(fullNameNode, pageTitle.childNodes[0]);
+    // When this is done the title should look something like this:
+    // Greenville, SC | The Weather Site
+
+    console.log("test4.5");
+    // Set the Location information
+    // Get the h1 to display the city location
+    let contentHeading = document.getElementById('locName');
+    contentHeading.innerHTML = fullName;
+    console.log("test5");
+    let areaCode = document.getElementById('locPstlCode');
+    areaCode.innerHTML = locPstlCode;
+    let areaElevation = document.getElementById('elev');
+    areaElevation.innerHTML = elev + " ft.";
+    let areaCoord = document.getElementById('coordinates');
+    areaCoord.innerHTML = fullCoordinates;
+    // The h1 in main h1 should now say "Greenville, SC"
+
+    // Set the temperature information
+    let curTemp = document.getElementById("curTempE");
+    curTemp.innerHTML = curTempE + "&deg; F";
+    let highTemp = document.getElementById("curHigh");
+    highTemp.innerHTML = curHigh + "&deg;";
+    let lowTemp = document.getElementById("curLow");
+    lowTemp.innerHTML = curLow + "&deg;";
+
+  // Set the wind information
+    let windStatus = document.getElementById("curWindSt");
+    windStatus.innerHTML = curWindSt + " mph";
+    let windDirection = document.getElementById("windDirection");
+    windDirection.innerHTML = wDirection;
+    let windGusts = document.getElementById("gusts");
+    windGusts.innerHTML = curWindSt + " mph";
+    
+    let hourly = document.getElementById("hourlyTemp");
+    hourly.innerHTML = hourlyArrayApi;
+
+    document.getElementById("status").classList.add('hide');
+    document.getElementById("main-content").classList.remove('hide');
+
 }
 
 function getLocation(locale) {
-    const URL = "https://api.weather.gov/points/" + locale; 
+    const URL = "https://api.weather.gov/points/" + locale;
     // NWS User-Agent header (built above) will be the second parameter 
-    fetch(URL, idHeader) 
-    .then(function(response){
-      if(response.ok){ 
-       return response.json(); 
-      } 
-      throw new ERROR('Response not OK.');
-    })
-    .then(function (data) { 
-      // Let's see what we got back
-      console.log('Json object from getLocation function:'); 
-      console.log(data);
-      // Store data to localstorage 
-      storage.setItem("locName", data.properties.relativeLocation.properties.city); 
-      storage.setItem("locState", data.properties.relativeLocation.properties.state); 
-   
-      // Next, get the weather station ID before requesting current conditions 
-      // URL for station list is in the data object 
-      let stationsURL = data.properties.observationStations; 
-      // Call the function to get the list of weather stations
-      getStationId(stationsURL); 
-     }) 
-    .catch(error => console.log('There was a getLocation error: ', error)) 
-   } // end getLocation function
+    fetch(URL, idHeader)
+        .then(function (response) {
+            if (response.ok) {
+                return response.json();
+            }
+            throw new ERROR('Response not OK.');
+        })
+        .then(function (data) {
+            // Let's see what we got back
+            console.log('Json object from getLocation function:');
+            console.log(data);
+            // Store data to localstorage 
 
-   // Gets weather station list and the nearest weather station ID from the NWS API
-function getStationId(stationsURL) { 
+            storage.setItem("locHourly", data.properties.forecastHourly);
+            storage.setItem("locName", data.properties.relativeLocation.properties.city);
+            storage.setItem("locState", data.properties.relativeLocation.properties.state);
+
+            // Next, get the weather station ID before requesting current conditions 
+            // URL for station list is in the data object 
+            let stationsURL = data.properties.observationStations;
+            // Call the function to get the list of weather stations
+            getStationId(stationsURL);
+            getHourly();
+        })
+        .catch(error => console.log('There was a getLocation error: ', error))
+} // end getLocation function
+
+// Gets weather station list and the nearest weather station ID from the NWS API
+function getStationId(stationsURL) {
     // NWS User-Agent header (built above) will be the second parameter 
-    fetch(stationsURL, idHeader) 
-    .then(function(response){
-      if(response.ok){ 
-       return response.json(); 
-      } 
-      throw new ERROR('Response not OK.');
-    })
-    .then(function (data) { 
-      // Let's see what we got back
-      console.log('From getStationId function:'); 
-      console.log(data);
-    
-      // Store station ID and elevation (in meters - will need to be converted to feet) 
-      let stationId = data.features[0].properties.stationIdentifier; 
-      let stationElevation = data.features[0].properties.elevation.value; 
-      console.log('Station and Elevation are: ' + stationId, stationElevation); 
-   
-      // Store data to localstorage 
-      storage.setItem("stationId", stationId); 
-      storage.setItem("stationElevation", stationElevation); 
-   
-      // Request the Current Weather for this station 
-      getWeather(stationId);
-     }) 
-    .catch(error => console.log('There was a getStationId error: ', error)) 
-   } // end getStationId function
+    fetch(stationsURL, idHeader)
+        .then(function (response) {
+            if (response.ok) {
+                return response.json();
+            }
+            throw new ERROR('Response not OK.');
+        })
+        .then(function (data) {
+            // Let's see what we got back
+            console.log('From getStationId function:');
+            console.log(data);
+
+            // Store station ID and elevation (in meters - will need to be converted to feet) 
+            let stationId = data.features[0].properties.stationIdentifier;
+            let stationElevation = data.features[0].properties.elevation.value;
+            console.log('Station and Elevation are: ' + stationId, stationElevation);
+
+            // Store data to localstorage 
+            storage.setItem("stationId", stationId);
+            storage.setItem("stationElevation", stationElevation);
+
+            // Request the Current Weather for this station 
+            getWeather(stationId);
+        })
+        .catch(error => console.log('There was a getStationId error: ', error))
+} // end getStationId function
 
 
-   // Gets current weather information for a specific weather station from the NWS API
-    function getWeather(stationId) { 
+// Gets current weather information for a specific weather station from the NWS API
+function getWeather(stationId) {
     // This is the URL for current observation data 
     const URL = 'https://api.weather.gov/stations/' + stationId + '/observations/latest';
     // NWS User-Agent header (built above) will be the second parameter 
-    fetch(URL, idHeader) 
-    .then(function(response){
-      if(response.ok){ 
-       return response.json(); 
-      } 
-      throw new ERROR('Response not OK.');
-    })
-    .then(function (data) { 
-      // Let's see what we got back
-      console.log('From getWeather function:'); 
-      console.log(data);
-    
-      // Store weather information to localStorage 
-   
-   
-      // Build the page for viewing 
-      
-     }) 
-    .catch(error => console.log('There was a getWeather error: ', error)) 
-   } // end getWeather function
+    fetch(URL, idHeader)
+        .then(function (response) {
+            if (response.ok) {
+                return response.json();
+            }
+            throw new ERROR('Response not OK.');
+        })
+        .then(function (data) {
+            // Let's see what we got back
+            console.log('From getWeather function:');
+            console.log(data);
+
+            // Store weather information to localStorage 
+            storage.setItem('locWindSpeed', data.properties.windSpeed.value);
+            
+            storage.setItem('locTextDescription', data.properties.textDescription);
+            storage.setItem('locElevation', data.properties.elevation.value);
+            storage.setItem('locTemperature', data.properties.temperature.value);
+          
+            console.log(data.properties.periods["0"].windDirection);
+
+            // Build the page for viewing 
+
+        })
+        .catch(error => console.log('There was a getWeather error: ', error))
+} // end getWeather function

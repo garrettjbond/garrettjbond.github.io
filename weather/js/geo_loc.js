@@ -24,6 +24,8 @@ function getGeoLocation(){
          // Combine the values
          const locale = lat + "," + long;
          console.log(`Lat and Long are: ${locale}.`);
+         storage.setItem('locLatApi', lat );
+         storage.setItem('locLongApi', long);
          getLocation(locale);
       
         })
