@@ -103,6 +103,20 @@ img{
     
 }
 
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#css-contentInfo{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#css-price{
+    color: #de2226;
+}
+
 /* 3. Mobile First*/
 
 
