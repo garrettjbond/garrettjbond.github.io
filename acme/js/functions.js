@@ -17,10 +17,10 @@ function fetchData(navListItems) {
     })
     .then(function (data) {
         console.log(data.navList);
-        let naviListItems = '<li><a href = "#"> Home </a></li>';
+        let naviListItems = '<li><a href = "./index.html"> Home </a></li>';
         // Build the remaining list items using a for loop
         data.navList.map(function(nav, idx){
-            naviListItems += '<li><a href = "?' + nav + '">' + nav + '</li>';
+            naviListItems += '<li><a href = "./template.html?' + nav + '">' + nav + '</li>';
             console.log(nav);
         })
         const pageName = window.location.search.slice(1);
@@ -65,7 +65,7 @@ function fetchData(navListItems) {
 
         //Price
         let pagePrice = document.createElement("p");
-        pagePrice.innerHTML = "<b> Price: $</b>" +  data[pageName].price;
+        pagePrice.innerHTML = "<b> Price: $" +  data[pageName].price + "</b>";
         pagePrice.setAttribute("id", "css-price");
         contentInfo.appendChild(pagePrice);
         

@@ -75,7 +75,7 @@ hr{
     
 }
 
-img{
+#logo{
     width: 50%;
 }
 
@@ -117,6 +117,24 @@ a{
     color: #de2226;
 }
 
+#css-image{
+    height: 260px;
+    margin: auto;
+    display: block;
+}
+
+p{
+    font-family: Arial, sans-serif
+}
+
+#css-price{
+    font-size: 3em;
+}
+
+#content-header{
+    padding-left: 10px;
+}
+
 /* 3. Mobile First*/
 
 
@@ -149,6 +167,33 @@ a{
     #content-header{
         font-size: 3em;
         margin: 5px;
+    }
+
+    /* #css-contentInfo{
+        padding-left: 5px;
+        padding-right: 5px;
+    } */
+    
+    #css-image{
+        height: 260px;
+        margin: auto;
+        display: block;
+    }
+
+    #css-content{
+        display: flex;
+        padding-right: 140px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+    }
+
+    #css-contentInfo{
+        width: 50%;
+        max-width: 700px;
+        padding-left: 30px;
+        font-weight: 400;
+
     }
 
 }
