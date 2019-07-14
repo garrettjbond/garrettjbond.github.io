@@ -46,6 +46,72 @@ hr{
     margin-right: 5px;
 }
 
+#feature-Promo{
+    background-image: url(../images/site/feature.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+   justify-content: flex-end;
+    
+}
+
+.recipe-image{
+    display: block;
+    background-color: #b5b5b5;
+    margin: auto;
+}
+
+.recipe-links{
+   color: #0000ee;
+}
+
+#feature-Promo-Info{
+  list-style: none;
+  color: #990033;
+  height: 175px;
+  padding-right: 1%;
+  
+  width: 159px;
+  height: 150px;
+  /* padding-left: 30px; */
+  font-size: .8em;
+  background-color: rgba(188, 229, 243, 0.7);
+
+
+}
+.recipe-image-container{
+    background-color: #b5b5b5;
+    
+}
+
+#featured-recipes-list li{
+    width: 40%;
+}
+#featured-recipes-list{
+    padding-left: 0px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 200px;
+    max-width: 500px;
+    list-style-type: none;
+    margin-left: -30px;
+    justify-content: space-around;
+}
+
+
+
+#feature-Promo-Info h2{
+    margin-bottom: 0px;
+    font-size: 1.7em;
+}
+
+#feature-promo-list{
+    list-style-type: none;
+    padding-left: 0px;
+    margin-top: 0px;
+}
+
 #main-wrapper{
     background-color:#ffffff;
 }
@@ -77,6 +143,11 @@ hr{
 
 #logo{
     width: 50%;
+}
+
+#acme-rocket-list{
+    padding-left: 0px;
+    padding-right: 30px;
 }
 
 #content-header{
@@ -135,7 +206,26 @@ p{
     padding-left: 10px;
 }
 
+#home-content h2 {
+    font-size: 2em;
+    margin-left: -25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#feature-button{
+    background-color: lightyellow;
+    border-radius: 20px;
+    width: 70%;
+    height: 20%;
+}
+
 /* 3. Mobile First*/
+#home-content{
+    display: flex;
+    flex-direction: column-reverse;
+    padding-left: 30px;
+}
 
 
 
@@ -153,15 +243,43 @@ p{
         width: 45%;
     }
 
+    #feature-Promo-Info h2{
+        margin-bottom: 0px;
+        font-size: 3em;
+    }
+
+    #home-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
     #navBarList{
         justify-content: flex-start;
         margin-top: 0px;
         margin-bottom: 0px;
     }
+    #feature-Promo-Info h2{
+        
+        font-size: 3em;
+    }
+
+    #feature-Promo{
+        justify-content: flex-start;
+    }
 
     #navBarList li{
         padding-right: 30px;
         font-size: 1.8em;
+    }
+
+    #feature-Promo-Info{
+        list-style: none;
+        color: #990033;
+        height: 400px;
+        width: 50%;
+        margin-left: 59%;
+        background-color: rgba(188, 229, 243, 0);
     }
 
     #content-header{
@@ -190,7 +308,6 @@ p{
 
     #css-contentInfo{
         width: 50%;
-        max-width: 700px;
         padding-left: 30px;
         font-weight: 400;
 
