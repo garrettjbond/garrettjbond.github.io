@@ -20,6 +20,9 @@ function fetchData(navListItems) {
         let naviListItems = '<li><a href = "./index.html"> Home </a></li>';
         // Build the remaining list items using a for loop
         data.navList.map(function(nav, idx){
+          //I HAVE TO HAVE THE CONTENT PAGES USE THE INDEX.HTML INSTEAD OF TEMPLATE.HTML by using display: none when the pages are called. But I'm not sure how to do this conditionally
+          //They want the page to not reload load by using "a href = '#' + nav" on the line below
+          //Add alt text to images on the content pages
             naviListItems += '<li><a href = "./template.html?' + nav + '">' + nav + '</li>';
             console.log(nav);
         })

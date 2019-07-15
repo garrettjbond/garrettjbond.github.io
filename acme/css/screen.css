@@ -213,11 +213,10 @@ p{
     margin-bottom: 10px;
 }
 
-#feature-button{
-    background-color: lightyellow;
-    border-radius: 20px;
-    width: 70%;
-    height: 20%;
+#actionbtn{
+    max-width: 80%;
+    padding-top: 5px;
+
 }
 
 /* 3. Mobile First*/
