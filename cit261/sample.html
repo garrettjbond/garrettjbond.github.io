@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- This is a practice assignment in class -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+
+        }
+
+        #formDisplay{
+            display: flex;      
+            flex-direction: column;  
+            margin: auto;
+            max-width: 200px;
+            padding: 20px;
+            border-style: solid;
+            border-radius: 10px;
+        }
+
+        #buttonSubmit{
+            background-color:aqua;
+        }
+
+
+    </style>
 </head>
 <body>
-    
+    <h1>Contact Us</h1>
+    <form id = "formDisplay">
+        <label for="name">Name:</label>
+        <input type="text" name="name">
+        <label for="email">Email:</label>
+        <input type="text" name="email">
+        <label for="message">Message:</label>
+        <input type="text" name="message">
+        <br>
+        <input id="buttonSubmit" type="submit" name="Send">
+    </form>
 </body>
 </html>
