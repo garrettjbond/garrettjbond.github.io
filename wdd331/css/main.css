@@ -19,8 +19,31 @@
 @import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
 
 /* 2. General Stying*/
+*{
+    box-sizing: border-box;
+}
 
-header{
+html{
+    height: 100%;
+}
+
+hr{
+    display: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+body{
+    font-family: 'Helvetica', 'Arial', 'sans-serif';
+    font-size: 1.2em;
+    margin:0;
+    padding:0;
+    height: 100%;
+}
+
+header {
     background-color: #6495ED;
     color:  #FAEBD7;
 }
@@ -34,6 +57,10 @@ main{
 
 ul{
     list-style-type: none;
+}
+
+nav ul{
+    margin: 0px;
 }
 
 a:link, a:visited{
@@ -79,16 +106,23 @@ article a:hover{
 
 h1, h2, h3, h4, h5, h6{
     font-family: Lora;
+    margin: 0px;
 }
 
-body{
-    font-family: 'Helvetica', 'Arial', 'sans-serif';
-}
+
 
 article{
     background-color: white;    
     width: 600px;
     padding: 30px 10px 30px 10px;
-    margin: auto;
+    margin: 3% auto 3% auto;
+}
+
+@media screen {
+
+
+
+
+
 }
 
