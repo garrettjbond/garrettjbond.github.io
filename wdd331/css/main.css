@@ -35,6 +35,13 @@ hr{
     background-color: #FAEBD7;
     border: none;
     height: 1.5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+li{
+    padding-top: 10px;
 }
 
 
@@ -49,6 +56,7 @@ body{
 header {
     background-color: #6495ED;
     color:  #FAEBD7;
+    text-align: right;
 }
 
 main{
@@ -79,16 +87,16 @@ p > a:hover{
     text-decoration: underline;
 }
 
-nav a:link, nav a:visited{
+header a:link, header a:visited{
     color: #FAEBD7;
     text-decoration: none;
 }
 
-nav a:active{
+header a:active{
     color: #DEB887;
 }
 
-nav a:hover{
+header a:hover{
     color: white;
     text-decoration: underline;
 }
@@ -112,19 +120,35 @@ h1, h2, h3, h4, h5, h6{
     margin: 0px;
 }
 
+h1{
+    font-size: 1.75em;
+}
+
+
+figure{
+    margin: 15% 15% 3% 15%;
+}
+
+/*3. Mobile Styling*/
 article{
     background-color: white;    
-    width: 600px;
-    padding: 3% 3% 4% 3%;
-    margin: 3% auto 3% auto;
+   
+    padding: 6% 5% 6% 5%;
+    margin: 8% 4% 3% 5%;
     box-shadow: 0px 3px 3px 0px #c4c4c4;
 }
 
-@media screen {
-
-
-
-
-
+header{
+    padding: 10%;
+  
 }
 
+/*3. Full Screen Styling*/
+@media screen and (min-width: 500px){
+
+body > div{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+}
