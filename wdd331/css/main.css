@@ -129,6 +129,10 @@ figure{
     margin: 15% 15% 3% 15%;
 }
 
+.post-date{
+    color: gray;
+}
+
 /*3. Mobile Styling*/
 article{
     background-color: white;    
@@ -148,7 +152,20 @@ header{
 
 body > div{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+header{
+    padding: 4%;
+    max-width: 33%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+article{
+    max-width: 90%;
+    padding: 6% 5% 6% 5%;
+    margin: 4% auto 1.5% auto;
 }
 
 }
