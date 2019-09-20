@@ -27,13 +27,16 @@ html{
     height: 100%;
 }
 
-hr{
-    display: none;
-}
-
 img{
     max-width: 100%;
 }
+
+hr{
+    background-color: #FAEBD7;
+    border: none;
+    height: 1.5px;
+}
+
 
 body{
     font-family: 'Helvetica', 'Arial', 'sans-serif';
@@ -63,16 +66,16 @@ nav ul{
     margin: 0px;
 }
 
-a:link, a:visited{
+p > a:link, a:visited{
     color: #6495ED;
     text-decoration: none;
 }
 
-a:active{
+p > a:active{
     color: #DEB887;
 }
 
-a:hover{
+p > a:hover{
     text-decoration: underline;
 }
 
@@ -90,16 +93,16 @@ nav a:hover{
     text-decoration: underline;
 }
 
-article a:link, article a:visited{
+h2 a:link, h2 a:visited{
     color: black;
     text-decoration: none;
 }
 
-article a:active{
+h2 a:active{
     color: #DEB887;
 }
 
-article a:hover{
+h2 a:hover{
     color: #6495ED;
     text-decoration: underline;
 }
@@ -108,8 +111,6 @@ h1, h2, h3, h4, h5, h6{
     font-family: Lora;
     margin: 0px;
 }
-
-
 
 article{
     background-color: white;    
