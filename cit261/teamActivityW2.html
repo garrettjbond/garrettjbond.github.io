@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="inputClick">
+    <input type="text" id="inputPlus">
+    <button onclick="addNumbers()">+</button>
+    <button onclick="difference()">-</button>
+    <button onclick="multiplyNumbers()">x</button>
+    <div id="emptyDiv">
+    </div>
+    <script>
+        //step 1
+        function readInput() {
+            let inputClick = document.getElementById('inputClick').value;
+            document.getElementById("emptyDiv").innerHTML = inputClick;
+        }
+        //step 2
+        function doSum() {
+            var result = 0;
+            let x = document.getElementById('inputClick').value;
+
+            for (var i = 1; i <= x; i++) {
+                result += i;
+            }
+
+            document.getElementById("emptyDiv").innerHTML = result;
+        }
+
+        //step 3
+        function addNumbers() {
+            let a = document.getElementById('inputClick').value;
+            let b = document.getElementById('inputPlus').value;
+
+
+
+            let sum = parseInt(a) + parseInt(b);
+
+            document.getElementById('emptyDiv').innerHTML = sum;
+        }
+
+        //strech 1
+        let difference = function() {
+            document.getElementById('emptyDiv').innerHTML=(parseInt(document.getElementById('inputClick').value) - (document.getElementById('inputPlus')
+                .value));
+        }
+        // let a = document.getElementById('inputClick').value;
+        // let b = document.getElementById('inputPlus').value;  
+
+
+
+        // let difference = parseInt(a) - parseInt(b); 
+
+        // document.getElementById('emptyDiv').innerHTML = difference;
+
+
+        var multiplyNumbers = () => document.getElementById('emptyDiv').innerHTML=(parseInt(document.getElementById('inputClick').value) * (document.getElementById('inputPlus')
+                .value));
+
+
+
+        function multiplyNumbers() {
+            let a = document.getElementById('inputClick').value;
+            let b = document.getElementById('inputPlus').value;
+
+
+
+            let product = parseInt(a) * parseInt(b);
+
+            document.getElementById('emptyDiv').innerHTML = product;
+        }
+    </script>
+</body>
+
+</html>
