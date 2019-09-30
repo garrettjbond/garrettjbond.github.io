@@ -1,0 +1,17 @@
+[class="help"]::before{
+    content: "(";
+}
+[class="help"]::after{
+    content: ")";
+}
+
+/*The instructions were vague: This rule will hide any paragraphs in a fieldset after the 2nd fieldset */
+fieldset:nth-of-type(3) p{
+    display: none;
+}
+
+/* This rule will hide any paragraphs in a fieldset after the 2nd paragraph */
+fieldset p:nth-child(n+4){
+    display: none;
+}
+
