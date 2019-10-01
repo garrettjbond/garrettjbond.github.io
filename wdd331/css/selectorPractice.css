@@ -15,3 +15,7 @@ fieldset p:nth-child(n+4){
     display: none;
 }
 
+li:nth-child(n+6){
+    background-color: blue;
+}
+
