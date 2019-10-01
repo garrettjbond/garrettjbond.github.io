@@ -10,15 +10,26 @@
 
 <body>
     <h1>Unit 1: Practice Test (Grade Checker)</h1>
-    <script type="text/javascript" src="./js/unit1js.js"></script>
     <ol>
         <li>Prompt the user for his grade.</li>
         <li>Check the user's input and tell them if he passed or failed</li>
     </ol>
-
     <form>
-        What was your grade on the last test? <input type="text" name="gradeInput">
+        What was your grade on the last test? <input type="text" id="gradeInput" name="gradeInput">
     </form>
+    <button type="button" onclick="checkInput()">Check my Grade!</button>
+    <div id = "response"></div>
+    <script>
+        function checkInput(){
+            let userGrade = document.getElementById("gradeInput").value;
+            if(userGrade >= 60){
+                document.getElementById("response").innerHTML = 'pass';
+            }
+            else{
+                document.getElementById("response").innerHTML = 'fail';
+            }    
+        }
+    </script>
 </body>
 
 </html>
