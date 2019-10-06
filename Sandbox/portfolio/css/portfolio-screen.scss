@@ -24,7 +24,7 @@ $body: white;
 $primary: #2699FB;
 $bodyAccent: #B1B1B1;
 
-/************** 2. General Styles *****************/
+/************** 2. General/Mobile Styles *****************/
 *{
     color: white;
     text-align: center;
@@ -34,15 +34,17 @@ $bodyAccent: #B1B1B1;
 nav{
     background-color: $primary;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 0px;
+    padding-right: 6%;
+    padding-left: 6%;
     height: 70px;
     
 }
 
 a{
     text-decoration: none;
+
 }
 
 nav > h1, nav > p{
@@ -76,5 +78,34 @@ main{
 footer{
     background-color: $primary;
     padding: 30px;
+}
+
+#hamburgerMenu{
+    height: 40px;
+    width: 40px;
+}
+
+// Full Desktop Site Styling
+@media screen and (min-width: 500px){
+    footer{
+        padding-right: 10%;
+        padding-left: 10%;
+    } 
+
+    article{
+        width: 40%
+    }
+    
+    nav{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    #mainWrapper{
+        display: flex;
+        justify-content: center;
+    }
 }
 
