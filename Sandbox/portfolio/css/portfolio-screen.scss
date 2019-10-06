@@ -25,10 +25,28 @@ $primary: #2699FB;
 $bodyAccent: #B1B1B1;
 
 /************** 2. General/Mobile Styles *****************/
-*{
+body{
+    padding: 0;
+    margin: 0;
+    height: auto;
     color: white;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+hr{
+    height: 2px;
+    width: 75%;
+    color: white;
+    background-color: white;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#projectHr{
+    color: $primary;
+    background-color: $primary;
 }
 
 nav{
@@ -61,15 +79,13 @@ header, article{
 
 article{
     margin: 4%;
- 
 }
 
-hr{
-    height: .5px;
-    width: 75%;
-    color: white;
-    background-color: white;
+article:hover{
+    background-color: black;
 }
+
+
 
 main{
     background-color: $body;
@@ -85,6 +101,11 @@ footer{
     width: 40px;
 }
 
+#projectHeader{
+    color: $primary;
+    margin-bottom: 0;
+}
+
 // Full Desktop Site Styling
 @media screen and (min-width: 500px){
     footer{
@@ -93,7 +114,8 @@ footer{
     } 
 
     article{
-        width: 40%
+        width: 40%;
+        margin-top: 2%;
     }
     
     nav{
@@ -107,5 +129,17 @@ footer{
         display: flex;
         justify-content: center;
     }
+    header{
+        height: 400px;
+    }
+
+    #projectHeader{
+        margin-bottom: 0;
+    }
+
+    #projectHr{
+        width: 50%;
+    }
+
 }
 
