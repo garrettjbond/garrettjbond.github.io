@@ -23,6 +23,7 @@
 $body: white;
 $primary: #2699FB;
 $bodyAccent: #B1B1B1;
+$secondary: rgb(255, 132, 1);
 
 /************** 2. General/Mobile Styles *****************/
 body{
@@ -89,11 +90,9 @@ article:hover{
 }
 @keyframes changeBackground{
     100%{
-        background-color: black;
+        background-color: $secondary;
     }
 }
-
-
 
 main{
     background-color: $body;
