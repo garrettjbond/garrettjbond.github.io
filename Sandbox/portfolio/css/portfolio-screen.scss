@@ -21,9 +21,9 @@
 /*@import url('');
 /*1.3 Variables*/
 $body: white;
-$primary: #2699FB;
+$primary: #a900b5;
 $bodyAccent: #B1B1B1;
-$secondary: rgb(255, 132, 1);
+$secondary: #f7ff58;
 
 /************** 2. General/Mobile Styles *****************/
 body{
@@ -34,6 +34,8 @@ body{
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
 
 hr{
     height: 2px;
@@ -91,11 +93,17 @@ article:hover{
 @keyframes changeBackground{
     100%{
         background-color: $secondary;
+        color: #1a1a76;
     }
 }
 
 main{
     background-color: $body;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20%;
+    margin-left: 20%;
 }
 
 footer{
@@ -113,18 +121,21 @@ footer{
     margin-bottom: 0;
 }
 
-// Full Desktop Site Styling
-@media screen and (min-width: 500px){
-    footer{
-        padding-right: 10%;
-        padding-left: 10%;
-    } 
+a > article{
+    color: white;
+    margin: 10%;
+}
 
-    article{
-        width: 40%;
-        margin-top: 2%;
+// Medium Desktop Site Styling
+@media screen and (min-width: 500px){
+    body{
+        font-size: 1.2vw;
     }
-    
+    footer{
+        padding-right: 25%;
+        padding-left: 25%;
+    }
+
     nav{
         display: flex;
         justify-content: space-between;
@@ -132,10 +143,6 @@ footer{
         padding-right: 5%;
     }
 
-    #mainWrapper{
-        display: flex;
-        justify-content: center;
-    }
     header{
         height: 400px;
     }
@@ -148,5 +155,25 @@ footer{
         width: 50%;
     }
 
-}
+    #articleContainer{
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
 
+    .articleWrapper{
+        margin: 0;
+    }
+
+    .articleItem{
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
+    }
+
+    article{
+        margin: auto;
+        min-width: 500px;
+        min-height: 500px;
+    }
+
+}

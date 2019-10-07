@@ -40,12 +40,12 @@ hr {
 }
 
 #projectHr {
-  color: #2699FB;
-  background-color: #2699FB;
+  color: #a900b5;
+  background-color: #a900b5;
 }
 
 nav {
-  background-color: #2699FB;
+  background-color: #a900b5;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -83,15 +83,21 @@ article:hover {
 
 @keyframes changeBackground {
   100% {
-    background-color: #ff8401;
+    background-color: #f7ff58;
+    color: #1a1a76;
   }
 }
 main {
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 20%;
+  margin-left: 20%;
 }
 
 footer {
-  background-color: #2699FB;
+  background-color: #a900b5;
   padding: 30px;
 }
 
@@ -101,19 +107,23 @@ footer {
 }
 
 #projectHeader {
-  color: #2699FB;
+  color: #a900b5;
   margin-bottom: 0;
 }
 
+a > article {
+  color: white;
+  margin: 10%;
+}
+
 @media screen and (min-width: 500px) {
-  footer {
-    padding-right: 10%;
-    padding-left: 10%;
+  body {
+    font-size: 1.2vw;
   }
 
-  article {
-    width: 40%;
-    margin-top: 2%;
+  footer {
+    padding-right: 25%;
+    padding-left: 25%;
   }
 
   nav {
@@ -121,11 +131,6 @@ footer {
     justify-content: space-between;
     padding-left: 5%;
     padding-right: 5%;
-  }
-
-  #mainWrapper {
-    display: flex;
-    justify-content: center;
   }
 
   header {
@@ -138,6 +143,27 @@ footer {
 
   #projectHr {
     width: 50%;
+  }
+
+  #articleContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .articleWrapper {
+    margin: 0;
+  }
+
+  .articleItem {
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+  }
+
+  article {
+    margin: auto;
+    min-width: 500px;
+    min-height: 500px;
   }
 }
 
