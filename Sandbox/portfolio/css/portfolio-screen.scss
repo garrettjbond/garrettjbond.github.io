@@ -79,10 +79,18 @@ header, article{
 
 article{
     margin: 4%;
+    border-radius: 15px;
 }
 
 article:hover{
-    background-color: black;
+    animation-name: changeBackground;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+}
+@keyframes changeBackground{
+    100%{
+        background-color: black;
+    }
 }
 
 
