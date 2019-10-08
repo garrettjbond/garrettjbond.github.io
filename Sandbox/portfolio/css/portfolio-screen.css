@@ -47,10 +47,8 @@ hr {
 nav {
   background-color: #8b0394;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding-right: 6%;
-  padding-left: 6%;
   height: 70px;
 }
 
@@ -72,12 +70,14 @@ header, article {
 
 header {
   background-image: linear-gradient(#8b0394, white);
-  height: 1200px;
+  height: 800px;
 }
 
 article {
   margin: 4%;
   border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 article:hover {
@@ -88,8 +88,8 @@ article:hover {
 
 @keyframes changeBackground {
   100% {
-    background-color: #f7ff58;
-    color: #1a1a76;
+    background-color: #875053;
+    color: white;
   }
 }
 main {
@@ -99,11 +99,6 @@ main {
   justify-content: center;
   margin-right: 20%;
   margin-left: 20%;
-}
-
-footer {
-  background-color: #8b0394;
-  padding: 30px;
 }
 
 #hamburgerMenu {
@@ -126,6 +121,17 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+.primaryMe {
+  background-image: linear-gradient(to right, white, #8b0394, white);
+  padding: 30px;
+}
+
+.accentMe {
+  background-image: linear-gradient(to right, white, #8b0394, white);
+  color: white;
+  padding: 30px;
 }
 
 @media screen and (min-width: 500px) {
@@ -172,6 +178,10 @@ nav {
     margin: auto;
     min-width: 500px;
     min-height: 500px;
+  }
+
+  header {
+    height: 1100px;
   }
 }
 

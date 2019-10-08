@@ -23,7 +23,7 @@
 $body: white;
 $primary: #8b0394;
 $bodyAccent: #B1B1B1;
-$secondary: #f7ff58;
+$secondary: #875053;
 
 /************** 2. General/Mobile Styles *****************/
 body{
@@ -34,8 +34,6 @@ body{
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-
 
 hr{
     height: 2px;
@@ -55,12 +53,9 @@ hr{
 nav{
     background-color: $primary;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding-right: 6%;
-    padding-left: 6%;
-    height: 70px;
-    
+    height: 70px; 
 }
 
 a{
@@ -82,12 +77,14 @@ header, article{
 
 header{
     background-image: linear-gradient($primary, white);
-    height: 1200px;
+    height: 800px;
 }
 
 article{
     margin: 4%;
     border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 article:hover{
@@ -98,7 +95,7 @@ article:hover{
 @keyframes changeBackground{
     100%{
         background-color: $secondary;
-        color: #1a1a76;
+        color: white;
     }
 }
 
@@ -109,11 +106,6 @@ main{
     justify-content: center;
     margin-right: 20%;
     margin-left: 20%;
-}
-
-footer{
-    background-color: $primary;
-    padding: 30px;
 }
 
 #hamburgerMenu{
@@ -136,6 +128,21 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
+}
+
+.primaryMe{
+    background-image: linear-gradient(to right, white, $primary, white);
+    // background-color: $primary;
+    padding: 30px;
+
+}
+
+.accentMe{
+    background-image: linear-gradient(to right, white, $primary, white);
+    
+    // background-color: $bodyAccent;
+    color: white;
+    padding: 30px;
 }
 
 // #heroTitle{
@@ -186,6 +193,10 @@ nav {
         margin: auto;
         min-width: 500px;
         min-height: 500px;
+    }
+
+    header{
+        height: 1100px;
     }
 
 }
