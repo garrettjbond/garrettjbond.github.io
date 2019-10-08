@@ -124,13 +124,14 @@ nav {
 }
 
 .primaryMe {
-  background-color: #875053;
+  background-color: whitesmoke;
+  color: black;
   padding: 30px;
 }
 
 .accentMe {
-  background-color: #875053;
-  color: white;
+  background-color: whitesmoke;
+  color: black;
   padding: 30px;
 }
 
