@@ -21,7 +21,7 @@
 /*@import url('');
 /*1.3 Variables*/
 $body: white;
-$primary: #a900b5;
+$primary: #8b0394;
 $bodyAccent: #B1B1B1;
 $secondary: #f7ff58;
 
@@ -80,6 +80,11 @@ header, article{
     justify-content: center;
 }
 
+header{
+    background-image: linear-gradient($primary, white);
+    height: 1200px;
+}
+
 article{
     margin: 4%;
     border-radius: 15px;
@@ -126,10 +131,22 @@ a > article{
     margin: 10%;
 }
 
+nav {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+// #heroTitle{
+//     display: inline;
+//     border: 1px solid gray;
+// }
+
 // Medium Desktop Site Styling
 @media screen and (min-width: 500px){
     body{
-        font-size: 1.2vw;
+        font-size: 1.3em;
     }
     footer{
         padding-right: 25%;
@@ -142,11 +159,6 @@ a > article{
         padding-left: 5%;
         padding-right: 5%;
     }
-
-    header{
-        height: 400px;
-    }
-
     #projectHeader{
         margin-bottom: 0;
     }

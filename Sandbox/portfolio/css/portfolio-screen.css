@@ -40,12 +40,12 @@ hr {
 }
 
 #projectHr {
-  color: #a900b5;
-  background-color: #a900b5;
+  color: #8b0394;
+  background-color: #8b0394;
 }
 
 nav {
-  background-color: #a900b5;
+  background-color: #8b0394;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -68,6 +68,11 @@ header, article {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+header {
+  background-image: linear-gradient(#8b0394, white);
+  height: 1200px;
 }
 
 article {
@@ -97,7 +102,7 @@ main {
 }
 
 footer {
-  background-color: #a900b5;
+  background-color: #8b0394;
   padding: 30px;
 }
 
@@ -107,7 +112,7 @@ footer {
 }
 
 #projectHeader {
-  color: #a900b5;
+  color: #8b0394;
   margin-bottom: 0;
 }
 
@@ -116,9 +121,16 @@ a > article {
   margin: 10%;
 }
 
+nav {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 @media screen and (min-width: 500px) {
   body {
-    font-size: 1.2vw;
+    font-size: 1.3em;
   }
 
   footer {
@@ -131,10 +143,6 @@ a > article {
     justify-content: space-between;
     padding-left: 5%;
     padding-right: 5%;
-  }
-
-  header {
-    height: 400px;
   }
 
   #projectHeader {
