@@ -47,7 +47,7 @@ hr {
 nav {
   background-color: #8b0394;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 70px;
 }
@@ -124,12 +124,12 @@ nav {
 }
 
 .primaryMe {
-  background-image: linear-gradient(to right, white, #8b0394, white);
+  background-color: #875053;
   padding: 30px;
 }
 
 .accentMe {
-  background-image: linear-gradient(to right, white, #8b0394, white);
+  background-color: #875053;
   color: white;
   padding: 30px;
 }
@@ -146,9 +146,7 @@ nav {
 
   nav {
     display: flex;
-    justify-content: space-between;
-    padding-left: 5%;
-    padding-right: 5%;
+    justify-content: space-around;
   }
 
   #projectHeader {

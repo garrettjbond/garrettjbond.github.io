@@ -1,0 +1,24 @@
+.gridContainer{
+   display: grid;
+   grid-template-columns: 80px 80px 80px;
+   grid-template-rows: 80px 80px 80px;
+}
+
+.gridItem{
+    border: 1px solid black;
+    padding: 20px;
+    
+}
+
+.gridItem:nth-child(3n){
+    border-right: none;
+}
+.gridItem:nth-last-child(3n){
+    border-left: none;
+}
+.gridItem:nth-last-child(n+7){
+    border-top: none;
+}
+.gridItem:nth-child(n+7){
+    border-bottom: none;
+}
