@@ -5,9 +5,9 @@
 *  1.  Includes (fonts and supplementary stylesheets)
 *  1.1 Normalize
 *  1.2 Google fonts
-* test
-*  2.  General Styles (for all pages and devices)
 *
+*  2.  General Styles (for all pages and devices)
+* test
 *  3.  Mobile First (styles specific to small screens)
 *
 *  4.  Large Screen Styles (Media Queries begin here)
@@ -29,16 +29,16 @@ html {
 
 img {
   max-width: 100%;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
 }
 
 hr {
   background-color: #FAEBD7;
   border: none;
   height: 1.5px;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
   margin-top: 20px;
 }
 
@@ -86,17 +86,17 @@ nav ul {
   margin: 0px;
 }
 
-p > a:link, a:visited {
-  color: #6495ED;
-  text-decoration: none;
-}
-
 p > a:active {
   color: #DEB887;
 }
 
 p > a:hover {
   text-decoration: underline;
+}
+
+p > a:link, a:visited {
+  color: #6495ED;
+  text-decoration: none;
 }
 
 h2 a:link, h2 a:visited {
@@ -150,8 +150,8 @@ header {
   header {
     padding: 4%;
     min-width: 25%;
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
     font-size: 2.25vw;
   }
 
@@ -171,8 +171,8 @@ header {
   }
 
   figure, img {
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
   }
 }
 

@@ -26,8 +26,8 @@ $mainColor: #FAEBD7;
 
 /*1.4 Mix-ins*/
 @mixin center(){
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
 }
 
 /* 2. General Stying*/
@@ -124,17 +124,17 @@ nav ul{
     margin: 0px;
 }
 
-p > a:link, a:visited{
-    color: #6495ED;
-    text-decoration: none;
-}
-
 p > a:active{
     color: #DEB887;
 }
 
 p > a:hover{
     text-decoration: underline;
+}
+
+p > a:link, a:visited{
+    color: #6495ED;
+    text-decoration: none;
 }
 
 //!Another Example of Nesting
