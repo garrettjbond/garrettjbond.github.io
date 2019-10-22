@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="./javascript/toDo.js"></script>
+    <script src="./css/toDo.scss"></script>
 </head>
 <body>
     <header id="headerWrapper">
         <h1>To Do List Tracker</h1>
     </header>
     <main id="mainWrapper">
-        <form id="listWrapper">
-            <input type="text" name="listItem" id="userInput">
-        </form>
+        <div id="myDiv">
+            <input type="text" id="userInput" placeholder="Please Enter a Task">
+            <span onclick="newElement()" class="addBtn">Add</span>
+        </div>
+
+        <ul id="myList">
+
+        </ul>
     </main>
-    <footer id="footerWrapper">Garrett Bond © 2019</footer>
 </body>
 </html>
