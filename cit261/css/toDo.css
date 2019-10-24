@@ -36,7 +36,7 @@ ul li:hover {
 
 /* When clicked on, add a background color and strike out text */
 ul li.checked {
-  background: #888;
+  background: #585858;
   color: #fff;
   text-decoration: line-through;
 }
@@ -64,20 +64,20 @@ ul li.checked::before {
 }
 
 .close:hover {
-  background-color: #f44336;
+  background-color: #ff9c40;
   color: white;
 }
 
 /* Style the header */
-.header {
-  background-color: #f44336;
+body {
+  background-color: #ff9c40;
   padding: 30px 40px;
   color: white;
   text-align: center;
 }
 
 /* Clear floats after the header */
-.header:after {
+body:after {
   content: "";
   display: table;
   clear: both;

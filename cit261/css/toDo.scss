@@ -1,3 +1,5 @@
+$primary: rgb(255, 156, 64);
+
 /* Include the padding and border in an element's total width and height */
 * {
     box-sizing: border-box;
@@ -37,7 +39,7 @@
   
   /* When clicked on, add a background color and strike out text */
   ul li.checked {
-    background: #888;
+    background: rgb(88, 88, 88);
     color: #fff;
     text-decoration: line-through;
   }
@@ -65,20 +67,20 @@
   }
   
   .close:hover {
-    background-color: #f44336;
+    background-color: $primary;
     color: white;
   }
   
   /* Style the header */
-  .header {
-    background-color: #f44336;
+  body {
+    background-color: $primary;
     padding: 30px 40px;
     color: white;
     text-align: center;
   }
   
   /* Clear floats after the header */
-  .header:after {
+  body:after {
     content: "";
     display: table;
     clear: both;
