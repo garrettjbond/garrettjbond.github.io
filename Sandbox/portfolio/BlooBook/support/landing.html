@@ -13,7 +13,7 @@
 
     <nav></nav>
     <main>
-        <div class="landingTitle">
+        <div class="landingTitle pageTitle">
             <h1>BlooBook</h1>
         </div>
         <div class="blooLogo">
@@ -66,8 +66,12 @@
                 </g>
             </svg>
         </div>
-        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Create Account</button>
-        <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button>
+
+        <div id="landingButtons">
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Create Account</button>
+            <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button>
+        </div>
+        
         <div id="id01" class="createmodal">
             <form class="modal-content" action="/action_page.php">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close"

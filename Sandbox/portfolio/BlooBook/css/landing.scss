@@ -1,6 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
+}
+
+.pageTitle{
+    font-family: 'Permanent Marker', cursive;
+}
+
+.landingTitle{
+    text-align: center;
 }
 
 /* Full-width input fields */
@@ -123,11 +133,24 @@ span.psw {
 }
 
 footer{
-    background-color:rgb(193, 193, 193);;
-    color: white;
+    color:rgb(193, 193, 193);
     text-align: center;
 }
 
 #logoCircle{
-    z-index: 0;
+    position: relative;
+    z-index: -1;
+}
+
+#logoBulb{
+    z-index: 1;
+}
+
+.blooLogo{
+    text-align: center;
+}
+
+#landingButtons{
+    display: flex;
+    justify-content: center;
 }
