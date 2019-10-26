@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM Challenges</h1>
+    <ol>
+        <li id="replaceMe">Replace me with innerHTML</li>
+        <li id="createMe">Create an HTML element and give it content</li>
+        <li id="removeMe">Remove an HTML element</li>
+    </ol>
+
+    <button onclick="replaceContent()">Replace #1</button>
+    <button onclick="createContent()">Create another Element</button>
+    <button onclick="removeElement()">Remove #3 Element</button>
+
+    <!--I don't understnad the quotation marks in this statement-->
+    <input type='button' onclick='location.reload(); 'value='Refresh Page' />
+
+<script>
+    //edit todo task
+    function replaceContent(){
+    document.getElementById("replaceMe").innerHTML="InnerHTML worked successfully";   
+    }
+
+    //create todo task
+    function createContent(){
+    //create element and set it equal to an object
+    var listItem = document.createElement("li");
+    //create text and set it equal to an object
+    var listItemText = document.createTextNode("New Item");
+    //use the element object and use the append child while using the text object as the parameter
+    listItem.appendChild(listItemText);
+    //access the dom and use the append child method while calling the newly created element.
+    document.body.appendChild(listItem);
+    }
+
+    //delete todo task
+    function removeElement(){
+    document.getElementById("removeMe").remove();
+    }
+</script>
+</body>
+</html>
