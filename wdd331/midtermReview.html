@@ -6,18 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="/wdd331/css/midtermReview.css">
+    <link rel="stylesheet" type="text/css" href="./css/midtermReview.css">
 </head>
 
 <body>
     <header>
+        <h1>D&D Initiative Tracker</h1>
     </header>
-    <main>
-        <p>text</p>
+    <main class="mainWrapper">
+        <form class="formWrapper">
+            <div class="formItem">
+                <p class="formTitle">Initiative</p>
+                <input class="formEntry" type="text" name="initiative" placeholder="enter initiative...">
+            </div>
+            <div class="formItem">
+                <p class="formTitle">Name</p>
+                <input class="formEntry" type="text" name="name" placeholder="enter name...">
+            </div>
+            <div class="formItem">
+                <p class="formTitle">AC</p>
+                <input class="formEntry" type="text" name="ac" placeholder="enter ac...">
+            </div>
+            <div class="formItem">
+                <p class="formTitle">Health</p>
+                <input class="formEntry" type="text" name="health" placeholder="enter health...">
+            </div>
+            <div class="formItem">
+                <p class="formTitle">Notes</p>
+                <input class="formEntry" type="text" name="notes" placeholder="enter notes...">
+            </div>
+        </form>
+        <div class="center">
+            <svg preserveAspectRatio="xMidYMin" display="block" margin="auto" width="100%" height="100%"
+                viewBox="0 0 1200 400" version="1.1">
+                <rect x="1" y="1" width="1198" height="398"
+                fill="none" stroke="blue" stroke-width="2" />
+                <desc>d20 dice : Goal is to center behind the form</desc>
+                <polygon fill="grey" fill-opacity=".5" stroke="white" stroke-opacity=".5" stroke-width="10" points="850,75  958,137.5 958,262.5 850,325 742,262.6 742,137.5" />
+            </svg>
+        </div>
     </main>
     <footer>
+        <p id="copy-right">If you inspect the source and view the CSS you will see the implementation or review of the topics learned: SASS, Selectors, SVG, and coming soon it will feature bootstrap</p>
     </footer>
-    <script src="/wdd331/javascript/midtermReview.js"></script>
+    <script src="./javascript/midtermReview.js"></script>
 </body>
 
 </html>

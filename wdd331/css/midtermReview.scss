@@ -1,4 +1,91 @@
-//test connections
-p{
-    color: blue;
+/*Variables and Imports*/
+$pmBackgroundColor: tan;
+$scBackgroundColor: maroon;
+$pmColor: black;
+$scColor: white;
+$thColor: grey;
+
+
+//reusable code via SCSS
+@mixin flexPositionX($x){
+    display: flex;
+    justify-content: $x;
+
+    //Same as the below
+    // display: flex;
+    // justify-content: position;
 }
+
+//reusable code via SCSS
+@mixin flexPositionY($y){
+    display: flex;
+    align-items: $y;
+
+    //Same as the below
+    // display: flex;
+    // align-items: position;
+}
+
+
+/*Mobile First Styling*/
+html,
+body {
+    background-color: $pmBackgroundColor;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100%;
+}
+
+//Descendant Combinator: Selects all p elements inside of div elements 
+//Nested using SCSS or SASS nesting options
+div {
+    input {
+        border-radius: 5px;
+    }
+
+    p {
+        margin-bottom: 0px;
+
+    }
+}
+
+//Child Combinator: Selects all p elements where the parents is a div element
+main>.formWrapper {
+    @include flexPositionY(center);
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+//Child Combinator: Selects all p elements where the parents is a div element
+body>header {
+    @include flexPositionX(center);
+}
+
+footer {
+    //same as the below
+    @include flexPositionX(center);
+    position: absolute;
+    color: $pmColor;
+    bottom: 0;
+    width: 100%;
+}
+
+::placeholder {
+    padding-left: 2.5%;
+    padding-top: 2.5%;
+}
+
+svg{
+    display: block;
+    margin: auto;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+/*# sourceMappingURL=midtermReview.css.map */
