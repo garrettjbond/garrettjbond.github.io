@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../wdd331/css/bootReview.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header id="primaryTheme" class="jumbotron text-center">
+        <h1 class="titleDisp">D&D Initiative Tracker Bootstrap</h1>
+    </header>
+    <div class="container well text-center" id="wellAdjustment">
+        <h2 class="text-center titleDisp">Character Setup</h2>
+        <div class="row formItem">
+            <div class="col-sm-3 formItem">
+                <p>Initiative</p>
+                <input type="text" name="initiative" placeholder="enter initiative...">
+            </div>
+            <div class="col-sm-3 formItem">
+                <p>Name</p>
+                <input type="text" name="name" placeholder="enter name...">
+            </div>
+            <div class="col-sm-3 formItem">
+                <p>AC</p>
+                <input type="text" name="ac" placeholder="enter ac...">
+            </div>
+            <div class="col-sm-3 formItem">
+                <p>Health</p>
+                <input type="text" name="health" placeholder="enter health...">
+            </div>
+            <button type="button" class="btn btn-danger" id="buttonSpacing">Add to Roster</button>
+        </div>
+    </div>
+    <div class="container well" id="encounterDisp" >
+        <h2 class="text-center titleDisp dkTitleDisplay">Encounter Roster</h2>
+        <ul class="list-group">
+          <li class="list-group-item">Barbarian<span class="badge">X</span></li>
+          <li class="list-group-item">Bard<span class="badge">X</span></li>
+          <li class="list-group-item">Cleric <span class="badge">X</span></li>
+          <li class="list-group-item">Etc... <span class="badge">X</span></li>
+        </ul>
+      </div>
+    <footer class="text-center">
+        <p id="copy-right">If you inspect the source and view the CSS you will see the implementation or review of
+            bootstrap</p>
+    </footer>
+</body>
+
+</html>

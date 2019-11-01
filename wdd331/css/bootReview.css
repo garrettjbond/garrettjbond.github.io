@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=MedievalSharp&display=swap');
+
+#primaryTheme{
+background-color: maroon;
+color: white;
+margin-bottom: 0px;
+font-family: 'MedievalSharp', cursive;
+}
+
+.titleDisp{
+    font-family: 'MedievalSharp', cursive;
+}
+
+footer{
+    padding: 15px;
+}
+
+#wellAdjustment{
+    margin-bottom: 0px;
+    /* background-image: url("d20.JPG"); */
+   
+}
+
+#encounterDisp{
+    background-color: rgb(148, 118, 118);
+}
+
+#buttonSpacing{
+    margin-top: 15px;
+}
+
+.formItem{
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.dkTitleDisplay{
+    color: white;
+}
+
