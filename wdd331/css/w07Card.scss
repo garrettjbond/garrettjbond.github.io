@@ -8,9 +8,6 @@ $one-column: 100% / $num-columns;
 $loop-start: 1;
 $loop-end: $num-columns +1;
 
-
-
-
 *,
 *:before,
 *:after {
@@ -71,91 +68,4 @@ $loop-end: $num-columns +1;
   text-align: center;
 }
 
-
-@mixin col($span-num) {
-flex: 0 0 $one-column * $span-num;
-}
-
-@mixin offset($offset-num) {
-margin-left: $one-column * $offset-num;
-}
-
-//make column classes 
-@for $index from $loop-start to $loop-end {
-.col-#{$index} {
-    @include col($index);
-}
-}
-
-//make offset classes
-@for $index from $loop-start to $loop-end {
-.offset-#{$index} {
-    @include offset($index);
-}
-}
-
-// .col-1{
-//   // flex: 0 0 12.5%;
-//   @include col(1);
-// }
-
-// .col-2{
-//   @include col(2);
-// }
-
-// .col-3{
-//   @include col(3);
-// }
-
-// .col-4{
-//   @include col(4);
-// }
-
-// .col-5{
-//   @include col(5);
-// }
-
-// .col-6{
-//   @include col(6);
-// }
-
-// .col-7{
-//   @include col(7);
-// }
-
-// .col-8{
-//   @include col(8);
-// }
-
-// .offset-1{
-//   margin-left: 12.5%
-// }
-
-// .offset-2 {
-// margin-left: 25%;
-// }
-
-// .offset-3{
-//   margin-left: 37.5%
-// }
-
-// .offset-4{
-//   margin-left: 50%;
-// }
-
-// .offset-5{
-//   margin-left: 62.5%
-// }
-
-// .offset-6{
-//   margin-left: 75%;
-// }
-
-
-// .offset-7{
-//   margin-left: 87.5%
-// }
-
-// .offset-8{
-//   margin-left: 100%;
-// }
+@import url("./_partialCardFront.css");
