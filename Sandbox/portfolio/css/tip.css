@@ -1,5 +1,53 @@
+/* ******************************
+*  Stylesheet for Screened Devices
+*  Created by: Garrett Bond
+*  
+*  1.  Includes (fonts and supplementary stylesheets)
+*  1.1 Normalize
+*  1.2 Google fonts
+*
+*  2.  General Styles (for all pages and devices)
+*
+*  3.  Mobile First (styles specific to small screens)
+*
+*  4.  Large Screen Styles (Media Queries begin here)
+*
+* ********************************/
+/************** 1. Imports ********************/
+/* 1.1 Normalize Import */
+@import url("normalize.css");
+/* 1.2 Google Fonts*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+/*2. General Stylings*/
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
 body {
-  background-color: black;
+  text-align: center;
+  margin: auto;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+button {
+  margin: 20px;
+}
+
+#applicationWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 /*# sourceMappingURL=tip.css.map */

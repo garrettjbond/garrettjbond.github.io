@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,46 @@
     <title>Tip Calculator</title>
     <link rel="stylesheet" href="../portfolio/css/tip.css">
 </head>
-<body>
-    <main>
 
-    </main>
-    <footer>
+<body id="bodyWrapper">
+    <div id="applicationWrapper">
+        <header id="headerWrapper">
+            <h1 class="title">Tip Calculator</h1>
+        </header>
+        <main id="mainWrapper">
+            <form id="formContainer">
+                <div id="formItem1">
+                    <h2>Total Before Tip:</h2>
+                    <input id="befTotal" type="text" placeholder="Total Before Tip">
+                </div>
+                <div id="formItem2">
+                    <h2>Quality of Service:</h2>
+                    <!-- <ul>
+                        <li>Poor: 5% and up</li>
+                        <li>Fair: 10% and up</li>
+                        <li>Good: 15% and up</li>
+                        <li>Great: 20% and up</li>
+                    </ul> -->
+                    <input id="quaService" type="text" placeholder="Higher Percantage ">
+                </div>
+                <button onclick="calculateTip()">Calculate Tip!</button>
+            </form>
 
+            <div id="refWrapper">
+                <h3>Quality of Service: Reference</h3>
+                <ul>
+                    <li><b>Poor: </b>5% and up</li>
+                    <li><b>Fair: </b>10% and up</li>
+                    <li><b>Good: </b>15% and up</li>
+                    <li><b>Great:</b> 20% and up</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+    <footer id="footerWrapper">
+        <p>&copy; Garrett Bond, 2019</p>
     </footer>
     <script src="../portfolio/js/tip.js"></script>
 </body>
+
 </html>
