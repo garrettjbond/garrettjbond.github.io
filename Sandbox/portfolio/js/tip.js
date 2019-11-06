@@ -11,5 +11,6 @@ console.log(quaService);
 var tip = preTotal * (service / 100);
      
 alert(tip);
+// document.getElementById("result").innerHTML = tip;
 
 }
