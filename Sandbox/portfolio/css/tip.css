@@ -28,6 +28,11 @@ body {
   margin: auto;
 }
 
+header {
+  background-color: red;
+  width: 100%;
+}
+
 footer {
   color: #acacac;
   position: absolute;
@@ -46,9 +51,19 @@ button {
   align-items: center;
 }
 
+#mainWrapper {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
+}
+
+#quaService {
+  width: 30px;
 }
 
 /*# sourceMappingURL=tip.css.map */

@@ -10,7 +10,7 @@
 </head>
 
 <body id="bodyWrapper">
-    <div id="applicationWrapper">
+    <span id="applicationWrapper">
         <header id="headerWrapper">
             <h1 class="title">Tip Calculator</h1>
         </header>
@@ -18,7 +18,7 @@
             <form id="formContainer">
                 <div id="formItem1">
                     <h2>Total Before Tip:</h2>
-                    <input id="befTotal" type="text" placeholder="Total Before Tip">
+                    <input id="befTotal" type="number" placeholder="">
                 </div>
                 <div id="formItem2">
                     <h2>Quality of Service:</h2>
@@ -28,15 +28,13 @@
                         <li>Good: 15% and up</li>
                         <li>Great: 20% and up</li>
                     </ul> -->
-                    <input id="quaService" type="text" placeholder="Higher Percantage ">
+                    <input id="quaService" type="number" placeholder="">
                 </div>
-                <button onclick="calculateTip()">Calculate Tip!</button>
+                <button type="button" onclick="calculateTip()">Calculate Tip!</button>
             </form>
 
-            <div id="result">
-
-            </div>
-
+            <div>Tip: <span id="result"></span></div>
+            <!-- To Do: Fix the input bar to make the left border appear, Change the size of the Input for the Quality of Service, Fix math to account for decimals, Change design to fit theme of tips, Check the footer and make sure it's not going to move in mobile if the keyboard appears upon input entry -->
             <div id="refWrapper">
                 <h3>Quality of Service: Reference</h3>
                 <ul>
