@@ -23,18 +23,29 @@
   font-family: "Open Sans", sans-serif;
 }
 
+input {
+  border: 0.5px solid #c6c6c6;
+}
+
+input:focus {
+  outline-color: #7d8984;
+}
+
 body {
   text-align: center;
   margin: auto;
+  background-color: #fcfbeb;
 }
 
 header {
-  background-color: red;
+  background-color: maroon;
+  color: white;
   width: 100%;
 }
 
 footer {
-  color: #acacac;
+  background-color: #896161;
+  color: white;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -43,6 +54,16 @@ footer {
 
 button {
   margin: 20px;
+  border: none;
+  background-color: #F24236;
+  color: white;
+  border-radius: 5px;
+  height: 35px;
+}
+
+button:hover {
+  background-color: #f7847c;
+  color: black;
 }
 
 #applicationWrapper {
@@ -63,7 +84,7 @@ ul {
 }
 
 #quaService {
-  width: 30px;
+  width: 40px;
 }
 
 /*# sourceMappingURL=tip.css.map */

@@ -26,19 +26,30 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+input{
+    border: .5px solid rgb(198, 198, 198);
+}
+
+input:focus{
+    outline-color: rgb(125, 137, 132);
+}
+
 body {
     text-align: center;
     margin: auto;
-
+    background-color: rgb(252, 251, 235);
 }
 
 header{
-    background-color: red;
+    background-color: maroon;
+    color: white;
     width: 100%;
 }
 
+
 footer {
-    color: rgb(172, 172, 172);
+    background-color: rgb(137, 97, 97);
+    color: white;
     //!This will position the footer and the bottom middle of the page.
     position: absolute;
     bottom: 0;
@@ -48,12 +59,24 @@ footer {
 
 button{
     margin: 20px;
+    border: none;
+    background-color:#F24236;
+    color: white;
+    border-radius: 5px;
+    height: 35px;
+}
+
+button:hover{
+    background-color: rgb(247, 132, 124);
+    color: black;
+    
 }
 
 #applicationWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 #mainWrapper{
@@ -68,5 +91,5 @@ ul{
 }
 
 #quaService{
-    width: 30px;
+    width: 40px;
 }
