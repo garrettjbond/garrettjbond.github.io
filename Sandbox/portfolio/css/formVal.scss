@@ -18,15 +18,12 @@
 /* 1.1 Normalize Import */
 @import url('normalize.css');
 
-footer {
-    color: grey;
-    //!This will position the footer and the bottom middle of the page.
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;
+footer{
     text-align: center;
+    color: grey;
 }
+
+
 
 #pageTitle{
     text-align: center;

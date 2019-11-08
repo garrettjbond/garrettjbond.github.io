@@ -14,55 +14,51 @@
         <h1 id="pageTitle"> Challenge: Form Validation</h1>
     </header>
     <main>
-        <form id="formWrapper">
+        <form name="formVal" id="formWrapper">
             <div>
                 <p>Account Type <span class="requiredSymbol">*</span></p>
-                <input type="radio" name="accountType"> <span>Personal Account</span>
-                <input type="radio" name="accountType"> <span>Business Account</span>
+                <input type="radio" name="accountType" id="persAcct"> <span>Personal Account</span>
+                <input type="radio" name="accountType" id="busAcct"> <span>Business Account</span>
             </div>
             <div>
                 <p>First Name <span class="requiredSymbol">*</span></p>
-                <input type="text" required>
+                <input type="text" required name="fName">
             </div>
             <div>
                 <p>Last Name <span class="requiredSymbol">*</span></p>
-                <input type="text" required>
+                <input type="text" required name="lName">
             </div>
             <div>
-                <p>Country/Region <span class="requiredSymbol">*</span></p>
-                <input type="text" required>
+                <p>Country/Region <span class="requiredSymbol" >*</span></p>
+                <input type="text" name="country" required>
             </div>
             <div>
                 <p>Street Address <span class="requiredSymbol">*</span></p>
-                <input type="text" required>
+                <input type="text" name="strAddress" required>
             </div>
             <div>
                 <p>Street Address 2 <span></span></p>
-                <input type="text">
+                <input type="text" name="strAddress2">
             </div>
             <div>
                 <p>City<span class="requiredSymbol">*</span></p>
-                <input type="text" required>
+                <input type="text" required name="city">
             </div>
             <div>
                 <p>State/Province<span class="requiredSymbol">*</span></p>
-                <input type="text" required>
+                <input type="text" required name="state">
             </div>
             <div>
                 <p>Phone Number<span class="requiredSymbol">*</span></p>
-                <input type="text" required>
+                <input type="number" required name="phnNumber" title="Please include the Area code" pattern=".{10}">
             </div>
-            <div>
-                <p>Last Name <span class="requiredSymbol">*</span></p>
-                <input type="text">
-            </div>
-
+            <button type="button" onclick="validateInfo()">Validate</button>
         </form>
     </main>
     <footer>
         <p>&copy; Garrett Bond, 2019</p>
     </footer>
-    <script src="./js/tip.js"></script>
+    <script src="./js/formVal.js"></script>
 </body>
 
 </html>
