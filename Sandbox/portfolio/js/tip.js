@@ -4,14 +4,14 @@ function calculateTip(){
 //gets the user input for the pre total and assigns it to a variable.
 var preTotal = parseInt(document.getElementById("befTotal").value);
 //changes the input to be the desired decimal place.
-var pTotal = preTotal.toPrecision(4);
+var pTotal = preTotal.toFixed(4);
 
 console.log(pTotal)
 
 console.log(preTotal);
 //gets the user input for the quality of service and assigns it to a variable.
 var service = parseInt(document.getElementById("quaService").value);
-var serv = service.toPrecision(4);
+var serv = service.toFixed(4);
 
 
 
