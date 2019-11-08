@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/formVal.css">
 </head>
@@ -15,44 +18,15 @@
     </header>
     <main>
         <form name="formVal" id="formWrapper">
-            <div>
-                <p>Account Type <span class="requiredSymbol">*</span></p>
-                <input type="radio" name="accountType" id="persAcct"> <span>Personal Account</span>
-                <input type="radio" name="accountType" id="busAcct"> <span>Business Account</span>
+            <div id="user">
+                <p>Username <span class="requiredSymbol">*</span></p>
+                <input type="text" required name="userName">
             </div>
-            <div>
-                <p>First Name <span class="requiredSymbol">*</span></p>
-                <input type="text" required name="fName">
+            <div id="pass">
+                <p>Password <span class="requiredSymbol">*</span></p>
+                <input type="password" required name="passName">
             </div>
-            <div>
-                <p>Last Name <span class="requiredSymbol">*</span></p>
-                <input type="text" required name="lName">
-            </div>
-            <div>
-                <p>Country/Region <span class="requiredSymbol" >*</span></p>
-                <input type="text" name="country" required>
-            </div>
-            <div>
-                <p>Street Address <span class="requiredSymbol">*</span></p>
-                <input type="text" name="strAddress" required>
-            </div>
-            <div>
-                <p>Street Address 2 <span></span></p>
-                <input type="text" name="strAddress2">
-            </div>
-            <div>
-                <p>City<span class="requiredSymbol">*</span></p>
-                <input type="text" required name="city">
-            </div>
-            <div>
-                <p>State/Province<span class="requiredSymbol">*</span></p>
-                <input type="text" required name="state">
-            </div>
-            <div>
-                <p>Phone Number<span class="requiredSymbol">*</span></p>
-                <input type="number" required name="phnNumber" title="Please include the Area code" pattern=".{10}">
-            </div>
-            <button type="button" onclick="validateInfo()">Validate</button>
+            <input id="btnSubmit" type="submit" onsubmit="accountCreation()">
         </form>
     </main>
     <footer>
