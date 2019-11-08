@@ -1,14 +1,24 @@
 console.log("test connection");
 
 function calculateTip(){
-    //gets the user input for the pre total and assigns it to a variable.
+//gets the user input for the pre total and assigns it to a variable.
 var preTotal = parseInt(document.getElementById("befTotal").value);
+//changes the input to be the desired decimal place.
+var pTotal = preTotal.toPrecision(4);
+
+console.log(pTotal)
+
 console.log(preTotal);
 //gets the user input for the quality of service and assigns it to a variable.
 var service = parseInt(document.getElementById("quaService").value);
-console.log(service);
+var serv = service.toPrecision(4);
 
-var tip = preTotal * (service / 100.00);
+
+
+var tip = pTotal * (serv / 100.00);
+
+console.log(tip);
+
 
 document.getElementById("result").innerHTML = "$" + tip;
 
