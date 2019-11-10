@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokemon random Vs</title>
+</head>
+<body>
+    <h1>Pokemon Random Vs</h1>
+
+    <div>
+        <div>
+            <img src="" alt="">
+            <p>Pokemon 1</p>
+        </div>
+        <div>Vs.</div>
+        <div></div>
+    </div>
+    
+    <script>
+        
+        // Calls the data
+        function cosultarPokemon(id) {
+            //By using the tildes and the dollar sign you can dynamically change the chosen pokemon below when we call the function.
+            fetch(`https://pokeapi.co/api/v2/pokemon/${id}`) 
+            .then(function (response){
+                console.log(response);
+                response.json()
+                .then(function (pokemon) {
+                    console.log(pokemon.name);
+                })
+            })
+            
+        }
+
+        cosultarPokemon(26);
+        </script>
+</body>
+</html>
