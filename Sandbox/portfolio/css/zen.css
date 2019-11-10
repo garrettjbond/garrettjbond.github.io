@@ -1,5 +1,52 @@
+/* ******************************
+*  Stylesheet for Screened Devices
+*  Created by: Garrett Bond
+*  
+*  1.  Includes (fonts and supplementary stylesheets)
+*  1.1 Normalize
+*  1.2 Google fonts
+*
+*  2.  General Styles (for all pages and devices)
+*
+*  3.  Mobile First (styles specific to small screens)
+*
+*  4.  Large Screen Styles (Media Queries begin here)
+*
+* ********************************/
+/************** 1. Imports ********************/
+/* 1.1 Normalize Import */
+@import url("normalize.css");
+/* 1.2 Google Fonts*/
+/*2. General Stylings*/
 body {
-  background-color: blue;
+  margin: 0;
+}
+
+header {
+  position: relative;
+  background-color: darkslateblue;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+.intro {
+  background-color: lightgray;
+}
+
+.summary {
+  padding: 5vw;
+}
+
+.preamble {
+  padding: 0vw 5vw 5vw 5vw;
 }
 
 /*# sourceMappingURL=zen.css.map */
