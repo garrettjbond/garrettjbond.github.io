@@ -1,3 +1,5 @@
+$bloo: #2699fb;
+
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
 
 body {
@@ -38,10 +40,9 @@ button {
   background-color: #2699fb;
   color: white;
   padding: 14px 20px;
-  margin: 8px auto;
+  margin: 8px 0px;
   border: none;
   cursor: pointer;
-  width: 100%;
 }
 
 button:hover {
@@ -142,10 +143,19 @@ span.psw {
   }
 }
 
+nav{
+  background-color: $bloo;
+  height: 45px;
+}
+
 footer{
     color:rgb(206, 206, 206);
     text-align: center;
     font-size: .8em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 1.5rem;
 }
 
 #logoCircle{
@@ -163,7 +173,13 @@ footer{
 
 #landingButtons{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    
+}
+
+.buttons{
+  width: 174px;
+  height: 58px;
 }
 
 .glow {
