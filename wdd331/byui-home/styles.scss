@@ -7,8 +7,8 @@ $dark-gray: #727272;
 $med-gray: #b4b3b5;
 $light-gray: #eaeaea;
 $body-font: #020202;
-$link-blue: #0076b6; //why do we have both of these blues?
-$byui-blue: #056cb6;
+$byui-blue: #0076b6; 
+// $byui-blue: #056cb6; Checked this via inspection tool and this color is not used?
 
 // Utility classes
 *,
@@ -18,6 +18,12 @@ $byui-blue: #056cb6;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+body{
+  margin: 0px;
+  background-color: $light-gray;
+}
+
 img {
   max-width: 100%;
 }
@@ -31,3 +37,11 @@ img {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
+header{
+  background-color: $byui-blue;
+  height: 60px;
+}
+
+
+//There should be three media queries @1200, @992, @769, @574

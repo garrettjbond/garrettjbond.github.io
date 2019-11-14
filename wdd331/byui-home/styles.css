@@ -1016,6 +1016,11 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0px;
+  background-color: #eaeaea;
+}
+
 img {
   max-width: 100%;
 }
@@ -1029,6 +1034,11 @@ img {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+header {
+  background-color: #0076b6;
+  height: 60px;
 }
 
 /*# sourceMappingURL=styles.css.map */
