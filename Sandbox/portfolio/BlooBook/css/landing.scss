@@ -7,6 +7,12 @@ body {
     margin: 0px;
 }
 
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 90vh;
+}
 
 .pageTitle{
     font-family: 'Permanent Marker', cursive;
@@ -178,6 +184,7 @@ footer{
 #landingButtons{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin-top: 15px;
     
 }
