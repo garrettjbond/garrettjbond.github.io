@@ -68,12 +68,12 @@ button:hover {
 /* Center the image and position the close button */
 .imgcontainer {
   text-align: center;
-  margin: 24px 0 12px 0;
+  margin: 12px 0 12px 0;
   position: relative;
 }
 
 img.avatar {
-  width: 40%;
+  width: 10%;
   border-radius: 50%;
 }
 
@@ -117,7 +117,7 @@ span.psw {
   color: #000;
   font-size: 35px;
   font-weight: bold;
-  padding: 15px;
+  padding-right: 15px;
 }
 
 .close:hover,
