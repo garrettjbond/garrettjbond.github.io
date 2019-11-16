@@ -43,5 +43,66 @@ header{
   height: 60px;
 }
 
+h1{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  margin: 0px;
+  font-family: 'BYUI Open Sans';
+  text-align: left;
+  font-weight: 300;
+  font-size: 20px;
+
+}
+
+.site-banner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  font-size: 2.5em;
+  padding-right: 15px;
+  padding-top: 8px;
+  form{
+    display: none;
+  }
+}
+
+.site-banner__right a{
+  color: white;
+}
+
+.icon-byui-logo{
+  color: white;
+  background-color: $body-font;
+  height: auto;
+  width: 100%;
+  padding: 8px;
+}
+
+#searchH{
+  display: none;
+}
+
+a{
+  
+  text-decoration: none;
+}
+
 
 //There should be three media queries @1200, @992, @769, @574
+@media only screen and (max-width: 574px) {
+  
+}
+
+@media only screen and (max-width: 769px) {
+  
+}
+
+@media only screen and (max-width: 992px) {
+  
+}
+
+@media only screen and (max-width: 1200px) {
+  
+}
