@@ -1085,4 +1085,25 @@ a {
   text-decoration: none;
 }
 
+main {
+  border-top: 0.5px solid #020202;
+  background-color: white;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+
+footer {
+  background-color: white;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+
+@media only screen and (max-width: 574px) {
+  main {
+    padding: 15px;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

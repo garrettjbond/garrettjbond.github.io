@@ -89,10 +89,27 @@ a{
   text-decoration: none;
 }
 
+main{
+  border-top: .5px solid $body-font; 
+  background-color: white;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+
+footer{
+  background-color: white;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+
 
 //There should be three media queries @1200, @992, @769, @574
 @media only screen and (max-width: 574px) {
-  
+  main{
+    padding: 15px;
+  }
 }
 
 @media only screen and (max-width: 769px) {
