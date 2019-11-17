@@ -1239,21 +1239,20 @@ h2, h3 {
   font-weight: 600;
 }
 #universityMessage img {
-  height: 361px;
-  width: 424px;
+  height: 371px;
+  width: 440px;
 }
 
 #primaryPhoto {
   height: 334px;
   width: 440px;
-  border: 1px solid #b4b3b5;
 }
 
 .secondaryPhotos_item {
   margin-top: 36px;
 }
 .secondaryPhotos_item img {
-  height: 269px;
+  height: 310px;
   width: 440px;
 }
 
