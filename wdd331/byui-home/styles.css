@@ -1249,10 +1249,12 @@ h2, h3 {
   border: 1px solid #b4b3b5;
 }
 
+.secondaryPhotos_item {
+  margin-top: 36px;
+}
 .secondaryPhotos_item img {
   height: 269px;
   width: 440px;
-  margin-top: 36px;
 }
 
 @media only screen and (max-width: 574px) {

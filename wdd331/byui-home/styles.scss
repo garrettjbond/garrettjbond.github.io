@@ -272,10 +272,13 @@ h2, h3{
   border: 1px solid $med-gray;
 }
 
-.secondaryPhotos_item img{
+.secondaryPhotos_item {
+  margin-top: 36px;
+
+img{
   height: 269px;
   width: 440px;
-  margin-top: 36px;
+}
 }
 
 
