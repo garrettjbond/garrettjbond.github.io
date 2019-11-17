@@ -1193,7 +1193,7 @@ h2, h3 {
 
 #comp4_Newsroom {
   height: 610px;
-  width: 450.4px;
+  width: 440.4px;
 }
 #comp4_Newsroom h2 {
   font-size: 28px;
@@ -1220,11 +1220,15 @@ h2, h3 {
   background-color: #0076b6;
   padding: 6px 24px;
   margin-right: 10px;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 #universityMessage {
   border: 1px solid #727272;
   border-radius: 4px;
+  height: 419.087px;
+  width: 440.4px;
 }
 #universityMessage h2 {
   border-bottom: 1px solid #727272;
@@ -1234,6 +1238,23 @@ h2, h3 {
   font-size: 16px;
   font-weight: 600;
 }
+#universityMessage img {
+  height: 361px;
+  width: 424px;
+}
+
+#primaryPhoto {
+  height: 334px;
+  width: 440px;
+  border: 1px solid #b4b3b5;
+}
+
+.secondaryPhotos_item img {
+  height: 269px;
+  width: 440px;
+  margin-top: 36px;
+}
+
 @media only screen and (max-width: 574px) {
   main {
     padding: 15px;

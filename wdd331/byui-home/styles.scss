@@ -208,7 +208,7 @@ h2, h3{
 //Newsroom components
 #comp4_Newsroom{
   height: 610px;
-  width: 450.4px;
+  width: 440.4px;
   h2{
     font-size: 28px;
     font-weight: 600;
@@ -239,6 +239,8 @@ h2, h3{
     background-color: $byui-blue;
     padding: 6px 24px;
     margin-right: 10px;
+    font-size: 15px;
+    font-weight: 700;
   }
 }
 
@@ -246,7 +248,8 @@ h2, h3{
 #universityMessage{
   border: 1px solid $dark-gray;
   border-radius: 4px;
-  
+  height: 419.087px;
+  width: 440.4px;
   h2{
     border-bottom: 1px solid $dark-gray;
     background-color: $light-gray;
@@ -257,9 +260,24 @@ h2, h3{
   }
 
   img{
-
+    height: 361px;
+    width: 424px;
   }
 }
+
+//Photo Gallery
+#primaryPhoto{
+  height: 334px;
+  width: 440px;
+  border: 1px solid $med-gray;
+}
+
+.secondaryPhotos_item img{
+  height: 269px;
+  width: 440px;
+  margin-top: 36px;
+}
+
 
 //There should be three media queries @1200, @992, @769, @574
 @media only screen and (max-width: 574px) {
