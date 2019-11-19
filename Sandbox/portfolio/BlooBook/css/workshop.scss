@@ -2,6 +2,7 @@
 *Variables
 */
 $bloo: #2699fb;
+$blooOrange: #FFE694;
 
 /*
 *Imports
@@ -18,11 +19,51 @@ body {
     background-color: white;
 }
 
+//Nav Component
 nav{
     background-color: $bloo;
     height: 45px;
+    display: flex;
+    justify-content: space-between;
+
+    #navTitle{
+        font-family: 'Permanent Marker', cursive;
+        color: white;
+        font-size: 30px;
+        padding-left: 20px;
+    } 
+
+    #navWrapperLeft{
+        padding-left: 30px;
+    }
+
+    #navWrapperRight{
+        padding-right: 30px;
+    }
 }
 
+
+//Header Title Component
+header{
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+}
+
+
+//Sidebar Component
+aside{
+    background-color: $blooOrange;
+    color: $bloo;
+    max-width: 747px;
+    
+    .noteListItem{
+        background-color: white;
+        max-width: 500px;
+    }
+    
+}
+
+//Footer Component
 footer{
     color:rgb(206, 206, 206);
     text-align: center;
@@ -32,12 +73,7 @@ footer{
     width: 100%;
     height: 1.5rem;
 }
-
-#navTitle{
-    font-family: 'Permanent Marker', cursive;
-    color: white;
-    font-size: 30px;
-}      
+//Center Display Component
 
 /*
 *Mobile Stylings
