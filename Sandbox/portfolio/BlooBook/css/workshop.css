@@ -41,11 +41,61 @@ header {
 aside {
   background-color: #FFE694;
   color: #2699fb;
-  max-width: 747px;
+  max-width: 38.91%;
+  max-height: 100%;
+}
+aside #noteListContainer {
+  height: 626px;
+  overflow-y: scroll;
+}
+aside .search-container {
+  display: flex;
+}
+aside .search-container button {
+  background-color: #2699fb;
+  border: none;
+}
+aside .search-container #createButton {
+  border-radius: 50%;
+  color: white;
+  font-weight: 600;
+}
+aside input {
+  max-width: 497px;
+  height: auto;
+  border: none;
 }
 aside .noteListItem {
   background-color: white;
   max-width: 500px;
+  max-height: 200px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+aside .noteItemHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+aside .noteItemHeader h4 {
+  margin: 0px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .noteDisplay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10%;
 }
 
 footer {
@@ -56,6 +106,10 @@ footer {
   bottom: 0;
   width: 100%;
   height: 1.5rem;
+}
+
+#asideMainWrapper {
+  display: flex;
 }
 
 /*
