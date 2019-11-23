@@ -26,6 +26,7 @@ function addItem() {
     //add class to new element
     rosterItem.classList.add("list-group-item");
     rosterClose.classList.add("badge");
+    rosterClose.classList.add("closeItem");
     //set content of new item
     rosterItem.innerHTML = "";
     rosterClose.innerHTML = "X";
@@ -46,12 +47,26 @@ function addItem() {
     rosterItem.appendChild(rosterHealth);
     rosterItem.appendChild(rosterClose);
 
+    //Make the elements editable
+    // element.setAttribute(attributename, attributevalue)
+    rosterInit.setAttribute("contenteditable", "true");
+    rosterName.setAttribute("contenteditable", "true");
+    rosterAc.setAttribute("contenteditable", "true");
+    rosterHealth.setAttribute("contenteditable", "true");
 }
 
 function deleteItem() {
     console.log("Allow the dm to delete a player from the roster");
-
-
+    // var removeMe = this.ParentElement;
+    // removeMe.remove();
+    var close = document.getElementsByClassName("closeItem");
+    var i;
+    for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+            var li = this.parentElement;
+            li.style.display = "none";
+        }
+    }
 
     //assign an id to every element that is created
     //onclick references the new id
@@ -60,10 +75,7 @@ function deleteItem() {
 }
 
 function initOrder() {
-    console.log("This will highlight the current players turn and skip to the next players turn");
+    alert("Functionality coming soon: This will highlight which character's turn it is");
     
-}
-
-function editItem() {
-    console.log("Allow the dm to edit the inputted information");
+    
 }
