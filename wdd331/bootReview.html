@@ -24,36 +24,38 @@
         <div class="row formItem">
             <div class="col-sm-3 formItem">
                 <p>Initiative</p>
-                <input type="text" name="initiative" placeholder="enter initiative...">
+                <input type="number" id="init" required name="initiative" placeholder="enter initiative...">
             </div>
             <div class="col-sm-3 formItem">
                 <p>Name</p>
-                <input type="text" name="name" placeholder="enter name...">
+                <input type="text" id="name" required name="name" placeholder="enter name...">
             </div>
             <div class="col-sm-3 formItem">
                 <p>AC</p>
-                <input type="text" name="ac" placeholder="enter ac...">
+                <input type="number" id="ac" required name="ac" placeholder="enter ac...">
             </div>
             <div class="col-sm-3 formItem">
                 <p>Health</p>
-                <input type="text" name="health" placeholder="enter health...">
+                <input type="number" id="health" required name="health" placeholder="enter health...">
             </div>
-            <button type="button" class="btn btn-danger" id="buttonSpacing">Add to Roster</button>
+            <button type="button" class="btn btn-danger" id="buttonSpacing" onclick="addItem()">Add to Roster</button>
         </div>
     </div>
     <div class="container well" id="encounterDisp" >
         <h2 class="text-center titleDisp dkTitleDisplay">Encounter Roster</h2>
-        <ul class="list-group">
-          <li class="list-group-item">Barbarian<span class="badge">X</span></li>
-          <li class="list-group-item">Bard<span class="badge">X</span></li>
-          <li class="list-group-item">Cleric <span class="badge">X</span></li>
-          <li class="list-group-item">Etc... <span class="badge">X</span></li>
+        <ul class="list-group" id="roster">
+          <li class="list-group-item">Barbarian<span class="badge" onclick="deleteItem()">X</span></li>
+          <li class="list-group-item">Bard<span class="badge" onclick="deleteItem()">X</span></li>
+          <li class="list-group-item">Cleric <span class="badge" onclick="deleteItem()">X</span></li>
+          <li class="list-group-item">Etc... <span class="badge" onclick="deleteItem()">X</span></li>
         </ul>
-      </div>
+        <button type="button" class="btn btn-secondary" id="buttonSpacing" onclick="initOrder()">Next</button>
+    </div>
     <footer class="text-center">
         <p id="copy-right">If you inspect the source and view the CSS you will see the implementation or review of
             bootstrap</p>
     </footer>
+    <script src="./javascript/bootReview.js"></script>
 </body>
 
 </html>
