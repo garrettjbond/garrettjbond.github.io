@@ -41,13 +41,30 @@
             <button type="button" class="btn btn-danger" id="buttonSpacing" onclick="addItem()">Add to Roster</button>
         </div>
     </div>
-    <div class="container well" id="encounterDisp" >
+    <div class="container well" id="encounterDisp">
         <h2 class="text-center titleDisp dkTitleDisplay">Encounter Roster</h2>
         <ul class="list-group" id="roster">
-          <li class="list-group-item">Barbarian<span class="badge" onclick="deleteItem()">X</span></li>
-          <li class="list-group-item">Bard<span class="badge" onclick="deleteItem()">X</span></li>
-          <li class="list-group-item">Cleric <span class="badge" onclick="deleteItem()">X</span></li>
-          <li class="list-group-item">Etc... <span class="badge" onclick="deleteItem()">X</span></li>
+            <li class="list-group-item"><span>Init</span><span>Name</span><span>AC</span><span>HP</span>
+                <span></span></li>
+            <li class="list-group-item">
+                <span>10</span>
+                <span>Bard</span>
+                <span>14</span>
+                <span>30</span><span class="badge" onclick="deleteItem()">X</span>
+            </li>
+            <li class="list-group-item">
+                <span>12</span>
+                <span>Barbarian</span>
+                <span>18</span>
+                <span>57</span><span class="badge" onclick="deleteItem()">X</span>
+            </li>
+            <li class="list-group-item">
+                <span>16</span>
+                <span>Wizard</span>
+                <span>16</span>
+                <span>79</span><span class="badge" onclick="deleteItem()">X</span>
+            </li>
+
         </ul>
         <button type="button" class="btn btn-secondary" id="buttonSpacing" onclick="initOrder()">Next</button>
     </div>

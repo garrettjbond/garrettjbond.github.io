@@ -38,3 +38,16 @@ footer{
     color: white;
 }
 
+#roster li:nth-child(1){
+    background-color: maroon;
+    color: white;
+    border: none;
+}
+
+
+#roster li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
