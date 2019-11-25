@@ -84,7 +84,9 @@ var counter = 0;
 var nCounter = 0;
 
 function initOrder() {
+    //Sets logic for negative counter variable
     nCounter = counter - 1;
+    
     //stores the roster in a variable
     var roster = document.querySelectorAll(".rosterListItem");
     
@@ -107,12 +109,5 @@ function initOrder() {
         counter = 0;  
     }
 
-    
-    //remove the styling everytime the function is called.
 }
-
-//Loop
-//add styling to the first one
-//Loop
-//remove styling on the first one
 
