@@ -1,20 +1,32 @@
 console.log("test");
 
+sortItem();
+
+function sortItem(){
+
+    var roster = document.querySelectorAll(".rosterListItem");    
+    // console.log(roster[1].children[0].innerHTML);
+
+    for(var i = 0; i <= roster.length-1; i++){
+        console.log(roster[i].children[0].innerHTML);
+}
+}
+
 function addItem() {
     var init = document.getElementById("init").value;
-    console.log(init);
+    // console.log(init);
 
     var name = document.getElementById("name").value;
-    console.log(name);
+    // console.log(name);
 
     var ac = document.getElementById("ac").value;
-    console.log(ac);
+    // console.log(ac);
 
     var health = document.getElementById("health").value;
-    console.log(health);
+    // console.log(health);
 
     var rosterItemDesc = "Initiative: " + init + " " + "Name: " + name + " " + "AC: " + ac + " " + "Health: " + health;
-    console.log(rosterItemDesc);
+    // console.log(rosterItemDesc);
 
     //create element
     var rosterItem = document.createElement("li");
@@ -86,12 +98,15 @@ var nCounter = 0;
 function initOrder() {
     //Sets logic for negative counter variable
     nCounter = counter - 1;
+    console.log("nCounter:" + nCounter);
+ 
+    console.log("Counter:" + counter);
     
     //stores the roster in a variable
     var roster = document.querySelectorAll(".rosterListItem");
     
     //keeps the counter positive
-    if(nCounter <= 0 ){
+    if(nCounter < 0 ){
         nCounter = 0;
     }
     //unstyle
@@ -106,8 +121,16 @@ function initOrder() {
     
     //Set limit for counter and reset the counter once it hits container limit
     if(counter > roster.length-1){
-        counter = 0;  
+    //     roster[nCounter].style.color = "#dd"; 
+    //     roster[nCounter].style.backgroundColor = "#fff";
+    //     nCounter = 0;
+    //     // alert(nCounter); 
+       counter = 0; 
+    //     // alert(counter);
+        
     }
 
-}
+    console.log(roster.length-1);
+    
 
+}
