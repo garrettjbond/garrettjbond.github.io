@@ -27,6 +27,8 @@ function addItem() {
     rosterItem.classList.add("list-group-item");
     rosterClose.classList.add("badge");
     rosterClose.classList.add("closeItem");
+    //add classes to new entries
+    rosterItem.classList.add("rosterListItem")
     //set content of new item
     rosterItem.innerHTML = "";
     rosterClose.innerHTML = "X";
@@ -74,8 +76,39 @@ function deleteItem() {
 
 }
 
+
+
+// button.addEventListener("click", initOrder);
+
+var counter = 0
+
 function initOrder() {
-    alert("Functionality coming soon: This will highlight which character's turn it is");
     
+    var roster = document.querySelectorAll(".rosterListItem");
     
+    //Adds styling to each item every time the 
+    roster[counter].style.backgroundColor = "#EDCF8E";
+    roster[counter].style.color = "black"; 
+    counter += 1;
+    
+    //Set limit for counter and reset the counter once it hits container limit
+    if(counter > roster.length-1){
+        counter = 0;
+        
+    }
+    
+    // var nCounter = counter - 1;
+    // roster[nCounter].style.backgroundColor = "#fff";
+    // roster[nCounter].style.color = "#dd"; 
+   
+
+
+
+    //remove the styling everytime the function is called.
 }
+
+//Loop
+//add styling to the first one
+//Loop
+//remove styling on the first one
+

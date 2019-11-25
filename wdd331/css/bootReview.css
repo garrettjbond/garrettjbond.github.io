@@ -44,6 +44,11 @@ footer{
     border: none;
 }
 
+.active{
+    background-color: #EDCF8E;
+    color: black;
+}
+
 
 #roster li{
     display: flex;
