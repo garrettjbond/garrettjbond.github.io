@@ -90,7 +90,7 @@ function initOrder() {
     //stores the roster in a variable
     var roster = document.querySelectorAll(".rosterListItem");
     
-    //keeps the counter positive.
+    //keeps the counter positive
     if(nCounter <= 0 ){
         nCounter = 0;
     }
