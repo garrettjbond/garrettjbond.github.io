@@ -80,30 +80,34 @@ function deleteItem() {
 
 // button.addEventListener("click", initOrder);
 
-var counter = 0
+var counter = 0;
+var nCounter = 0;
 
 function initOrder() {
-    
+    nCounter = counter - 1;
+    //stores the roster in a variable
     var roster = document.querySelectorAll(".rosterListItem");
     
-    //Adds styling to each item every time the 
+    //keeps the counter positive.
+    if(nCounter <= 0 ){
+        nCounter = 0;
+    }
+    //unstyle
+    roster[nCounter].style.color = "#dd"; 
+    roster[nCounter].style.backgroundColor = "#fff";
+
+    //Style
     roster[counter].style.backgroundColor = "#EDCF8E";
     roster[counter].style.color = "black"; 
+    //Adds styling to each item every time the 
     counter += 1;
     
     //Set limit for counter and reset the counter once it hits container limit
     if(counter > roster.length-1){
-        counter = 0;
-        
+        counter = 0;  
     }
+
     
-    // var nCounter = counter - 1;
-    // roster[nCounter].style.backgroundColor = "#fff";
-    // roster[nCounter].style.color = "#dd"; 
-   
-
-
-
     //remove the styling everytime the function is called.
 }
 
