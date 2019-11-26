@@ -9,7 +9,7 @@ function sortItem(){
 
     for(var i = 0; i <= roster.length-1; i++){
         console.log(roster[i].children[0].innerHTML);
-}
+    }
 }
 
 function addItem() {
@@ -81,11 +81,6 @@ function deleteItem() {
             li.style.display = "none";
         }
     }
-
-    //assign an id to every element that is created
-    //onclick references the new id
-    //remove referenced new id
-
 }
 
 
@@ -126,11 +121,7 @@ function initOrder() {
     //     nCounter = 0;
     //     // alert(nCounter); 
        counter = 0; 
-    //     // alert(counter);
-        
+    //     // alert(counter);     
     }
-
     console.log(roster.length-1);
-    
-
 }
