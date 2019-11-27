@@ -56,3 +56,7 @@ footer{
     align-items: center;
 }
 
+.closeItem:hover{
+    cursor: pointer;
+}
+

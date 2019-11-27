@@ -81,47 +81,82 @@ function deleteItem() {
             li.style.display = "none";
         }
     }
+
+    var roster = document.querySelectorAll(".rosterListItem");
+    console.log('bootReview.js -> %croster:', 'color: red', roster)
 }
 
 
 
 // button.addEventListener("click", initOrder);
 
+// var nCounter = 0;
+
 var counter = 0;
-var nCounter = 0;
-
 function initOrder() {
-    //Sets logic for negative counter variable
-    nCounter = counter - 1;
-    console.log("nCounter:" + nCounter);
- 
-    console.log("Counter:" + counter);
+    console.log("start: " + counter);
     
-    //stores the roster in a variable
     var roster = document.querySelectorAll(".rosterListItem");
-    
-    //keeps the counter positive
-    if(nCounter < 0 ){
-        nCounter = 0;
-    }
-    //unstyle
-    roster[nCounter].style.color = "#dd"; 
-    roster[nCounter].style.backgroundColor = "#fff";
-
-    //Style
+    console.log('bootReview.js -> %croster:', 'color: red', roster)
+    //style
     roster[counter].style.backgroundColor = "#EDCF8E";
-    roster[counter].style.color = "black"; 
-    //Adds styling to each item every time the 
-    counter += 1;
-    
-    //Set limit for counter and reset the counter once it hits container limit
-    if(counter > roster.length-1){
-    //     roster[nCounter].style.color = "#dd"; 
-    //     roster[nCounter].style.backgroundColor = "#fff";
-    //     nCounter = 0;
-    //     // alert(nCounter); 
-       counter = 0; 
-    //     // alert(counter);     
+    roster[counter].style.color = "black";
+    console.log("Counter Style:" + counter);
+
+    //unstyle
+    if(counter == 0){
+        roster[roster.length-1].style.color = "#dd"; 
+        roster[roster.length-1].style.backgroundColor = "#fff";
+       console.log(roster);   
     }
-    console.log(roster.length-1);
+    else{
+        roster[counter-1].style.color = "#dd"; 
+        roster[counter-1].style.backgroundColor = "#fff";
+        
+    }
+
+    counter += 1;
+
+    if(counter > roster.length-1){
+        counter = 0;
+    }
+    // //Sets logic for negative counter variable
+    // nCounter = counter - 1;
+    // console.log("nCounter Start:" + nCounter);
+ 
+    // console.log("Counter Start:" + counter);
+    
+    // //stores the roster in a variable
+    // var roster = document.querySelectorAll(".rosterListItem");
+    
+    // //keeps the counter positive
+    // if(nCounter < 0 ){
+    //     nCounter = 0;
+    // }
+    // //unstyle
+    // roster[nCounter].style.color = "#dd"; 
+    // roster[nCounter].style.backgroundColor = "#fff";
+    // console.log("nCounter unStyle:" + counter);
+    // //Style
+    // roster[counter].style.backgroundColor = "#EDCF8E";
+    // roster[counter].style.color = "black";
+    // console.log("Counter Style:" + counter); 
+    // //Adds styling to each item every time the 
+    // counter += 1;
+    // console.log("nCounter End:" + nCounter);
+    // console.log("Counter End:" + counter);
+    // //Set limit for counter and reset the counter once it hits container limit
+    // if(counter > roster.length-1){
+    // //     roster[nCounter].style.color = "#dd"; 
+    // //     roster[nCounter].style.backgroundColor = "#fff";
+    //     // nCounter = 0;
+    //     //     // alert(nCounter); 
+    //     counter = 0;
+    // roster[roster.length-1].style.color = "#dd"; 
+    // roster[roster.length-1].style.backgroundColor = "#fff";
+    //    console.log(counter); 
+    //    //ncounter resets before it unstyles the last element.
+    // //     // alert(counter);     
+    // }
+    
 }
