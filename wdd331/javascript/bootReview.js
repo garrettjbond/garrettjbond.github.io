@@ -104,7 +104,10 @@ function initOrder() {
     console.log("Counter Style:" + counter);
 
     //unstyle
-    if(counter == 0){
+    if(roster[counter] = ""){
+        counter +=1;
+    }
+    else if(counter == 0){
         roster[roster.length-1].style.color = "#dd"; 
         roster[roster.length-1].style.backgroundColor = "#fff";
        console.log(roster);   
