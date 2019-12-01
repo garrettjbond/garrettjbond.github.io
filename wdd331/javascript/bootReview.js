@@ -2,12 +2,12 @@ console.log("test");
 
 sortItem();
 
-function sortItem(){
+function sortItem() {
 
-    var roster = document.querySelectorAll(".rosterListItem");    
+    var roster = document.querySelectorAll(".rosterListItem");
     // console.log(roster[1].children[0].innerHTML);
 
-    for(var i = 0; i <= roster.length-1; i++){
+    for (var i = 0; i <= roster.length - 1; i++) {
         console.log(roster[i].children[0].innerHTML);
     }
 }
@@ -76,7 +76,7 @@ function deleteItem() {
     var close = document.getElementsByClassName("closeItem");
     var i;
     for (i = 0; i < close.length; i++) {
-        close[i].onclick = function() {
+        close[i].onclick = function () {
             var li = this.parentElement;
             li.style.display = "none";
         }
@@ -93,9 +93,10 @@ function deleteItem() {
 // var nCounter = 0;
 
 var counter = 0;
+
 function initOrder() {
     console.log("start: " + counter);
-    
+
     var roster = document.querySelectorAll(".rosterListItem");
     console.log('bootReview.js -> %croster:', 'color: red', roster)
     //style
@@ -104,34 +105,32 @@ function initOrder() {
     console.log("Counter Style:" + counter);
 
     //unstyle
-    if(roster[counter] = ""){
-        counter +=1;
-    }
-    else if(counter == 0){
-        roster[roster.length-1].style.color = "#dd"; 
-        roster[roster.length-1].style.backgroundColor = "#fff";
-       console.log(roster);   
-    }
-    else{
-        roster[counter-1].style.color = "#dd"; 
-        roster[counter-1].style.backgroundColor = "#fff";
-        
+    if (roster[counter] = "") {
+        counter += 1;
+    } else if (counter == 0) {
+        roster[roster.length - 1].style.color = "#dd";
+        roster[roster.length - 1].style.backgroundColor = "#fff";
+        console.log(roster);
+    } else {
+        roster[counter - 1].style.color = "#dd";
+        roster[counter - 1].style.backgroundColor = "#fff";
+
     }
 
     counter += 1;
 
-    if(counter > roster.length-1){
+    if (counter > roster.length - 1) {
         counter = 0;
     }
     // //Sets logic for negative counter variable
     // nCounter = counter - 1;
     // console.log("nCounter Start:" + nCounter);
- 
+
     // console.log("Counter Start:" + counter);
-    
+
     // //stores the roster in a variable
     // var roster = document.querySelectorAll(".rosterListItem");
-    
+
     // //keeps the counter positive
     // if(nCounter < 0 ){
     //     nCounter = 0;
@@ -161,5 +160,31 @@ function initOrder() {
     //    //ncounter resets before it unstyles the last element.
     // //     // alert(counter);     
     // }
-    
+
+}
+
+connectIt();
+function createNode(element) {
+    return document.createElement(element); // Create the type of element you pass in the parameters
+  }
+
+  function append(parent, el) {
+    return parent.appendChild(el); // Append the second parameter(element) to the first one
+  }
+
+function connectIt() {
+
+    const ul = document.getElementById('monsters');
+    const url = 'https://randomuser.me/api/?results=10'
+
+
+    fetch(url) // Call the fetch function passing the url of the API as a parameter
+        .then((resp) => resp.json())
+        .then(function(data) {
+            
+        })
+        .catch(function () {
+            // This is where you run code if the server returns any errors
+        });
+
 }
