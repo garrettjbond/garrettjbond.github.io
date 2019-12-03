@@ -142,12 +142,13 @@ main {
     }
 }
 
-// // Footer Component
+// Footer Component
 footer {
     color: rgb(206, 206, 206);
     text-align: center;
     font-size: .8em;
     position: absolute;
+    bottom: 1.5vh;
     width: 100%;
 }
 
@@ -162,10 +163,6 @@ footer {
 #asideMainWrapper {
     display: flex;
     flex-direction: column;
-}
-
-#noteListContainer {
-    display: none;
 }
 
 #asideWrapper {
@@ -208,7 +205,7 @@ main {
     }
 
     button {
-        min-width: 10vw;
+        width: 40px;
         height: 40px;
     }
 
@@ -217,9 +214,60 @@ main {
     }
 }
 
-
+@media only screen and (max-width: 899px) { 
+#noteListContainer {
+    display: none;
+}
+}
 
 /*
 *Full Web Stylings
 */
+@media only screen and (min-width: 900px) {
+    #asideMainWrapper{
+        display: flex;
+        flex-direction: row;
+    }
 
+    #asideWrapper{
+        order: 0;
+    }
+
+    .search-container {
+        height: 70px;
+        background-color: $blooOrange;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    
+        form {
+            width: 68%;
+            padding-left: 15px;
+        }
+    
+        input {
+            width: 75%;
+            margin-left: 9px;
+            padding-left: 10px;
+        }
+    
+        input,
+        button {
+            height: 40px;
+            border: none;
+            float: left;
+        }
+    
+        button {
+            width: 40px;
+            height: 40px;
+        }
+    
+        #createButton {
+            margin-right: 25px;
+        }
+    }
+}

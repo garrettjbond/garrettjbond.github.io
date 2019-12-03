@@ -81,6 +81,7 @@ footer {
   text-align: center;
   font-size: 0.8em;
   position: absolute;
+  bottom: 1.5vh;
   width: 100%;
 }
 
@@ -90,10 +91,6 @@ footer {
 #asideMainWrapper {
   display: flex;
   flex-direction: column;
-}
-
-#noteListContainer {
-  display: none;
 }
 
 #asideWrapper {
@@ -131,15 +128,63 @@ main {
   float: left;
 }
 .search-container button {
-  min-width: 10vw;
+  width: 40px;
   height: 40px;
 }
 .search-container #createButton {
   margin-right: 25px;
 }
 
+@media only screen and (max-width: 899px) {
+  #noteListContainer {
+    display: none;
+  }
+}
 /*
 *Full Web Stylings
 */
+@media only screen and (min-width: 900px) {
+  #asideMainWrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #asideWrapper {
+    order: 0;
+  }
+
+  .search-container {
+    height: 70px;
+    background-color: #FFE694;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  .search-container form {
+    width: 68%;
+    padding-left: 15px;
+  }
+  .search-container input {
+    width: 75%;
+    margin-left: 9px;
+    padding-left: 10px;
+  }
+  .search-container input,
+.search-container button {
+    height: 40px;
+    border: none;
+    float: left;
+  }
+  .search-container button {
+    width: 40px;
+    height: 40px;
+  }
+  .search-container #createButton {
+    margin-right: 25px;
+  }
+}
 
 /*# sourceMappingURL=workshop.css.map */
