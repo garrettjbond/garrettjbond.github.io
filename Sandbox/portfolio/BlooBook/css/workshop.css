@@ -121,6 +121,7 @@ main {
 }
 .search-container input {
   width: 80%;
+  margin-left: 4px;
 }
 .search-container input, .search-container button {
   height: 40px;
@@ -130,6 +131,9 @@ main {
 .search-container button {
   min-width: 10vw;
   height: 40px;
+}
+.search-container #createButton {
+  margin-right: 25px;
 }
 
 /*
