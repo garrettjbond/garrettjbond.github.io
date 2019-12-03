@@ -16,9 +16,18 @@ body {
 
 nav {
   background-color: #2699fb;
-  height: 45px;
+  height: 50px;
   display: flex;
   justify-content: space-between;
+}
+nav #navWrapperLeft svg {
+  height: 50%;
+  padding-top: 12px;
+}
+nav #navWrapperRight svg {
+  height: 45px;
+  width: 25px;
+  padding-top: 4px;
 }
 nav #navTitle {
   font-family: "Permanent Marker", cursive;
@@ -36,53 +45,22 @@ nav #navWrapperRight {
 header {
   text-align: center;
   font-family: "Permanent Marker", cursive;
+  padding: 10px 16px;
+  background: white;
+  color: black;
 }
 
-aside {
-  background-color: #FFE694;
-  color: #2699fb;
-  max-width: 38.91%;
-  max-height: 100%;
-}
-aside #noteListContainer {
-  height: 626px;
-  overflow-y: scroll;
-}
-aside .search-container {
+.search-container {
   display: flex;
 }
-aside .search-container button {
+.search-container button {
   background-color: #2699fb;
   border: none;
 }
-aside .search-container #createButton {
+.search-container #createButton {
   border-radius: 50%;
   color: white;
   font-weight: 600;
-}
-aside input {
-  max-width: 497px;
-  height: auto;
-  border: none;
-}
-aside .noteListItem {
-  background-color: white;
-  max-width: 500px;
-  max-height: 200px;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-  overflow: hidden;
-}
-aside .noteItemHeader {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-aside .noteItemHeader h4 {
-  margin: 0px;
 }
 
 main {
@@ -103,18 +81,57 @@ footer {
   text-align: center;
   font-size: 0.8em;
   position: absolute;
-  bottom: 0;
   width: 100%;
-  height: 1.5rem;
-}
-
-#asideMainWrapper {
-  display: flex;
 }
 
 /*
 *Mobile Stylings
 */
+#asideMainWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+#noteListContainer {
+  display: none;
+}
+
+#asideWrapper {
+  order: 2;
+}
+
+main {
+  background-color: white;
+  color: #2699fb;
+}
+
+.search-container {
+  height: 70px;
+  background-color: #FFE694;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.search-container form {
+  width: 68%;
+  padding-left: 15px;
+}
+.search-container input {
+  width: 80%;
+}
+.search-container input, .search-container button {
+  height: 40px;
+  border: none;
+  float: left;
+}
+.search-container button {
+  min-width: 10vw;
+  height: 40px;
+}
+
 /*
 *Full Web Stylings
 */
