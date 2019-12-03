@@ -25,7 +25,7 @@ nav {
     height: 50px;
     display: flex;
     justify-content: space-between;
-    
+
     #navWrapperLeft svg {
         height: 50%;
         padding-top: 12px;
@@ -60,7 +60,7 @@ header {
     text-align: center;
     font-family: 'Permanent Marker', cursive;
     padding: 10px 16px;
-    background: white;
+    background-color: #ebf6ff;
     color: black;
 }
 
@@ -179,41 +179,47 @@ main {
 }
 
 //Search Component
-.search-container{
+.search-container {
     height: 70px;
     background-color: $blooOrange;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     position: fixed;
-  bottom: 0;
-  width: 100%;
+    bottom: 0;
+    width: 100%;
 
-    form{
+    form {
         width: 68%;
-        padding-left: 15px; 
+        padding-left: 15px;
     }
 
-    input{
-        width: 80%;
-        margin-left: 4px;
+    input {
+        width: 75%;
+        margin-left: 9px;
+        padding-left: 10px;
     }
 
-    input, button{
+    input,
+    button {
         height: 40px;
         border: none;
         float: left;
     }
 
-    button{
+    button {
         min-width: 10vw;
         height: 40px;
     }
-    #createButton{
+
+    #createButton {
         margin-right: 25px;
     }
 }
 
+
+
 /*
 *Full Web Stylings
 */
+

@@ -46,7 +46,7 @@ header {
   text-align: center;
   font-family: "Permanent Marker", cursive;
   padding: 10px 16px;
-  background: white;
+  background-color: #ebf6ff;
   color: black;
 }
 
@@ -120,10 +120,12 @@ main {
   padding-left: 15px;
 }
 .search-container input {
-  width: 80%;
-  margin-left: 4px;
+  width: 75%;
+  margin-left: 9px;
+  padding-left: 10px;
 }
-.search-container input, .search-container button {
+.search-container input,
+.search-container button {
   height: 40px;
   border: none;
   float: left;
