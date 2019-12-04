@@ -66,7 +66,6 @@ header {
 main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 main .noteDisplay {
   display: flex;
@@ -80,8 +79,11 @@ footer {
   color: #cecece;
   text-align: center;
   font-size: 0.8em;
+  height: 2.5rem;
   position: absolute;
-  bottom: 1.5vh;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 100%;
 }
 
@@ -151,6 +153,12 @@ main {
 
   #asideWrapper {
     order: 0;
+    width: 0;
+    height: 70vh;
+    overflow-y: scroll;
+  }
+  #asideWrapper button {
+    opacity: 0;
   }
 
   .search-container {
@@ -184,6 +192,11 @@ main {
   }
   .search-container #createButton {
     margin-right: 25px;
+  }
+
+  .sideBar {
+    width: 45px;
+    background-color: #FFE694;
   }
 }
 
