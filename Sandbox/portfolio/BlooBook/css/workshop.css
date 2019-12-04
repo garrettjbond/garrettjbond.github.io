@@ -72,7 +72,7 @@ main .noteDisplay {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10%;
+  margin: 15%;
 }
 
 footer {
@@ -85,6 +85,7 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
+  z-index: -1;
 }
 
 /*
@@ -141,6 +142,10 @@ main {
   #noteListContainer {
     display: none;
   }
+
+  .sideBar {
+    display: none;
+  }
 }
 /*
 *Full Web Stylings
@@ -154,8 +159,8 @@ main {
   #asideWrapper {
     order: 0;
     width: 0;
-    height: 70vh;
     overflow-y: scroll;
+    transition: 1s;
   }
   #asideWrapper button {
     opacity: 0;
@@ -194,9 +199,31 @@ main {
     margin-right: 25px;
   }
 
+  main {
+    width: fit-content;
+  }
+
   .sideBar {
-    width: 45px;
+    width: 50px;
+    order: 0;
     background-color: #FFE694;
+  }
+  .sideBar svg {
+    padding-top: 50px;
+    padding-left: 12px;
+  }
+
+  .noteDisplay {
+    margin: 35%;
+    font-size: 1.25em;
+  }
+
+  .closebtn {
+    float: right;
+    font-size: 36px;
+    margin-left: 50px;
+    text-decoration: none;
+    color: #2699fb;
   }
 }
 

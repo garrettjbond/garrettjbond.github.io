@@ -27,27 +27,37 @@
             </svg>
         </div>
     </nav>
-    <header id="headerWrapper" class = "sticky">
+    <header id="headerWrapper" class="sticky">
         <h1>Workshop</h1>
     </header>
-    <div class="sideBar">
-    </div>
     <div id="asideMainWrapper">
+        <div class="sideBar" onclick = "toggleSideBar(this); openNav();">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <path id="Path_10" data-name="Path 10"
+                    d="M8,0,6.545,1.455l5.506,5.506H0V9.039H12.052L6.545,14.545,8,16l8-8Z" fill="#2699fb" />
+            </svg>
+        </div>
         <aside id="asideWrapper">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div class="search-container">
                 <form action="">
                     <input type="text" placeholder="Search.." name="search">
-                    <button type="submit" id="submitButton"><svg xmlns="http://www.w3.org/2000/svg" width="12.127" height="12.127" viewBox="0 0 12.127 12.127">
-                        <path id="Path_208" data-name="Path 208" d="M12.127,11.059,9.61,8.542a5.222,5.222,0,0,0,1.068-3.2A5.306,5.306,0,0,0,5.339,0,5.306,5.306,0,0,0,0,5.339a5.306,5.306,0,0,0,5.339,5.339,5.222,5.222,0,0,0,3.2-1.068l2.517,2.517Zm-10.6-5.72A3.777,3.777,0,0,1,5.339,1.525,3.777,3.777,0,0,1,9.153,5.339,3.777,3.777,0,0,1,5.339,9.153,3.777,3.777,0,0,1,1.525,5.339Z" fill="#fff"/>
-                      </svg>
-                      </button>
+                    <button type="submit" id="submitButton"><svg xmlns="http://www.w3.org/2000/svg" width="12.127"
+                            height="12.127" viewBox="0 0 12.127 12.127">
+                            <path id="Path_208" data-name="Path 208"
+                                d="M12.127,11.059,9.61,8.542a5.222,5.222,0,0,0,1.068-3.2A5.306,5.306,0,0,0,5.339,0,5.306,5.306,0,0,0,0,5.339a5.306,5.306,0,0,0,5.339,5.339,5.222,5.222,0,0,0,3.2-1.068l2.517,2.517Zm-10.6-5.72A3.777,3.777,0,0,1,5.339,1.525,3.777,3.777,0,0,1,9.153,5.339,3.777,3.777,0,0,1,5.339,9.153,3.777,3.777,0,0,1,1.525,5.339Z"
+                                fill="#fff" />
+                        </svg>
+                    </button>
                 </form>
-                <button id="createButton"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="15.999" viewBox="0 0 16 15.999">
-                    <g id="_" data-name="+" transform="translate(-301 -111)">
-                      <path id="Union_1" data-name="Union 1" d="M-4613,16V9h-7V7h7V0h2V7h7V9h-7v7Z" transform="translate(4921 111)" fill="#fff"/>
-                    </g>
-                  </svg>
-                  </button>
+                <button id="createButton"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="15.999"
+                        viewBox="0 0 16 15.999">
+                        <g id="_" data-name="+" transform="translate(-301 -111)">
+                            <path id="Union_1" data-name="Union 1" d="M-4613,16V9h-7V7h7V0h2V7h7V9h-7v7Z"
+                                transform="translate(4921 111)" fill="#fff" />
+                        </g>
+                    </svg>
+                </button>
             </div>
             <div id="noteListContainer">
                 <div class="noteListItem">
@@ -145,17 +155,22 @@
         <main id="mainWrapper">
             <div class="noteDisplay">
                 <h2 class="noteTitle">Note Title</h2>
-                <div class="noteSubtitle">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                <div class="noteSubtitle">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt
                 </div>
                 <p class="noteContent">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                     incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quiepakis nostrud exercitation ullamco laboris
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quiepakis nostrud exercitation ullamco
+                    laboris
                     nsi ut aliquip ex ea comepmodo consetquat. Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cfgillum dolore eutpe fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                    esse cfgillum dolore eutpe fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                    sunt
                     inpeku culpa qui officia deserunt mollit anim id est laborum.
-    
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium poeyi doloremque laudantium,
-                    totam rem aperiam, eaque ipsa quae apsb illo inventore veritatis et quasi architecto beiatae vitae dicta
+
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium poeyi doloremque
+                    laudantium,
+                    totam rem aperiam, eaque ipsa quae apsb illo inventore veritatis et quasi architecto beiatae vitae
+                    dicta
                     sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
                     consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
                     dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, seprid quia non numquam eius modi
@@ -167,6 +182,7 @@
         <span id="copyrightInfo">&copy;2019 Company Name, All rights reserved.</span>
         <script src="../js/landing.js"></script>
     </footer>
+    <script src="../js/workshop.js"></script>
 </body>
 
 </html>
