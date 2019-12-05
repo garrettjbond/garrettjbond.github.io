@@ -32,7 +32,7 @@
     </header>
     <div id="asideMainWrapper">
         <div class="sideBar" onclick = "toggleSideBar(this); openNav();">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <svg id="arrowSVG" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                 <path id="Path_10" data-name="Path 10"
                     d="M8,0,6.545,1.455l5.506,5.506H0V9.039H12.052L6.545,14.545,8,16l8-8Z" fill="#2699fb" />
             </svg>
@@ -154,11 +154,11 @@
         </aside>
         <main id="mainWrapper">
             <div class="noteDisplay">
-                <h2 class="noteTitle">Note Title</h2>
-                <div class="noteSubtitle">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                <h2 class="noteTitle" contenteditable="true">Note Title</h2>
+                <div class="noteSubtitle" contenteditable="true">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
                     deserunt
                 </div>
-                <p class="noteContent">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                <p class="noteContent" contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                     incididunt ut
                     labore et dolore magna aliqua. Ut enim ad minim veniam, quiepakis nostrud exercitation ullamco
                     laboris
