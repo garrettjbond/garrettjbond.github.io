@@ -163,7 +163,7 @@ function initOrder() {
 
 }
 
-connectIt();
+
 function createNode(element) {
     return document.createElement(element); // Create the type of element you pass in the parameters
   }
@@ -172,19 +172,26 @@ function createNode(element) {
     return parent.appendChild(el); // Append the second parameter(element) to the first one
   }
 
-function connectIt() {
+const fetchMonsters = () => {
+    //create url variable
+    const url = "https://api.open5e.com/monsters/";
 
-    const ul = document.getElementById('monsters');
-    const url = 'https://randomuser.me/api/?results=10'
-
-
-    fetch(url) // Call the fetch function passing the url of the API as a parameter
-        .then((resp) => resp.json())
-        .then(function(data) {
+    //make request via fetch
+    fetch(url)
+    //accept response/promise
+        .then(res => {
+            return res.json();
+        })
+        .then( data => {
+            console.log(data);
+            const monster = {};
+            monster['init'] = data.results[0].dexterity;
+            monster['name'] = data.results[0].name;
+            monster['ac'] = data.results[0].armor_class;
+            monster['hp'] = data.results[0].hit_points;
+            console.log(monster);
             
         })
-        .catch(function () {
-            // This is where you run code if the server returns any errors
-        });
+};
 
-}
+fetchMonsters();
