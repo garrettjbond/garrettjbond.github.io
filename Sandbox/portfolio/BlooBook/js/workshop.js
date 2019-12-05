@@ -8,5 +8,7 @@ function toggleSideBar(x){
     document.getElementById("arrowSVG").style.display = "none";
   }
   
-  function closeNav(){  document.getElementById("asideWrapper").style.width = "0px";
+  function closeNav(){  
+    document.getElementById("asideWrapper").style.width = "0px";
+    document.getElementById("arrowSVG").style.display = "";
   }

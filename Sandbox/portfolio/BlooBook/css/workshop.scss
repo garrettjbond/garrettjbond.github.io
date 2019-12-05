@@ -230,6 +230,7 @@ main {
         width: 0;
         overflow-y: scroll;
         transition: 1s;
+        background-color: $blooOrange;
     }
 
     .search-container {
@@ -300,6 +301,7 @@ main {
         text-decoration: none;
         color: $bloo; 
         background-color: $blooOrange;
+        padding-right: 15px;
     }    
 
     .noteListItem{

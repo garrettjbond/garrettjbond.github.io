@@ -176,6 +176,7 @@ main {
     width: 0;
     overflow-y: scroll;
     transition: 1s;
+    background-color: #FFE694;
   }
 
   .search-container {
@@ -240,6 +241,7 @@ main {
     text-decoration: none;
     color: #2699fb;
     background-color: #FFE694;
+    padding-right: 15px;
   }
 
   .noteListItem {
