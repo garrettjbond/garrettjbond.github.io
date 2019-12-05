@@ -76,7 +76,17 @@ main .noteDisplay {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 15%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 15%;
+  margin-top: 5%;
+}
+main .noteDisplay h2 {
+  font-size: 1.65em;
+}
+main .noteDisplay .noteSubtitle {
+  font-size: 1.25em;
+  text-align: center;
 }
 
 footer {
