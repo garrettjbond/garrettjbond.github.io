@@ -127,6 +127,7 @@ main {
   width: 75%;
   margin-left: 9px;
   padding-left: 10px;
+  outline: none;
 }
 .search-container input,
 .search-container button {
