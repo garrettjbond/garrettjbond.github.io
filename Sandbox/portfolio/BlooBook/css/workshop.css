@@ -151,6 +151,10 @@ main {
   .sideBar {
     display: none;
   }
+
+  .closebtn {
+    display: none;
+  }
 }
 /*
 *Full Web Stylings
@@ -173,6 +177,7 @@ main {
   }
 
   #asideWrapper {
+    height: 88vh;
     order: 0;
     width: 0;
     overflow-y: scroll;
