@@ -20,7 +20,20 @@
         <h1 class="titleDisp">D&D Initiative Tracker</h1>
     </header>
     <div class="container well text-center" id="wellAdjustment">
-        <h2 class="text-center titleDisp">Character Setup</h2>
+        <h2 class="text-center titleDisp">Let's Get Started!</h2>
+        <div class="row">
+            <button type="button" class="btn btn-danger buttonSpacing" onclick="addItem()">Character Creation</button>
+            <button type="button" class="btn btn-danger buttonSpacing" onclick="addItem()">Monster Selection</button>
+        </div>
+    </div>
+    <div class="container well text-center" id="wellAdjustment">
+        <h2 class="text-center titleDisp">Monster Selection</h2>
+        <div class="row formItem">
+            <button type="button" class="btn btn-danger buttonSpacing" onclick="addItem()">Add to Roster</button>
+        </div>
+    </div>
+    <div class="container well text-center" id="wellAdjustment">
+        <h2 class="text-center titleDisp">Character Creation</h2>
         <div class="row formItem">
             <div class="col-sm-3 formItem">
                 <p>Initiative</p>
@@ -41,7 +54,7 @@
             <button type="button" class="btn btn-danger buttonSpacing" onclick="addItem()">Add to Roster</button>
         </div>
     </div>
-    <ul id="monsters"></ul>
+    <!-- <ul id="monsters"></ul> -->
     <div class="container well" id="encounterDisp">
         <h2 class="text-center titleDisp dkTitleDisplay">Encounter Roster</h2>
         <ul class="list-group" id="roster">
