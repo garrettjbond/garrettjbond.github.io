@@ -60,3 +60,11 @@ footer{
     cursor: pointer;
 }
 
+td{
+    background-color: white;
+}
+th{
+    background-color: rgb(148, 118, 118);
+    color: white;
+    text-align: center !important;
+}
