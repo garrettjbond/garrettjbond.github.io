@@ -122,45 +122,6 @@ function initOrder() {
     if (counter > roster.length - 1) {
         counter = 0;
     }
-    // //Sets logic for negative counter variable
-    // nCounter = counter - 1;
-    // console.log("nCounter Start:" + nCounter);
-
-    // console.log("Counter Start:" + counter);
-
-    // //stores the roster in a variable
-    // var roster = document.querySelectorAll(".rosterListItem");
-
-    // //keeps the counter positive
-    // if(nCounter < 0 ){
-    //     nCounter = 0;
-    // }
-    // //unstyle
-    // roster[nCounter].style.color = "#dd"; 
-    // roster[nCounter].style.backgroundColor = "#fff";
-    // console.log("nCounter unStyle:" + counter);
-    // //Style
-    // roster[counter].style.backgroundColor = "#EDCF8E";
-    // roster[counter].style.color = "black";
-    // console.log("Counter Style:" + counter); 
-    // //Adds styling to each item every time the 
-    // counter += 1;
-    // console.log("nCounter End:" + nCounter);
-    // console.log("Counter End:" + counter);
-    // //Set limit for counter and reset the counter once it hits container limit
-    // if(counter > roster.length-1){
-    // //     roster[nCounter].style.color = "#dd"; 
-    // //     roster[nCounter].style.backgroundColor = "#fff";
-    //     // nCounter = 0;
-    //     //     // alert(nCounter); 
-    //     counter = 0;
-    // roster[roster.length-1].style.color = "#dd"; 
-    // roster[roster.length-1].style.backgroundColor = "#fff";
-    //    console.log(counter); 
-    //    //ncounter resets before it unstyles the last element.
-    // //     // alert(counter);     
-    // }
-
 }
 
 
@@ -190,8 +151,13 @@ const fetchMonsters = () => {
             monster['ac'] = data.results[0].armor_class;
             monster['hp'] = data.results[0].hit_points;
             console.log(monster);
-            
         })
 };
+
+function toggleStyle(){
+  document.getElementsByTagName("td").addEventListener("click")
+}
+
+toggleStyle();
 
 fetchMonsters();
