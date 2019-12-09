@@ -44,11 +44,6 @@ footer{
     border: none;
 }
 
-.active{
-    background-color: #EDCF8E;
-    color: black;
-}
-
 
 #roster li{
     display: flex;
@@ -71,7 +66,7 @@ td{
     cursor: pointer;
 }
 
-.active, td:hover{
+.activeMonsterItem, td:hover{
     background-color: rgb(148, 118, 118);
     color: white; 
 }
@@ -91,3 +86,4 @@ th{
 input{
     padding-left: 5px;    
 }
+

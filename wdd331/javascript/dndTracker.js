@@ -155,7 +155,13 @@ const fetchMonsters = () => {
 };
 
 function toggleStyle(){
-  document.getElementsByTagName("td").addEventListener("click")
+    var itemObject = document.getElementsByClassName("monsterItem");
+
+    for(var i = 0; i < itemObject.length; i++){
+        itemObject[i].addEventListener("click", function(){
+            this.classList.toggle("activeMonsterItem");
+        });
+    }
 }
 
 toggleStyle();
