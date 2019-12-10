@@ -19,14 +19,14 @@
     <header id="primaryTheme" class="jumbotron text-center">
         <h1 class="titleDisp">D&D Initiative Tracker</h1>
     </header>
-    <div class="container well text-center" id="wellAdjustment">
+    <!-- <div class="container well text-center" id="wellAdjustment">
         <h2 class="text-center titleDisp">Let's Get Started!</h2>
         <div class="row">
-            <button type="button" class="btn btn-danger buttonSpacing" onclick="addItem()">Character Creation</button>
-            <button type="button" class="btn btn-danger buttonSpacing" onclick="addItem()">Monster Selection</button>
+            <button type="button" class="btn btn-danger buttonSpacing"> <a href="#characterSelection"> Character Creation</a></button>
+            <button type="button" class="btn btn-danger buttonSpacing"> <a href="#monsterSelection"> Monster Selection</a></button>
         </div>
-    </div>
-    <div class="container well text-center" id="wellAdjustment">
+    </div> -->
+    <div class="container well text-center" id="wellAdjustment" name="monsterSelection">
         <h2 class="text-center titleDisp">Monster Selection</h2>
         <div class="row formItem">
             <table class="table table-bordered" id="tableStyle">
@@ -53,10 +53,10 @@
                     </tr>
                 </tbody>
             </table>
-            <button type="button" class="btn btn-danger buttonSpacing" onclick="addItem()">Add to Roster</button>
+            <button type="button" class="btn btn-danger buttonSpacing" onclick="importIt()">Add to Roster</button>
         </div>
     </div>
-    <div class="container well text-center" id="wellAdjustment">
+    <div class="container well text-center" id="wellAdjustment" name="characterSelection">
         <h2 class="text-center titleDisp">Character Creation</h2>
         <div class="row formItem">
             <div class="col-sm-3 formItem">
