@@ -3,7 +3,7 @@ console.log("test");
 sortItem();
 toggleStyle();
 fetchMonsters();
-//! searchIt();
+
 
 
 function sortItem() {
@@ -169,22 +169,23 @@ function toggleStyle(){
     }
 }
 
-//!Search Bar input filtering
-//! function searchIt() {
-//!     // Declare variables
-//!     var input, filter, ul, li, a, i;
-//!     input = document.getElementById("mySearch");
-//!     filter = input.value.toUpperCase();
-//!     ul = document.getElementById("myMenu");
-//!     li = ul.getElementsByTagName("li");
-//!
-//!     // Loop through all list items, and hide those who don't match the search query
-//!     for (i = 0; i < li.length; i++) {
-//!       a = li[i].getElementsByTagName("a")[0];
-//!       if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-//!         li[i].style.display = "";
-//!       } else {
-//!         li[i].style.display = "none";
-//!       }
-//!     }
-//!   }
+ //Search Bar input filtering
+ function searchIt() {
+    // Declare variables
+    var input, filter, tr, td, word, i, txtValue;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    tr = document.getElementById("monsterTable");
+    td = document.getElementsByClassName('monsterItem');
+        
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < td.length; i++) {
+    word = td[i];
+      txtValue = word.textContent || word.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        td[i].style.display = "";
+      } else {
+        td[i].style.display = "none";
+      }
+    }
+  }
