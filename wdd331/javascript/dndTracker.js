@@ -9,9 +9,9 @@ function sortItem() {
     
     var roster = document.querySelectorAll(".rosterListItem");
     // console.log(roster[1].children[0].innerHTML);
-    
+     
     for (var i = 0; i <= roster.length - 1; i++) {
-        console.log(roster[i].children[0].innerHTML);
+        console.log(roster[i].children[i].innerHTML);
     }
 }
 
@@ -73,40 +73,22 @@ function addItem() {
 }
 
 function deleteItem() {
-    console.log("Allow the dm to delete a player from the roster");
-    // var removeMe = this.ParentElement;
-    // removeMe.remove();
-    var close = document.getElementsByClassName("closeItem");
-    var i;
-    for (i = 0; i < close.length; i++) {
-        close[i].onclick = function () {
-            var li = this.parentElement;
-            li.style.display = "none";
-        }
-    }
-    
-    var roster = document.querySelectorAll(".rosterListItem");
-    console.log('bootReview.js -> %croster:', 'color: red', roster)
+    event.target.parentElement.style.display = "none";
 }
 
 
-
-// button.addEventListener("click", initOrder);
-
-// var nCounter = 0;
-
+//turn tracker
 var counter = 0;
-
 function initOrder() {
     console.log("start: " + counter);
     
     var roster = document.querySelectorAll(".rosterListItem");
     console.log('bootReview.js -> %croster:', 'color: red', roster)
     //style
+
     roster[counter].style.backgroundColor = "#EDCF8E";
     roster[counter].style.color = "black";
     console.log("Counter Style:" + counter);
-    
     //unstyle
     if (roster[counter] = "") {
         counter += 1;
