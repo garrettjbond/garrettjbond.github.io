@@ -7,12 +7,10 @@ sortItem();
 
 function sortItem() {
     
-    var roster = document.querySelectorAll(".rosterListItem");
+    var roster = Array.from(document.querySelectorAll(".rosterListItem"));
     // console.log(roster[1].children[0].innerHTML);
-     
-    for (var i = 0; i <= roster.length - 1; i++) {
-        console.log(roster[i].children[i].innerHTML);
-    }
+    console.log(roster);
+    roster.sort(function(a, b){return a.getAttribute("data-dexterity") - b});
 }
 
 function addItem() {
@@ -46,7 +44,8 @@ function addItem() {
     rosterItem.classList.add("rosterListItem")
     //set content of new item
     rosterItem.innerHTML = "";
-    rosterClose.innerHTML = `<span class="badge closeItem" onclick="deleteItem()">X</span>`;
+    rosterClose.innerHTML = "X";
+    rosterClose.onclick = () => {deleteItem()};
     rosterInit.innerHTML = init;
     rosterName.innerHTML = name;
     rosterAc.innerHTML = ac;
