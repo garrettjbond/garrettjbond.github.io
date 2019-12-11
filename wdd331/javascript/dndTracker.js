@@ -140,7 +140,7 @@ const fetchMonsters = () => {
             //make new elements
             var rosterMonsterRow = document.createElement("tr");
             var rosterMonsterData = document.createElement("td");
-            //add classes to new elements      
+            //add classes to the new elements      
             rosterMonsterRow.classList.add("monsterTable");
             rosterMonsterRow.classList.add("tableRowInsert");
             rosterMonsterData.classList.add("monsterItem");
