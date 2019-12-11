@@ -150,7 +150,7 @@ const fetchMonsters = () => {
             rosterMonsterData.setAttribute('data-armor-class', dataItem.armor_class); 
             rosterMonsterData.setAttribute('data-hit-points', dataItem.hit_points);
             rosterMonsterRow.appendChild(rosterMonsterData);
-            document.getElementsByClassName("tableRowInsert")[document.getElementsByClassName("tableRowInsert").length - 1].appendChild(rosterMonsterRow);
+            document.getElementsByClassName("monsterBody")[document.getElementsByClassName("monsterBody").length - 1].appendChild(rosterMonsterRow);
             // apiData['init'] = dataItem.dexterity;
             // apiData['name'] = dataItem.name;
             // apiData['ac'] = dataItem.armor_class;
