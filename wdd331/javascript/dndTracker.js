@@ -46,13 +46,12 @@ function addItem() {
     rosterItem.classList.add("rosterListItem")
     //set content of new item
     rosterItem.innerHTML = "";
-    rosterClose.innerHTML = "X";
+    rosterClose.innerHTML = `<span class="badge closeItem" onclick="deleteItem()">X</span>`;
     rosterInit.innerHTML = init;
     rosterName.innerHTML = name;
     rosterAc.innerHTML = ac;
     rosterHealth.innerHTML = health;
     //add onclick to new item
-    rosterClose.onclick = deleteItem();
     
     //get the desired location of where to put the new element
     var roster = document.getElementById("roster");
@@ -204,22 +203,26 @@ function searchIt() {
 // import selection to Roster
 function importIt() {
     //get object of potential monsters
-    var monsterRoster = document.getElementsByClassName("activeMonsterItem");
+    var monsterRoster = Array.from(document.getElementsByClassName("activeMonsterItem"));
     console.log("monster roster: ", monsterRoster);
     //find item in object that has class list activeMonsterItem
     monsterRoster.map(monsterRosterItem => {  
         
         //make new elements
         var rosterCharacter = document.createElement("li");
-        
+        var roster = document.getElementById("roster");
         //add classes to the new elements      
         rosterCharacter.classList.add("list-group-item", "rosterListItem");
         //add content to the new
-        rosterCharacter.innerHTML = `<span contenteditable="true">${monsterRosterItem.getAttribute("dexterity")}</span>
-        <span contenteditable="true">${monsterRosterItem.getAttribute("name")}</span>
-        <span contenteditable="true">${monsterRosterItem.getAttribute("armor_class")}</span>
-        <span contenteditable="true">${monsterRosterItem.getAttribute("hit_points")}</span>
-        <span class="badge closeItem" onclick="deleteItem()">X</span>` 
+        console.log("additem", monsterRosterItem.getAttribute("data-name"));
+        
+        rosterCharacter.innerHTML = `<span contenteditable="true">${monsterRosterItem.getAttribute("data-dexterity")}</span>
+        <span contenteditable="true">${monsterRosterItem.getAttribute("data-name")}</span>
+        <span contenteditable="true">${monsterRosterItem.getAttribute("data-armor-class")}</span>
+        <span contenteditable="true">${monsterRosterItem.getAttribute("data-hit-points")}</span>
+        <span class="badge closeItem" onclick="deleteItem()">X</span>`;
+        
+        roster.appendChild(rosterCharacter);
     });
     
     
