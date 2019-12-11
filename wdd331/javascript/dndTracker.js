@@ -53,7 +53,7 @@ function addItem() {
     rosterHealth.innerHTML = health;
     //add onclick to new item
     rosterClose.onclick = deleteItem();
-
+    
     //get the desired location of where to put the new element
     var roster = document.getElementById("roster");
     //put the new element at the desired location
@@ -85,13 +85,13 @@ function initOrder() {
     var roster = document.querySelectorAll(".rosterListItem");
     console.log('bootReview.js -> %croster:', 'color: red', roster)
     //style
-
-
+    
+    
     
     roster[counter].style.backgroundColor = "#EDCF8E";
     roster[counter].style.color = "black";
     console.log("Counter Style:" + counter);
-        
+    
     //unstyle
     if (roster[counter] = "") {
         counter += 1;
@@ -132,13 +132,32 @@ const fetchMonsters = () => {
         return res.json();
     })
     .then(data => {
+        
         console.log(data);
-        const monster = {};
-        monster['init'] = data.results[0].dexterity;
-        monster['name'] = data.results[0].name;
-        monster['ac'] = data.results[0].armor_class;
-        monster['hp'] = data.results[0].hit_points;
-        console.log(monster);
+        const monster = [];
+        data.results.map(dataItem => {
+            var apiData = {};
+            //make new elements
+            var rosterMonsterRow = document.createElement("tr");
+            var rosterMonsterData = document.createElement("td");
+            //add classes to new elements      
+            rosterMonsterRow.classList.add("monsterTable");
+            rosterMonsterData.classList.add("monsterItem");
+            //add content to new elements
+            rosterMonsterData.innerHTML = dataItem.name; 
+            rosterMonsterData.setAttribute('data-dexterity', dataItem.dexterity); 
+            rosterMonsterData.setAttribute('data-name', dataItem.name); 
+            rosterMonsterData.setAttribute('data-armor-class', dataItem.armor_class); 
+            rosterMonsterData.setAttribute('data-hit-points', dataItem.hit_points);
+            rosterMonsterRow.appendChild(rosterMonsterData);
+            document.getElementsByClassName("tableRowInsert")[document.getElementsByClassName("tableRowInsert").length - 1].appendChild(rosterMonsterRow);
+            // apiData['init'] = dataItem.dexterity;
+            // apiData['name'] = dataItem.name;
+            // apiData['ac'] = dataItem.armor_class;
+            // apiData['hp'] = dataItem.hit_points;
+            monster.push(apiData);
+        })
+
         })
 
     };
