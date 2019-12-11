@@ -7,6 +7,12 @@ margin-bottom: 0px;
 font-family: 'MedievalSharp', cursive;
 }
 
+tbody{
+    height: 300px;
+    display: block;
+    overflow: hidden;
+}
+
 .titleDisp{
     font-family: 'MedievalSharp', cursive;
     padding: 15px;
