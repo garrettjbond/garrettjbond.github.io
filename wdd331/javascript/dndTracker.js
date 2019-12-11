@@ -73,7 +73,7 @@ function addItem() {
 }
 
 function deleteItem() {
-    event.target.parentElement.style.display = "none";
+    event.target.parentElement.remove(event.target);
 }
 
 
@@ -86,9 +86,12 @@ function initOrder() {
     console.log('bootReview.js -> %croster:', 'color: red', roster)
     //style
 
+
+    
     roster[counter].style.backgroundColor = "#EDCF8E";
     roster[counter].style.color = "black";
     console.log("Counter Style:" + counter);
+        
     //unstyle
     if (roster[counter] = "") {
         counter += 1;
