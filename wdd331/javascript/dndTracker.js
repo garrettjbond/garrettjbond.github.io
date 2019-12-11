@@ -1,7 +1,7 @@
 console.log("test");
 
 sortItem();
-toggleStyle();
+// toggleStyle();
 
 
 
@@ -144,6 +144,9 @@ const fetchMonsters = () => {
             rosterMonsterRow.classList.add("monsterTable");
             rosterMonsterRow.classList.add("tableRowInsert");
             rosterMonsterData.classList.add("monsterItem");
+            //add onclick to the new data
+            rosterMonsterRow.onclick = (event) => {event.target.classList.toggle("activeMonsterItem")};
+
             //add content to new elements
             rosterMonsterData.innerHTML = dataItem.name; 
             rosterMonsterData.setAttribute('data-dexterity', dataItem.dexterity); 
@@ -157,7 +160,7 @@ const fetchMonsters = () => {
             // apiData['ac'] = dataItem.armor_class;
             // apiData['hp'] = dataItem.hit_points;
             monster.push(apiData);
-        })
+        });
 
         })
 
@@ -165,15 +168,19 @@ const fetchMonsters = () => {
     
     fetchMonsters();
     //toggle click styling
-    function toggleStyle() {
-        var itemObject = document.getElementsByClassName("monsterItem");
+
+    
+    // function toggleStyle() {
+    //     console.log("toggleStyle");
+    //     var itemObject = document.getElementsByClassName("monsterItem");
+    //     console.log(itemObject);
         
-        for (var i = 0; i < itemObject.length; i++) {
-            itemObject[i].addEventListener("click", function () {
-                this.classList.toggle("activeMonsterItem");
-            });
-        }
-    }
+    //     for (var i = 0; i < itemObject.length; i++) {
+    //         itemObject[i].addEventListener("click", function () {
+    //             this.classList.toggle("activeMonsterItem");
+    //         });
+    //     }
+    // }
 
 //Search Bar input filtering
 function searchIt() {

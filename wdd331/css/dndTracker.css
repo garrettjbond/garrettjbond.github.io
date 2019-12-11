@@ -9,7 +9,7 @@ font-family: 'MedievalSharp', cursive;
 
 tbody{
     height: 300px;
-    display: block;
+    display: inline-block;
     overflow-y: scroll;
 }
 
