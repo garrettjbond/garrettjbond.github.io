@@ -6,11 +6,27 @@ sortItem();
 
 
 function sortItem() {
+    console.log("sortItem");
     
     var roster = Array.from(document.querySelectorAll(".rosterListItem"));
     // console.log(roster[1].children[0].innerHTML);
     console.log(roster);
-    roster.sort(function(a, b){return a.getAttribute("data-dexterity") - b});
+    roster.sort(function(a, b){return parseInt(b.firstElementChild.innerText) - parseInt(a.firstElementChild.innerText)});
+    console.log(roster);
+
+    //make new elements
+    var rosterSort = document.getElementById("roster");
+    roster.map(rosterChild => { 
+    var rosterCharacterSort = document.createElement("li");
+
+    //add classes to the new elements      
+    rosterCharacterSort.classList.add("list-group-item", "rosterListItem");
+    //add content to the new
+    console.log(rosterChild);
+
+    // add to page
+    rosterSort.appendChild(rosterChild);
+    });
 }
 
 function addItem() {
@@ -47,6 +63,7 @@ function addItem() {
     rosterClose.innerHTML = "X";
     rosterClose.onclick = () => {deleteItem()};
     rosterInit.innerHTML = init;
+    rosterInit.onblur = () => {sortItem()};
     rosterName.innerHTML = name;
     rosterAc.innerHTML = ac;
     rosterHealth.innerHTML = health;
@@ -215,7 +232,7 @@ function importIt() {
         //add content to the new
         console.log("additem", monsterRosterItem.getAttribute("data-name"));
         
-        rosterCharacter.innerHTML = `<span contenteditable="true">${monsterRosterItem.getAttribute("data-dexterity")}</span>
+        rosterCharacter.innerHTML = `<span contenteditable="true" onblur="sortItem()">${monsterRosterItem.getAttribute("data-dexterity")}</span>
         <span contenteditable="true">${monsterRosterItem.getAttribute("data-name")}</span>
         <span contenteditable="true">${monsterRosterItem.getAttribute("data-armor-class")}</span>
         <span contenteditable="true">${monsterRosterItem.getAttribute("data-hit-points")}</span>
@@ -223,8 +240,7 @@ function importIt() {
         
         roster.appendChild(rosterCharacter);
     });
-    
-    
+    sortItem();
     //if monsterPlayer has activeMonsterItem active then add to roster
     //else prompt use to make a selection
 }
