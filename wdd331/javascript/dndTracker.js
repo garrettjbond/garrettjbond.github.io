@@ -147,7 +147,7 @@ const fetchMonsters = () => {
             //add onclick to the new data
             rosterMonsterRow.onclick = (event) => {event.target.classList.toggle("activeMonsterItem")};
 
-            //add content to new elements
+            //add the content to new elements
             rosterMonsterData.innerHTML = dataItem.name; 
             rosterMonsterData.setAttribute('data-dexterity', dataItem.dexterity); 
             rosterMonsterData.setAttribute('data-name', dataItem.name); 
