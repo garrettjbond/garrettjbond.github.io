@@ -204,24 +204,23 @@ function searchIt() {
 // import selection to Roster
 function importIt() {
     //get object of potential monsters
-    var monsterRoster = getElementsByClassName("monsterItem");
-    
+    var monsterRoster = document.getElementsByClassName("activeMonsterItem");
+    console.log("monster roster: ", monsterRoster);
     //find item in object that has class list activeMonsterItem
-    
-
-    for(var i = 0; i < monsterRoster; i++){ 
-        monsterPlayer = monsterRoster[i];
-    
-        if(monsterPlayer){
-            console.log("it worked, check the roster below");
-        }
-        else{
-            console.log("please click a monster before proceeding...");
-            
-        }
-    }
-
-    console.log(monsterPlayer.textContent);
+    monsterRoster.map(monsterRosterItem => {  
+        
+        //make new elements
+        var rosterCharacter = document.createElement("li");
+        
+        //add classes to the new elements      
+        rosterCharacter.classList.add("list-group-item", "rosterListItem");
+        //add content to the new
+        rosterCharacter.innerHTML = `<span contenteditable="true">${monsterRosterItem.getAttribute("dexterity")}</span>
+        <span contenteditable="true">${monsterRosterItem.getAttribute("name")}</span>
+        <span contenteditable="true">${monsterRosterItem.getAttribute("armor_class")}</span>
+        <span contenteditable="true">${monsterRosterItem.getAttribute("hit_points")}</span>
+        <span class="badge closeItem" onclick="deleteItem()">X</span>` 
+    });
     
     
     //if monsterPlayer has activeMonsterItem active then add to roster
