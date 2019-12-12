@@ -137,47 +137,43 @@ header h1 {
     margin: auto;
 
 }
-
+/* 
 header {
     height: 100vh;
 }
-
-header img:nth-child(1) {
+.dragon {
     width: 20%;
     height: auto;
     animation: flight 3s infinite;
 }
+.knight {
+    width: 8%;
+    height: auto;
+    margin-top: 500px;
+    margin-left: 100px;
+}
+
 
 @keyframes flight {
     0% {
-        margin-top: 0px;
+        transform: translateY(0px);
     }
 
     20% {
-        margin-top: 50px;
+        transform: translateY(50px);
     }
     40% {
-        margin-top: 0px;
+        transform: translateY(0px);
     }
 
     60% {
-        margin-top: 50px
+        transform: translateY(50px);
     }
     80% {
-        margin-top: 0px
+        transform: translateY(0px);
     }
 
     100% {
-        margin-top: 50px;
+        transform: translateY(50px);
     }
-}
-
-header img:nth-child(2) {
-    width: 8%;
-    height: auto;
-    float: right;
-}
-
-header img {
-    filter: grayscale(0%);
-}
+} */
