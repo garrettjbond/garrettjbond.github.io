@@ -85,10 +85,14 @@ function addItem() {
     rosterName.setAttribute("contenteditable", "true");
     rosterAc.setAttribute("contenteditable", "true");
     rosterHealth.setAttribute("contenteditable", "true");
+
+    sortItem();
 }
 
 function deleteItem() {
     event.target.parentElement.remove(event.target);
+
+    sortItem();
 }
 
 
