@@ -16,8 +16,12 @@
 </head>
 
 <body>
-    <header id="primaryTheme" class="jumbotron text-center">
+    <header id="primaryTheme" class="jumbotron text-center headerWrapper">
         <h1 class="titleDisp">D&D Initiative Tracker</h1>
+        <div class="imgWrapper">
+            <img src="./images/dragonflight.png" alt="dragon flying">
+            <img src="./images/knight.png" alt="mounted archer">
+        </div>
     </header>
     <!-- <div class="container well text-center" id="wellAdjustment">
         <h2 class="text-center titleDisp">Let's Get Started!</h2>
@@ -32,7 +36,9 @@
             <table class="table table-bordered" id="tableStyle">
                 <thead>
                     <tr>
-                      <th><input id="myInput" onkeyup="searchIt()" autocomplete="off" type="text" placeholder="Search..."><span class="glyphicon glyphicon-search searchSymbol" id="searchSYM"></span></th>
+                        <th><input id="myInput" onkeyup="searchIt()" autocomplete="off" type="text"
+                                placeholder="Search..."><span class="glyphicon glyphicon-search searchSymbol"
+                                id="searchSYM"></span></th>
                     </tr>
                 </thead>
                 <tbody class="monsterBody">
@@ -70,13 +76,13 @@
             <li class="list-group-item"><span>Init</span><span>Name</span><span>AC</span><span>HP</span>
                 <span></span></li>
             <li class="list-group-item rosterListItem">
-                <span contenteditable="true"  onblur="sortItem()">15</span>
+                <span contenteditable="true" onblur="sortItem()">15</span>
                 <span contenteditable="true">Bard</span>
                 <span contenteditable="true">14</span>
                 <span contenteditable="true">30</span><span class="badge closeItem" onclick="deleteItem()">X</span>
             </li>
             <li class="list-group-item rosterListItem">
-                <span contenteditable="true"  onblur="sortItem()">12</span>
+                <span contenteditable="true" onblur="sortItem()">12</span>
                 <span contenteditable="true">Barbarian</span>
                 <span contenteditable="true">18</span>
                 <span contenteditable="true">57</span><span class="badge closeItem" onclick="deleteItem()">X</span>
