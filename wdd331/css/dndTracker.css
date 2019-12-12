@@ -11,8 +11,12 @@ tbody{
     height: 300px;
     display: inline-block;
     overflow-y: scroll;
+    width: 100%;
 }
 
+tr{
+    display: grid;
+}
 /* width */
 ::-webkit-scrollbar {
     width: 20px;
