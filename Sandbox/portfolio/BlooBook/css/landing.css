@@ -107,6 +107,11 @@ span.psw {
   padding-top: 60px;
 }
 
+.buttonAnch, .buttonAnch:active {
+  text-decoration: none;
+  color: white;
+}
+
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
