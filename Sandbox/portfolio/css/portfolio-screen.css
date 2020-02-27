@@ -121,6 +121,7 @@ h1 {
   background-color: #2a2a2a;
   border-radius: 50%;
   height: 250px;
+  overflow: hidden;
   width: 250px;
 }
 
