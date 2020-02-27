@@ -12,13 +12,22 @@ body {
   margin: 0px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: Ubuntu;
   font-size: 3.5em;
   color: black;
 }
 
-p, span, footer, li, a {
+p,
+span,
+footer,
+li,
+a {
   font-family: PT Sans;
   color: #2a2a2a;
 }
@@ -126,7 +135,9 @@ h1 {
   cursor: pointer;
 }
 
-.bar-one, .bar-two, .bar-three {
+.bar-one,
+.bar-two,
+.bar-three {
   transition: 0.4s;
 }
 
@@ -280,7 +291,8 @@ h1 {
   transform: rotateY(180deg);
 }
 
-.tile-front, .tile-back {
+.tile-front,
+.tile-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -337,18 +349,24 @@ h1 {
   background-color: #2a2a2a;
 }
 
-.contact_icons_container ul {
+.contact_icons_container {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 15px 20px 0px 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
 }
-.contact_icons_container li {
-  list-style: none;
+.contact_icons_container .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
   border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  background-color: white;
+  color: white;
+  border: 4px solid white;
+}
+.contact_icons_container .fa:hover {
+  opacity: 0.7;
 }
 
 footer {

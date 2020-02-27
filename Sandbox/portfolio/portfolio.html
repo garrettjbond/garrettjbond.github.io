@@ -7,170 +7,223 @@
     <meta name="author" content="Garrett Bond">
     <meta name="description" content="This is my portfolio">
     <link rel="stylesheet" href="./css/portfolio-screen.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-  <header id="welcome-section">
-    <nav id="navbar">
-      <div>
-        <p id="nav_logo">{GB}</p>
-      </div>
-      <div>
-          <div id="menu-icon" onclick="openNav()">
-          <div class="menu-bar bar-one"></div>
-          <div class="menu-bar bar-two"></div>
-          <div class="menu-bar bar-three"></div>
+    <header id="welcome-section">
+        <nav id="navbar">
+            <div>
+                <p id="nav_logo">{GB}</p>
+            </div>
+            <div>
+                <div id="menu-icon" onclick="openNav()">
+                    <div class="menu-bar bar-one"></div>
+                    <div class="menu-bar bar-two"></div>
+                    <div class="menu-bar bar-three"></div>
+                </div>
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#aboutMe" onclick="closeNav()">About</a>
+                    <a href="#hours" onclick="closeNav()">Hours</a>
+                    <a href="#projects" onclick="closeNav()">Projects</a>
+                    <a href="#contact" onclick="closeNav()">Contact</a>
+                </div>
+            </div>
+        </nav>
+        <div id="header_content">
+            <div id="img_container">
+                <img id="avatarImage" alt="profile picture" src="./images/profilePic2019.jpg">
+            </div>
+            <div id="header_title">
+                <hr class="header_hr">
+                <h1>Garrett Bond</h1>
+                <hr class="header_hr">
+            </div>
+            <a id="header_change" href="#aboutMe">
+                <p id="iLove">Let's Begin </p>
+                <div id="changeAnimation"><span class="change">></span></div>
+            </a>
         </div>
-        <div id="mySidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a href="#aboutMe" onclick="closeNav()">About</a>
-          <a href="#hours" onclick="closeNav()">Hours</a>
-          <a href="#projects" onclick="closeNav()">Projects</a>
-          <a href="#contact" onclick="closeNav()">Contact</a>
-        </div>
-      </div>
-    </nav>
-    <div id="header_content">
-      <div id="img_container">
-        <img id="avatarImage" alt="profile picture">
-      </div>
-      <div id="header_title">
-        <hr class="header_hr">
-        <h1>Garrett Bond</h1>
-        <hr class="header_hr">
-      </div>
-      <a id="header_change" href="#aboutMe" >
-        <p id="iLove">Let's Begin </p>
-        <div id="changeAnimation"><span class="change">></span></div>
-      </a>
-    </div>
-  </header>
-  <main>
-    <div id="aboutMe" class="main_div">
-      <div class="div_header">
-        <h2>About</h2>
-        <hr>
-      </div>
-      <article>
-        <p>I'm front-end developer with 0 experience, but have devoted hours learning the holy trinity: HTML, CSS, and JS.</p>
-        <p>
+    </header>
+    <main>
+        <div id="aboutMe" class="main_div">
+            <div class="div_header">
+                <h2>About</h2>
+                <hr>
+            </div>
+            <article>
+                <p>I'm front-end developer with 0 experience, but have devoted hours learning the holy trinity: HTML,
+                    CSS, and JS.</p>
+                <p>
 
-          I'm currently a student at BYU-I, and in July 2020 will receive my Bachelor's Degree in Computer Information Technology.</p>
-        <p>Give me a chance and you will NOT be disappointed.</p>
-      </article>
-    </div>
-    <div id="hours" class="main_div">
-      <div id="grandfather">
-        <div id="arm"></div>
-        <div id="ball"></div>
-      </div>
-      <div class="div_header">
-        <h2>Hours</h2>
-        <hr>
-      </div>
-      <article>
-        <p>I was told by a recruiter that he wished each applicant had devoted 800+ hours to coding and personal projects. </p>
-        <p>I was shocked. Not only was I nowhere near that number, but I felt I had no time to make this a reality.
-        </p>
-        <p>
-          While working 30-40 hours a week and spending 5-15 hours a week on school, I still found the time.
-        </p>
-        <p>Since October I have logged 169 hours and it's continuing to climb. My current goal is to hit 350 hours before I graduate in July.
-        </p>
-        <p>Intrigued? Follow my progress <a href="https://docs.google.com/spreadsheets/d/1ZzAt9uQZ6G07e9ek4WFwkM4OmNPhTY6Yn8zP2c0UtgA/edit?usp=sharing">here</a></p>
-
-      </article>
-    </div>
-    <div id="projects" class="main_div">
-      <div class="div_header">
-        <h2>Projects</h2>
-        <hr>
-      </div>
-      <article>
-        <p>In an effort to solidify my understanding of the holy trinity, I have focused my projects on HTML, CSS, JS.
-        </p>
-        <p>To stay relevant and increase my awareness of the ever changing field in IT. I have a number of projects in the queue that focus on various libraries and frameworks.
-        </p>
-        <p>Check back soon for more additions.</p>
-        <div id="tile-container">
-          <div class="project-tile">
-            <div class="tile-inner">
-              <div class="tile-front"><h3>Senior Practicum: BlooBook</h3></div>
-              <div class="tile-back">
-            <p>Starting from Adobe XD and ending in my github repo, this project brought to life the creative vision of a workplace for entreprenuers. While it is still under construction, the overall theme was still accomplished using VSCode, Adobe:XD, HTML, SCSS, and JS.</p><a href="https://garrettjbond.github.io/Sandbox/portfolio/BlooBook/support/landing.html">Take Me There!</a></div>
-            </div>
-          </div>
-          <div class="project-tile">
-            <div class="tile-inner">
-              <div class="tile-front"><h3>D&D Initiative Tracker</h3></div>
-              <div class="tile-back">
-            <p>For all the Dungeons and Dragons nerds out there, this single page application is the solution for all dungeon masters. It asynchronously connects to an open-source API and allows you create and maintain a battle encounter.</p><a href="https://garrettjbond.github.io/wdd331/dndTracker.html">Take Me There!</a>
-              </div>
-            </div>
-          </div>
-          <div class="project-tile">
-            <div class="tile-inner">
-              <div class="tile-front"><h3>Tip Calculator</h3></div>
-              <div class="tile-back">
-            <p>Don't know how much to tip? This single page application makes the process easy for you, so all you have to worry about is the trip home.</p><a href="https://garrettjbond.github.io/Sandbox/portfolio/tip.html">Take Me There!</a></div>
-            </div>
-          </div>
-          <div class="project-tile">
-            <div class="tile-inner">
-              <div class="tile-front"><h3>To Do List</h3></div>
-              <div class="tile-back">
-            <p>This is your everyday to-do list single page application. Put together with HTML, SCSS, and JS.</p><a href="https://garrettjbond.github.io/cit261/index.html">Take Me There!</a></div>
-            </div>
-          </div>
-          <div class="project-tile">
-            <div class="tile-inner">
-              <div class="tile-front"><h3>FCC: Tribute Page</h3></div>
-              <div class="tile-back">
-            <p>My first Free Code Camp project was a tribute page to the great Abraham Lincoln. This challenge focused on HTML, CSS, and responsive design.</p><a href="https://codepen.io/gbonddev/pen/LYEONbd">Take Me There!</a></div>
-            </div>
-          </div>
-          <div class="project-tile">
-            <div class="tile-inner">
-              <div class="tile-front"><h3>FCC: Survey Form</h3></div>
-              <div class="tile-back">
-            <p>My second Free Code Camp project was a survey form. This challenge was designed to increase my understanding of forms and input validation without the use of regular expressions. Languages included HTML and CSS. </p><a href="https://codepen.io/gbonddev/pen/vYEWRzL">Take Me There!</a></div>
-            </div>
-          </div>
-          <div class="project-tile">
-            <div class="tile-inner">
-              <div class="tile-front"><h3>FCC: Product Landing Page</h3></div>
-              <div class="tile-back">
-            <p>My third Free Code Camp project was a mock version of a product landing page. It is similar to one you might find on any e-commece site. Languages included HTML and SCSS.</p><a href="https://codepen.io/gbonddev/pen/eYmyLrw">Take Me There!</a></div>
-            </div>
-          </div>
-          <div class="project-tile">
-            <div class="tile-inner">
-              <div class="tile-front"><h3>FCC: Technical Document Page</h3></div>
-              <div class="tile-back">
-            <p>My fourth Free Code Camp project was a technical documentation page that covered various concepts, which I at the time struggled with. Languages used were HTML and SCSS.</p><a href="https://codepen.io/gbonddev/pen/QWwmVrO">Take Me There!</a></div>
-            </div>
-          </div>
+                    I'm currently a student at BYU-I, and in July 2020 will receive my Bachelor's Degree in Computer
+                    Information Technology.</p>
+                <p>Give me a chance and you will NOT be disappointed.</p>
+            </article>
         </div>
-      </article>
-    </div>
-    <div id="contact" class="main_div">
-      <div class="div_header">
-        <h2>Contact</h2>
-        <hr>
-      </div>
-      <div class="contact_icons_container">
-        <ul>
-          <li>Em</li>
-          <li>Li</li>
-          <li>TW</li>
-          <li>FCC</li>
-        </ul>
-      </div>
-    </div>
-  </main>
-  <footer>©2020 Garrett Bond
-    <script src="./js/portfolio.js"></script>
-  </footer>
+        <div id="hours" class="main_div">
+            <div id="grandfather">
+                <div id="arm"></div>
+                <div id="ball"></div>
+            </div>
+            <div class="div_header">
+                <h2>Hours</h2>
+                <hr>
+            </div>
+            <article>
+                <p>I was told by a recruiter that he wished each applicant had devoted 800+ hours to coding and personal
+                    projects. </p>
+                <p>I was shocked. Not only was I nowhere near that number, but I felt I had no time to make this a
+                    reality.
+                </p>
+                <p>
+                    While working 30-40 hours a week and spending 5-15 hours a week on school, I still found the time.
+                </p>
+                <p>Since October I have logged 169 hours and it's continuing to climb. My current goal is to hit 350
+                    hours before I graduate in July.
+                </p>
+                <p>Intrigued? Follow my progress <a
+                        href="https://docs.google.com/spreadsheets/d/1ZzAt9uQZ6G07e9ek4WFwkM4OmNPhTY6Yn8zP2c0UtgA/edit?usp=sharing">here</a>
+                </p>
+
+            </article>
+        </div>
+        <div id="projects" class="main_div">
+            <div class="div_header">
+                <h2>Projects</h2>
+                <hr>
+            </div>
+            <article>
+                <p>In an effort to solidify my understanding of the holy trinity, I have focused my projects on HTML,
+                    CSS, JS.
+                </p>
+                <p>To stay relevant and increase my awareness of the ever changing field in IT. I have a number of
+                    projects in the queue that focus on various libraries and frameworks.
+                </p>
+                <p>Check back soon for more additions.</p>
+                <div id="tile-container">
+                    <div class="project-tile">
+                        <div class="tile-inner">
+                            <div class="tile-front">
+                                <h3>Senior Practicum: BlooBook</h3>
+                            </div>
+                            <div class="tile-back">
+                                <p>Starting from Adobe XD and ending in my github repo, this project brought to life the
+                                    creative vision of a workplace for entreprenuers. While it is still under
+                                    construction, the overall theme was still accomplished using VSCode, Adobe:XD, HTML,
+                                    SCSS, and JS.</p><a
+                                    href="https://garrettjbond.github.io/Sandbox/portfolio/BlooBook/support/landing.html">Take
+                                    Me There!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-tile">
+                        <div class="tile-inner">
+                            <div class="tile-front">
+                                <h3>D&D Initiative Tracker</h3>
+                            </div>
+                            <div class="tile-back">
+                                <p>For all the Dungeons and Dragons nerds out there, this single page application is the
+                                    solution for all dungeon masters. It asynchronously connects to an open-source API
+                                    and allows you create and maintain a battle encounter.</p><a
+                                    href="https://garrettjbond.github.io/wdd331/dndTracker.html">Take Me There!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-tile">
+                        <div class="tile-inner">
+                            <div class="tile-front">
+                                <h3>Tip Calculator</h3>
+                            </div>
+                            <div class="tile-back">
+                                <p>Don't know how much to tip? This single page application makes the process easy for
+                                    you, so all you have to worry about is the trip home.</p><a
+                                    href="https://garrettjbond.github.io/Sandbox/portfolio/tip.html">Take Me There!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-tile">
+                        <div class="tile-inner">
+                            <div class="tile-front">
+                                <h3>To Do List</h3>
+                            </div>
+                            <div class="tile-back">
+                                <p>This is your everyday to-do list single page application. Put together with HTML,
+                                    SCSS, and JS.</p><a href="https://garrettjbond.github.io/cit261/index.html">Take Me
+                                    There!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-tile">
+                        <div class="tile-inner">
+                            <div class="tile-front">
+                                <h3>FCC: Tribute Page</h3>
+                            </div>
+                            <div class="tile-back">
+                                <p>My first Free Code Camp project was a tribute page to the great Abraham Lincoln. This
+                                    challenge focused on HTML, CSS, and responsive design.</p><a
+                                    href="https://codepen.io/gbonddev/pen/LYEONbd">Take Me There!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-tile">
+                        <div class="tile-inner">
+                            <div class="tile-front">
+                                <h3>FCC: Survey Form</h3>
+                            </div>
+                            <div class="tile-back">
+                                <p>My second Free Code Camp project was a survey form. This challenge was designed to
+                                    increase my understanding of forms and input validation without the use of regular
+                                    expressions. Languages included HTML and CSS. </p><a
+                                    href="https://codepen.io/gbonddev/pen/vYEWRzL">Take Me There!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-tile">
+                        <div class="tile-inner">
+                            <div class="tile-front">
+                                <h3>FCC: Product Landing Page</h3>
+                            </div>
+                            <div class="tile-back">
+                                <p>My third Free Code Camp project was a mock version of a product landing page. It is
+                                    similar to one you might find on any e-commece site. Languages included HTML and
+                                    SCSS.</p><a href="https://codepen.io/gbonddev/pen/eYmyLrw">Take Me There!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-tile">
+                        <div class="tile-inner">
+                            <div class="tile-front">
+                                <h3>FCC: Technical Document Page</h3>
+                            </div>
+                            <div class="tile-back">
+                                <p>My fourth Free Code Camp project was a technical documentation page that covered
+                                    various concepts, which I at the time struggled with. Languages used were HTML and
+                                    SCSS.</p><a href="https://codepen.io/gbonddev/pen/QWwmVrO">Take Me There!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div id="contact" class="main_div">
+            <div class="div_header">
+                <h2>Contact</h2>
+                <hr>
+            </div>
+            <div class="contact_icons_container">
+                <a href="https://www.linkedin.com/in/garrett-bond/" class="fa fa-linkedin"></a>
+                <a href="https://twitter.com/GarrettBond16" class="fa fa-twitter"></a>
+                <a href="gbond.dev@gmail.com" class="fa fa-envelope"></a>
+                <a href="https://www.freecodecamp.org/fcc9ae3e3df-6bb4-48de-b15d-8fff11e12ba2" class="fa fa-code"></a>
+                <a href="https://codepen.io/gbonddev" class="fa fa-codepen" id="profile-link"></a>
+            </div>
+        </div>
+    </main>
+    <footer>©2020 Garrett Bond
+        <script src="./js/portfolio.js"></script>
+    </footer>
 </body>
 
 </html>
