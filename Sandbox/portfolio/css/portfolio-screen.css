@@ -361,7 +361,7 @@ h1 {
   align-items: center;
 }
 .contact_icons_container .fa {
-  padding: 10px;
+  padding: 6px;
   font-size: 30px;
   width: 30px;
   text-align: center;
@@ -381,9 +381,6 @@ footer {
   background-color: dodgerblue;
   padding-bottom: 5px;
 }
-footer .contact_icons_container {
-  padding-top: 10px;
-}
 footer .footer_div {
   padding: 25px 25px 0px 25px;
   border-top: 2px solid #E6ECF8;
@@ -392,6 +389,12 @@ footer p {
   color: white;
   text-align: center;
   padding-bottom: 5px;
+  padding-top: 20px;
+}
+
+#core-container {
+  display: flex;
+  justify-content: center;
 }
 
 /*************************
@@ -444,25 +447,67 @@ header {
 }
 
 /*************************
-* Tablet Stylings
+* Small Tablet Stylings
 *************************/
 @media only screen and (min-width: 500px) {
-  .main_div {
-    padding: 50px;
+  .project-tile {
+    height: 300px;
+    width: 300px;
   }
-  .main_div:nth-of-type(4) {
-    height: 30vh;
+
+  h1 {
+    font-size: 5em;
+  }
+
+  .contact_icons_container .fa {
+    padding: 10px;
+  }
+
+  #contact {
+    margin: 0px 10% 0px 10%;
+  }
+}
+/*************************
+* Big Tablet Stylings
+*************************/
+@media only screen and (min-width: 700px) {
+  .project-tile {
+    height: 375px;
+    width: 375px;
+  }
+
+  #coreIMG {
+    width: 60%;
   }
 }
 /*************************
 * Full Desktop Stylings
 *************************/
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 848px) {
   .main_div {
-    padding: 75px;
+    padding: 0px 13% 0px 13%;
   }
-  .main_div:nth-of-type(4) {
-    height: 30vh;
+
+  .project-tile {
+    height: 325px;
+    width: 325px;
+  }
+
+  #coreIMG {
+    width: 40%;
+  }
+
+  #arm {
+    width: 3vh;
+  }
+
+  #ball {
+    height: 20vw;
+    width: 20vw;
+  }
+
+  #navbar {
+    padding: 0px 13% 0px 13%;
   }
 }
 
