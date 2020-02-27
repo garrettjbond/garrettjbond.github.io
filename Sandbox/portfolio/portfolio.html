@@ -1,74 +1,176 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Garrett Bond's Portfolio</title>
+    <meta charset="utf-8">
+    <title>Portfolio | Bond</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="Garrett Bond">
+    <meta name="description" content="This is my portfolio">
     <link rel="stylesheet" href="./css/portfolio-screen.css">
 </head>
 
 <body>
-    <header>
-        <h1 id="heroTitle">Welcome!</h1>
-        <!-- <img src="./images/profilePic2019.jpg" alt="profilePicture"> -->
-    </header>
-    <main>
-        <h2 id="projectHeader">Projects</h2>
-        <hr id="projectHr">
-        <div id="articleContainer">
-            <a class="articleItem" href="#">
-                <article class="articleWrapper">
-                    <h3>Initiative Tracker</h3>
-                    <hr>
-                    <p>Status: Under Construction</p>
-                </article>
-            </a>
-            <a class="articleItem" href="#">
-                <article class="articleWrapper">
-                    <h3>Dice Roller</h3>
-                    <hr>
-                    <p>Status: Under Construction</p>
-                </article>
-            </a>
-            <a class="articleItem" href="#">
-                <article class="articleWrapper">
-                    <h3>CSS Zen Garden: Bat Cave Theme</h3>
-                    <hr>
-                    <p>Status: Under Construction</p>
-                </article>
-            </a>
-            <a class="articleItem" href="#">
-                <article class="articleWrapper">
-                    <h3>BlooBook</h3>
-                    <hr>
-                    <p>Status: Under Construction</p>
-                </article>
-            </a>
+  <header id="welcome-section">
+    <nav id="navbar">
+      <div>
+        <p id="nav_logo">{GB}</p>
+      </div>
+      <div>
+          <div id="menu-icon" onclick="openNav()">
+          <div class="menu-bar bar-one"></div>
+          <div class="menu-bar bar-two"></div>
+          <div class="menu-bar bar-three"></div>
         </div>
-    </main>
-    <footer>
-        <div class="primaryMe">
-            <h2>About Me</h2>
-            <hr>
-            <p>
-                My name is Garrett Bond, and I’m currently attending school at Brigham Young University of Idaho. I am
-                working towards my bachelor’s degree in Computer Information Technology. I am always eager to gain more
-                insight in all aspects of the technology sector, specifically Web Front End. I’m currently searching for
-                an internship in Front End and am eager to pursue any career opportunities that will allow me to pursue
-                this. 
-            </p>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="#aboutMe" onclick="closeNav()">About</a>
+          <a href="#hours" onclick="closeNav()">Hours</a>
+          <a href="#projects" onclick="closeNav()">Projects</a>
+          <a href="#contact" onclick="closeNav()">Contact</a>
         </div>
-        <div class="accentMe">
-            <h2>Contact Me</h2>
-            <hr>
-            <ul>
-                <li>LinkedIn: https://www.linkedin.com/in/garrett-bond-5941aab8</li>
-                <li>Email: gbond.dev@gmail.com</li>
-            </ul>
+      </div>
+    </nav>
+    <div id="header_content">
+      <div id="img_container">
+        <img id="avatarImage" alt="profile picture">
+      </div>
+      <div id="header_title">
+        <hr class="header_hr">
+        <h1>Garrett Bond</h1>
+        <hr class="header_hr">
+      </div>
+      <a id="header_change" href="#aboutMe" >
+        <p id="iLove">Let's Begin </p>
+        <div id="changeAnimation"><span class="change">></span></div>
+      </a>
+    </div>
+  </header>
+  <main>
+    <div id="aboutMe" class="main_div">
+      <div class="div_header">
+        <h2>About</h2>
+        <hr>
+      </div>
+      <article>
+        <p>I'm front-end developer with 0 experience, but have devoted hours learning the holy trinity: HTML, CSS, and JS.</p>
+        <p>
+
+          I'm currently a student at BYU-I, and in July 2020 will receive my Bachelor's Degree in Computer Information Technology.</p>
+        <p>Give me a chance and you will NOT be disappointed.</p>
+      </article>
+    </div>
+    <div id="hours" class="main_div">
+      <div id="grandfather">
+        <div id="arm"></div>
+        <div id="ball"></div>
+      </div>
+      <div class="div_header">
+        <h2>Hours</h2>
+        <hr>
+      </div>
+      <article>
+        <p>I was told by a recruiter that he wished each applicant had devoted 800+ hours to coding and personal projects. </p>
+        <p>I was shocked. Not only was I nowhere near that number, but I felt I had no time to make this a reality.
+        </p>
+        <p>
+          While working 30-40 hours a week and spending 5-15 hours a week on school, I still found the time.
+        </p>
+        <p>Since October I have logged 169 hours and it's continuing to climb. My current goal is to hit 350 hours before I graduate in July.
+        </p>
+        <p>Intrigued? Follow my progress <a href="https://docs.google.com/spreadsheets/d/1ZzAt9uQZ6G07e9ek4WFwkM4OmNPhTY6Yn8zP2c0UtgA/edit?usp=sharing">here</a></p>
+
+      </article>
+    </div>
+    <div id="projects" class="main_div">
+      <div class="div_header">
+        <h2>Projects</h2>
+        <hr>
+      </div>
+      <article>
+        <p>In an effort to solidify my understanding of the holy trinity, I have focused my projects on HTML, CSS, JS.
+        </p>
+        <p>To stay relevant and increase my awareness of the ever changing field in IT. I have a number of projects in the queue that focus on various libraries and frameworks.
+        </p>
+        <p>Check back soon for more additions.</p>
+        <div id="tile-container">
+          <div class="project-tile">
+            <div class="tile-inner">
+              <div class="tile-front"><h3>Senior Practicum: BlooBook</h3></div>
+              <div class="tile-back">
+            <p>Starting from Adobe XD and ending in my github repo, this project brought to life the creative vision of a workplace for entreprenuers. While it is still under construction, the overall theme was still accomplished using VSCode, Adobe:XD, HTML, SCSS, and JS.</p><a href="https://garrettjbond.github.io/Sandbox/portfolio/BlooBook/support/landing.html">Take Me There!</a></div>
+            </div>
+          </div>
+          <div class="project-tile">
+            <div class="tile-inner">
+              <div class="tile-front"><h3>D&D Initiative Tracker</h3></div>
+              <div class="tile-back">
+            <p>For all the Dungeons and Dragons nerds out there, this single page application is the solution for all dungeon masters. It asynchronously connects to an open-source API and allows you create and maintain a battle encounter.</p><a href="https://garrettjbond.github.io/wdd331/dndTracker.html">Take Me There!</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-tile">
+            <div class="tile-inner">
+              <div class="tile-front"><h3>Tip Calculator</h3></div>
+              <div class="tile-back">
+            <p>Don't know how much to tip? This single page application makes the process easy for you, so all you have to worry about is the trip home.</p><a href="https://garrettjbond.github.io/Sandbox/portfolio/tip.html">Take Me There!</a></div>
+            </div>
+          </div>
+          <div class="project-tile">
+            <div class="tile-inner">
+              <div class="tile-front"><h3>To Do List</h3></div>
+              <div class="tile-back">
+            <p>This is your everyday to-do list single page application. Put together with HTML, SCSS, and JS.</p><a href="https://garrettjbond.github.io/cit261/index.html">Take Me There!</a></div>
+            </div>
+          </div>
+          <div class="project-tile">
+            <div class="tile-inner">
+              <div class="tile-front"><h3>FCC: Tribute Page</h3></div>
+              <div class="tile-back">
+            <p>My first Free Code Camp project was a tribute page to the great Abraham Lincoln. This challenge focused on HTML, CSS, and responsive design.</p><a href="https://codepen.io/gbonddev/pen/LYEONbd">Take Me There!</a></div>
+            </div>
+          </div>
+          <div class="project-tile">
+            <div class="tile-inner">
+              <div class="tile-front"><h3>FCC: Survey Form</h3></div>
+              <div class="tile-back">
+            <p>My second Free Code Camp project was a survey form. This challenge was designed to increase my understanding of forms and input validation without the use of regular expressions. Languages included HTML and CSS. </p><a href="https://codepen.io/gbonddev/pen/vYEWRzL">Take Me There!</a></div>
+            </div>
+          </div>
+          <div class="project-tile">
+            <div class="tile-inner">
+              <div class="tile-front"><h3>FCC: Product Landing Page</h3></div>
+              <div class="tile-back">
+            <p>My third Free Code Camp project was a mock version of a product landing page. It is similar to one you might find on any e-commece site. Languages included HTML and SCSS.</p><a href="https://codepen.io/gbonddev/pen/eYmyLrw">Take Me There!</a></div>
+            </div>
+          </div>
+          <div class="project-tile">
+            <div class="tile-inner">
+              <div class="tile-front"><h3>FCC: Technical Document Page</h3></div>
+              <div class="tile-back">
+            <p>My fourth Free Code Camp project was a technical documentation page that covered various concepts, which I at the time struggled with. Languages used were HTML and SCSS.</p><a href="https://codepen.io/gbonddev/pen/QWwmVrO">Take Me There!</a></div>
+            </div>
+          </div>
         </div>
-    </footer>
+      </article>
+    </div>
+    <div id="contact" class="main_div">
+      <div class="div_header">
+        <h2>Contact</h2>
+        <hr>
+      </div>
+      <div class="contact_icons_container">
+        <ul>
+          <li>Em</li>
+          <li>Li</li>
+          <li>TW</li>
+          <li>FCC</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer>©2020 Garrett Bond
+    <script src="./js/portfolio.js"></script>
+  </footer>
 </body>
 
 </html>

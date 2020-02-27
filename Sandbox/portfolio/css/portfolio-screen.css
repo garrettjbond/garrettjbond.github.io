@@ -1,99 +1,434 @@
-/* ******************************
-*  Stylesheet for Screened Devices
-*  Created by: Garrett Bond
-*  
-*  1.  Includes (fonts and supplementary stylesheets)
-*  1.1 Normalize
-*  1.2 Google fonts
-*
-*  2.  General Styles (for all pages and devices)
-*
-*  3.  Mobile First (styles specific to small screens)
-*
-*  4.  Large Screen Styles (Media Queries begin here)
-*
-* ********************************/
-/************** 1. Imports ********************/
-/* 1.1 Normalize Import */
-@import url("normalize.css");
-/* 1.2 Google Font Import*/
-@import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
-/*@import url('');
-/*1.3 Variables*/
-/************** 2. General/Mobile Styles *****************/
+/*************************
+* Imports
+*************************/
+@import url("https://fonts.googleapis.com/css?family=PT+Sans|Ubuntu&display=swap");
+/*************************
+* Variables
+*************************/
+/*************************
+* Generic Stylings
+*************************/
 body {
-  font-family: "Permanent Marker", cursive;
+  margin: 0px;
 }
 
-header {
+h1, h2, h3, h4, h5, h6 {
+  font-family: Ubuntu;
+  font-size: 3.5em;
+  color: black;
+}
+
+p, span, footer, li, a {
+  font-family: PT Sans;
+  color: #2a2a2a;
+}
+
+main p {
+  font-size: 2em;
+}
+
+#header_title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav div p {
+  color: white;
+}
+
+#navbar {
+  position: sticky;
+}
+
+#iLove {
+  font-size: 2em;
+  display: flex;
+  margin: 0px;
+}
+
+.header_hr {
+  margin: 0px;
+  background-color: dodgerblue;
+  border: none;
+  height: 6px;
+}
+.header_hr:nth-of-type(1) {
+  width: 80%;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+.header_hr:nth-of-type(2) {
+  margin-top: 15px;
+  width: 50%;
+}
+
+#header_change {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  padding: 15px;
+  margin-top: 25px;
+  border: 4px solid #2a2a2a;
+  border-radius: 25px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.change {
   position: relative;
+  display: inline-block;
+  font-weight: 900;
+  font-size: 1.25em;
+  margin-left: 10px;
+  padding: 8px 15px 8px 15px;
+  background-color: dodgerblue;
+  color: white;
+  border: 4px solid #2a2a2a;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+#header_change:hover .change {
+  background-color: deepskyblue;
+  transform: rotate(90deg);
+}
+
+h1 {
+  font-size: 15vw;
+  padding: 0px;
+  margin: 0px;
+}
+
+#nav_logo {
+  font-family: Ubuntu;
+}
+
+#img_container {
+  background-color: #2a2a2a;
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+}
+
+.menu-bar {
+  background-color: white;
+  height: 5px;
+  width: 35px;
+  margin: 6px 0px;
+}
+
+#menu-icon {
+  cursor: pointer;
+}
+
+.bar-one, .bar-two, .bar-three {
+  transition: 0.4s;
+}
+
+.changeMenu .bar-one {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.changeMenu .bar-two {
+  opacity: 0;
+}
+
+.changeMenu .bar-three {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-color: #cacaca;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #2a2a2a;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.main_div {
+  border-top: 2px solid #E6ECF8;
+}
+
+.main_div:nth-of-type(odd) {
+  background-color: #f5f5f5;
+}
+
+.div_header {
+  margin: 15px;
+}
+.div_header h2 {
+  margin: 0px;
+}
+.div_header hr {
+  float: left;
+  margin: 0px;
+  width: 200px;
+  height: 6px;
+  border: none;
+  background-color: dodgerblue;
+}
+
+#hours {
+  overflow: hidden;
+}
+
+#grandfather {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+}
+
+#arm {
+  position: absolute;
+  width: 5vw;
   height: 100vh;
-  background-image: url("../images/pastelBlueSmoke.jpg");
-  background-color: darkblue;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: burlywood;
+  top: -50vh;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+#ball {
+  position: absolute;
+  background-color: gold;
+  height: 40vw;
+  width: 40vw;
+  border: 15px solid goldenrod;
+  border-radius: 50%;
+  top: 40vh;
+  z-index: 2;
+  opacity: 0.2;
+}
+
+#grandfather {
+  animation: swing 6s infinite;
+}
+
+@keyframes swing {
+  20% {
+    transform: rotate(30deg);
+  }
+  40% {
+    transform: rotate(-30deg);
+  }
+  60% {
+    transform: rotate(30deg);
+  }
+  80% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+#tile-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-tile {
+  background-color: transparent;
+  width: 300px;
+  height: 150px;
+  border: 2 solid #cacaca;
+  perspective: 1000px;
+}
+
+.tile-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.project-tile:hover .tile-inner {
+  transform: rotateY(180deg);
+}
+
+.tile-front, .tile-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.tile-front {
+  background-color: azure;
+  color: #2a2a2a;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-h1 {
-  font-size: 3em;
+.tile-back {
+  background-color: dodgerblue;
+  transform: rotateY(180deg);
+}
+.tile-back p {
+  font-size: 2em;
+  line-height: 1.8;
   color: white;
-  padding: 1em;
+  margin: 0px 30px 0px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.tile-back a {
+  cursor: pointer;
+  color: white;
+  top: -35px;
+  position: relative;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 4px;
+  font-size: 2em;
   transition: 0.3s;
 }
-
-header:hover {
-  animation: earthquake 1s;
-  animation-fill-mode: forwards;
+.tile-back a:hover {
+  background-color: white;
+  color: blue;
 }
 
-@keyframes earthquake {
-  0% {
-    border-radius: 0%;
-    transform: translate(1px, 1px) rotate(0deg);
+#contact {
+  background-color: dodgerblue;
+  height: 20vh;
+}
+#contact h2 {
+  color: white;
+}
+#contact hr {
+  background-color: #2a2a2a;
+}
+
+.contact_icons_container ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 15px 20px 0px 20px;
+}
+.contact_icons_container li {
+  list-style: none;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  background-color: white;
+}
+
+footer {
+  bottom: 0.5em;
+  width: 100%;
+  text-align: center;
+  background-color: dodgerblue;
+  color: white;
+  padding-bottom: 15px;
+}
+
+/*************************
+* Mobile Stylings
+*************************/
+header {
+  height: 100vh;
+}
+
+.main_div {
+  padding: 25px;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 2.5em;
+  color: white;
+  background-color: dodgerblue;
+}
+
+#header_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#tile-container {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.project-tile {
+  font-size: 0.5em;
+  border-radius: 5px;
+  border: 2px solid #E6ECF8;
+  width: 100%;
+  height: 250px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*************************
+* Tablet Stylings
+*************************/
+@media only screen and (min-width: 500px) {
+  .main_div {
+    padding: 50px;
   }
-  10% {
-    border-radius: 5%;
-    transform: translate(-1px, -2px) rotate(-1deg);
+  .main_div:nth-of-type(4) {
+    height: 30vh;
   }
-  20% {
-    border-radius: 10%;
-    transform: translate(-3px, 0px) rotate(1deg);
+}
+/*************************
+* Full Desktop Stylings
+*************************/
+@media only screen and (min-width: 700px) {
+  .main_div {
+    padding: 75px;
   }
-  30% {
-    border-radius: 15%;
-    transform: translate(3px, 2px) rotate(0deg);
-  }
-  40% {
-    border-radius: 20%;
-    transform: translate(1px, -1px) rotate(1deg);
-  }
-  50% {
-    border-radius: 25%;
-    transform: translate(-1px, 2px) rotate(-1deg);
-  }
-  60% {
-    border-radius: 30%;
-    transform: translate(-3px, 1px) rotate(0deg);
-  }
-  70% {
-    border-radius: 35%;
-    transform: translate(3px, 1px) rotate(-1deg);
-  }
-  80% {
-    border-radius: 40%;
-    transform: translate(-1px, -1px) rotate(1deg);
-  }
-  90% {
-    border-radius: 45%;
-    transform: translate(1px, 2px) rotate(0deg);
-  }
-  100% {
-    border-radius: 50%;
-    transform: translate(1px, -2px) rotate(-1deg);
+  .main_div:nth-of-type(4) {
+    height: 30vh;
   }
 }
 
