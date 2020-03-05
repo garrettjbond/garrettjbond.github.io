@@ -227,6 +227,14 @@ h1 {
 
 //Generic Section Stylings
 
+.footer_div, .main_div{
+    padding: 4% 13% 4% 13%;
+}
+
+.tile-front h3{
+    margin: 5%;
+}
+
 h2{
     // border-bottom: 6px solid $blue;
     text-decoration: underline;
@@ -613,6 +621,15 @@ header {
     }
     #coreIMG{
         width: 40%;
+    }
+
+    .tile-back p {
+        font-size: 2em;
+        line-height: 2;
+    }
+
+    .tile-back a {
+        margin-bottom: 30px;
     }
 
     #arm{
