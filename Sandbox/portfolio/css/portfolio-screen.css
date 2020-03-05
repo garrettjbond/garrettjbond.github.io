@@ -73,7 +73,6 @@ nav div p {
 }
 
 .change {
-  position: relative;
   display: inline-block;
   font-weight: 900;
   font-size: 1.25em;
@@ -147,7 +146,7 @@ h1 {
   position: fixed;
   z-index: 3;
   top: 0;
-  left: 0;
+  right: 0;
   background-color: #cacaca;
   overflow-x: hidden;
   transition: 0.5s;
