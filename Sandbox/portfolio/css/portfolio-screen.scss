@@ -80,23 +80,23 @@ nav div p {
     margin: 0px;
 }
 
-.header_hr {
-    margin: 0px;
-    background-color: $blue;
-    border: none;
-    height: 6px;
+// .header_hr {
+//     margin: 0px;
+//     background-color: $blue;
+//     border: none;
+//     height: 6px;
 
-    &:nth-of-type(1) {
-        width: 80%;
-        margin-top: 25px;
-        margin-bottom: 10px;
-    }
+//     &:nth-of-type(1) {
+//         width: 80%;
+//         margin-top: 25px;
+//         margin-bottom: 10px;
+//     }
 
-    &:nth-of-type(2) {
-        margin-top: 15px;
-        width: 50%;
-    }
-}
+//     &:nth-of-type(2) {
+//         margin-top: 15px;
+//         width: 50%;
+//     }
+// }
 
 #header_change {
     display: flex;
@@ -240,14 +240,14 @@ h1 {
         margin: 0px;
     }
 
-    hr {
-        float: left;
-        margin: 0px;
-        width: 200px;
-        height: 6px;
-        border: none;
-        background-color: $blue;
-    }
+    // hr {
+    //     float: left;
+    //     margin: 0px;
+    //     width: 200px;
+    //     height: 6px;
+    //     border: none;
+    //     background-color: $blue;
+    // }
 }
 
 //AboutMe
@@ -268,6 +268,15 @@ h1 {
     display: flex;
     justify-content: center;
     z-index: -1;
+}
+
+#a_here{
+    text-decoration: underline;
+    transition: .3s;
+}
+
+#a_here:hover{
+    color: $blue;
 }
 
 #arm {
@@ -407,9 +416,9 @@ h1 {
         color: white;
     }
 
-    hr {
-        background-color: $black;
-    }
+    // hr {
+    //     background-color: $black;
+    // }
 }
 
 .contact_icons_container {

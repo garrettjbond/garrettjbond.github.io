@@ -60,22 +60,6 @@ nav div p {
   margin: 0px;
 }
 
-.header_hr {
-  margin: 0px;
-  background-color: dodgerblue;
-  border: none;
-  height: 6px;
-}
-.header_hr:nth-of-type(1) {
-  width: 80%;
-  margin-top: 25px;
-  margin-bottom: 10px;
-}
-.header_hr:nth-of-type(2) {
-  margin-top: 15px;
-  width: 50%;
-}
-
 #header_change {
   display: flex;
   align-items: baseline;
@@ -203,14 +187,6 @@ h1 {
 .div_header h2 {
   margin: 0px;
 }
-.div_header hr {
-  float: left;
-  margin: 0px;
-  width: 200px;
-  height: 6px;
-  border: none;
-  background-color: dodgerblue;
-}
 
 #coreIMG {
   position: relative;
@@ -226,6 +202,15 @@ h1 {
   display: flex;
   justify-content: center;
   z-index: -1;
+}
+
+#a_here {
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+#a_here:hover {
+  color: dodgerblue;
 }
 
 #arm {
@@ -351,9 +336,6 @@ h1 {
 }
 #contact h2 {
   color: white;
-}
-#contact hr {
-  background-color: #2a2a2a;
 }
 
 .contact_icons_container {
