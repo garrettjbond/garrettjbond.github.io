@@ -173,6 +173,15 @@ h1 {
   margin-left: 50px;
 }
 
+h2 {
+  text-decoration: underline;
+  text-decoration-color: dodgerblue;
+}
+
+#contact h2 {
+  text-decoration-color: white;
+}
+
 .main_div {
   border-top: 2px solid #E6ECF8;
 }
