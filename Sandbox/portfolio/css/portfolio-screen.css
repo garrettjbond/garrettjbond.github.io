@@ -94,7 +94,9 @@ nav div p {
 h1 {
   font-size: 15vw;
   padding: 0px;
-  margin: 0px;
+  margin: 25px 0px 0px 0px;
+  border-top: 6px solid dodgerblue;
+  border-bottom: 6px solid dodgerblue;
 }
 
 #nav_logo {
