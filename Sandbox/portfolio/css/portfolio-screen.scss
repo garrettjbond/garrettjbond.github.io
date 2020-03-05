@@ -226,6 +226,19 @@ h1 {
 
 
 //Generic Section Stylings
+#navbar{
+    overflow: hidden;
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+html{
+    scroll-behavior: smooth;
+}
 
 .footer_div, .main_div{
     padding: 4% 13% 4% 13%;
