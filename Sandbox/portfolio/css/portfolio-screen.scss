@@ -164,6 +164,9 @@ h1 {
 
 #menu-icon {
     cursor: pointer;
+    position: fixed;
+    right: 3%;
+    top: 2%;
 }
 
 .bar-one,
@@ -223,9 +226,8 @@ h1 {
 
 
 //Generic Section Stylings
-#navbar{
-    overflow: hidden;
-}
+
+
 
 .sticky{
     position: fixed;
