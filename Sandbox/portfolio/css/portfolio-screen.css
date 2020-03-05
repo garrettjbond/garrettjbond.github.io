@@ -451,6 +451,11 @@ header {
     width: 300px;
   }
 
+  .tile-back p {
+    font-size: 1.8em;
+    line-height: 2;
+  }
+
   h1 {
     font-size: 5em;
   }
@@ -470,6 +475,15 @@ header {
   .project-tile {
     height: 375px;
     width: 375px;
+  }
+
+  .tile-back p {
+    font-size: 2em;
+    line-height: 2;
+  }
+
+  .tile-back a {
+    margin-bottom: 40px;
   }
 
   #coreIMG {
