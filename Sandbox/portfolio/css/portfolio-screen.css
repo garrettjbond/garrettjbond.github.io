@@ -50,10 +50,6 @@ nav div p {
   color: white;
 }
 
-#navbar {
-  position: sticky;
-}
-
 #iLove {
   font-size: 2em;
   display: flex;
@@ -182,6 +178,7 @@ h1 {
   position: fixed;
   top: 0;
   z-index: 10;
+  width: 100%;
 }
 
 html {
