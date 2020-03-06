@@ -321,7 +321,7 @@ h2 {
 }
 
 .tile-front {
-  background-color: azure;
+  background-color: white;
   color: #2a2a2a;
   display: flex;
   justify-content: center;
@@ -365,8 +365,10 @@ h2 {
 #contact {
   background-color: dodgerblue;
   height: 20vh;
+  margin-bottom: 30px;
 }
 #contact h2 {
+  padding-top: 0px;
   color: white;
 }
 
