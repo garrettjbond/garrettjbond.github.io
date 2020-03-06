@@ -193,6 +193,7 @@ html {
 }
 
 h2 {
+  padding-top: 30px;
   text-decoration: underline;
   text-decoration-color: dodgerblue;
 }
