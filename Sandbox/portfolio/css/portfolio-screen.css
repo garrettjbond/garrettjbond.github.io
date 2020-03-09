@@ -553,6 +553,10 @@ header {
   #navbar {
     padding: 0px 13% 0px 13%;
   }
+
+  #contact {
+    padding: 2% 13% 0% 13%;
+  }
 }
 
 /*# sourceMappingURL=portfolio-screen.css.map */
