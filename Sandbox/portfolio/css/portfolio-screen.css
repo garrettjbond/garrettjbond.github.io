@@ -84,7 +84,7 @@ div.contact_icons_container {
   padding: 30px;
 }
 
-div.div_header {
+#contact.div_header {
   max-width: 400px;
   margin: auto;
 }
