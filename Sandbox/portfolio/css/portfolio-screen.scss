@@ -26,15 +26,21 @@ body {
 }
 
 //Header tags: ubuntu
-h1,
+h1, h3{
+    font-family: Ubuntu;
+    font-size: 3.5em;
+    color:$black;
+}
 h2,
-h3,
 h4,
 h5,
 h6 {
     font-family: Ubuntu;
     font-size: 3.5em;
-    color: black;
+    color: $blue;
+    span{
+        color:$black;
+    }
 }
 
 //text body: PT Sans
@@ -460,7 +466,7 @@ h2{
 
 .contact_icons_container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 
     .fa {

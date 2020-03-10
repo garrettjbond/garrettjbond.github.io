@@ -12,15 +12,25 @@ body {
   margin: 0px;
 }
 
-h1,
+h1, h3 {
+  font-family: Ubuntu;
+  font-size: 3.5em;
+  color: #2a2a2a;
+}
+
 h2,
-h3,
 h4,
 h5,
 h6 {
   font-family: Ubuntu;
   font-size: 3.5em;
-  color: black;
+  color: dodgerblue;
+}
+h2 span,
+h4 span,
+h5 span,
+h6 span {
+  color: #2a2a2a;
 }
 
 p,
@@ -366,7 +376,7 @@ h2 {
 
 .contact_icons_container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 .contact_icons_container .fa {
