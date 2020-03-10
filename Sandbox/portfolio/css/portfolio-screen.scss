@@ -113,6 +113,22 @@ nav div p {
     cursor: pointer;
 }
 
+div.contact_icons_container{
+        max-width: 400px;
+        margin: auto;
+        padding: 30px;
+}
+
+div.div_header{
+    max-width: 400px;
+    margin: auto;
+}
+
+.contactHeader{
+        text-align: center;
+        padding-top: 30px;
+}
+
 .change {
     // position: relative;
     display: inline-block;
@@ -596,7 +612,7 @@ header {
     }
 
     #contact{
-        padding: 0px 10% 0px 10%;
+        padding: 25px 10% 0px 10%;
     }
 }
 
