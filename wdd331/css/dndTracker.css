@@ -78,11 +78,19 @@ footer {
     border: none;
 }
 
+.boxLoading{
+    font-size: 100px;
+}
+
 
 #roster li {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
+
+    /* This was the AC and HP alignment fix */
+    display: grid;
+    grid-template-columns: 24% 25% 24% 24% 3%;
 }
 
 .closeItem:hover {

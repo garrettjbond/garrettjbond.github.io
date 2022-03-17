@@ -14,7 +14,6 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
-
 <body>
     <header id="primaryTheme" class="jumbotron text-center headerWrapper">
         <h1 class="titleDisp">D&D Initiative Tracker</h1>
@@ -22,8 +21,7 @@
             <img class="dragon" src="./images/dragonflight.png" alt="dragon">
             <img class="knight" src="./images/knight.png" alt="mounted archer">
             <img class="knight" src="./images/knight.png" alt="mounted archer"> 
-        </div> -->
-        
+        </div> -->       
     </header>
     <!-- <div class="container well text-center" id="wellAdjustment">
         <h2 class="text-center titleDisp">Let's Get Started!</h2>
@@ -32,6 +30,8 @@
             <button type="button" class="btn btn-danger buttonSpacing"> <a href="#monsterSelection"> Monster Selection</a></button>
         </div>
     </div> -->
+    <main>
+        <!-- Monster API Data -->
     <div class="container well text-center" id="wellAdjustment" name="monsterSelection">
         <h2 class="text-center titleDisp">Monster Selection</h2>
         <div class="row formItem">
@@ -43,22 +43,23 @@
                                 id="searchSYM"></span></th>
                     </tr>
                 </thead>
-                <tbody class="monsterBody">
+                <tbody class="monsterBody" id="monsterBodyId">
                 </tbody>
             </table>
-            <button type="button" class="btn btn-danger buttonSpacing" onclick="importIt()">Add to Roster</button>
+            <button type="button" class="btn btn-danger buttonSpacing" onclick="importIt();">Add to Roster</button>
         </div>
     </div>
+    <!-- Character Builder -->
     <div class="container well text-center" id="wellAdjustment" name="characterSelection">
         <h2 class="text-center titleDisp">Character Creation</h2>
-        <div class="row formItem">
+        <form class="row formItem" onsubmit="addItem();return false" id="formId">
             <div class="col-sm-3 formItem">
                 <p>Initiative</p>
-                <input type="number" id="init" required name="initiative" placeholder="enter initiative...">
+                <input type="number" required id="init" required name="initiative" placeholder="enter initiative...">
             </div>
             <div class="col-sm-3 formItem">
                 <p>Name</p>
-                <input type="text" id="name" required name="name" placeholder="enter name...">
+                <input type="text" id="name" required required name="name" placeholder="enter name...">
             </div>
             <div class="col-sm-3 formItem">
                 <p>AC</p>
@@ -68,10 +69,10 @@
                 <p>Health</p>
                 <input type="number" id="health" required name="health" placeholder="enter health...">
             </div>
-            <button type="button" class="btn btn-danger buttonSpacing" onclick="addItem()">Add to Roster</button>
-        </div>
+            <input type="submit" id="submitButton" class="btn btn-danger buttonSpacing" value="Add to Roster">
+        </form>
     </div>
-    <!-- <ul id="monsters"></ul> -->
+    <!-- Encounter Roster -->
     <div class="container well" id="encounterDisp">
         <h2 class="text-center titleDisp dkTitleDisplay">Encounter Roster</h2>
         <ul class="list-group" id="roster">
@@ -98,6 +99,7 @@
         </ul>
         <button type="button" class="btn btn-secondary buttonSpacing" onclick="initOrder()">Turn Tracker</button>
     </div>
+</main>
     <footer class="text-center">
         <p id="copy-right">&copy;2019 Garrett Bond</p>
     </footer>

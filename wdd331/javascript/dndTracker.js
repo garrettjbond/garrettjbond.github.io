@@ -3,8 +3,6 @@ console.log("test");
 sortItem();
 // toggleStyle();
 
-
-
 function sortItem() {
     console.log("sortItem");
     
@@ -87,13 +85,14 @@ function addItem() {
     rosterHealth.setAttribute("contenteditable", "true");
 
     sortItem();
+    document.getElementById("formId").reset();
 }
 
 function deleteItem() {
     event.target.parentElement.remove(event.target);
-
     sortItem();
 }
+
 
 
 //turn tracker
@@ -104,8 +103,6 @@ function initOrder() {
     var roster = document.querySelectorAll(".rosterListItem");
     console.log('bootReview.js -> %croster:', 'color: red', roster)
     //style
-    
-    
     
     roster[counter].style.backgroundColor = "#EDCF8E";
     roster[counter].style.color = "black";
@@ -143,6 +140,8 @@ function append(parent, el) {
 const fetchMonsters = () => {
     //create url variable
     const url = "https://api.open5e.com/monsters/?limit=1086";
+    document.getElementById('monsterBodyId').innerHTML = "Loading...";
+    document.getElementById('monsterBodyId').style.paddingTop = "20%";
     
     //make request via fetch
     fetch(url)
@@ -151,7 +150,9 @@ const fetchMonsters = () => {
         return res.json();
     })
     .then(data => {
-        
+        document.getElementById("monsterBodyId").innerHTML="";
+        document.getElementById('monsterBodyId').style.paddingTop = "0%";
+        // loading.style.display = "none";
         console.log(data);
         const monster = [];
         data.results.map(dataItem => {
@@ -165,7 +166,6 @@ const fetchMonsters = () => {
             rosterMonsterData.classList.add("monsterItem");
             //add onclick to the new data
             rosterMonsterRow.onclick = (event) => {event.target.classList.toggle("activeMonsterItem")};
-
             //add the content to new elements
             rosterMonsterData.innerHTML = dataItem.name; 
             rosterMonsterData.setAttribute('data-dexterity', dataItem.dexterity); 
@@ -174,10 +174,6 @@ const fetchMonsters = () => {
             rosterMonsterData.setAttribute('data-hit-points', dataItem.hit_points);
             rosterMonsterRow.appendChild(rosterMonsterData);
             document.getElementsByClassName("monsterBody")[document.getElementsByClassName("monsterBody").length - 1].appendChild(rosterMonsterRow);
-            // apiData['init'] = dataItem.dexterity;
-            // apiData['name'] = dataItem.name;
-            // apiData['ac'] = dataItem.armor_class;
-            // apiData['hp'] = dataItem.hit_points;
             monster.push(apiData);
         });
 
@@ -187,19 +183,17 @@ const fetchMonsters = () => {
     
     fetchMonsters();
     //toggle click styling
-
-    
-    // function toggleStyle() {
-    //     console.log("toggleStyle");
-    //     var itemObject = document.getElementsByClassName("monsterItem");
-    //     console.log(itemObject);
+    function toggleStyle() {
+        console.log("toggleStyle");
+        var itemObject = document.getElementsByClassName("monsterItem");
+        console.log(itemObject);
         
-    //     for (var i = 0; i < itemObject.length; i++) {
-    //         itemObject[i].addEventListener("click", function () {
-    //             this.classList.toggle("activeMonsterItem");
-    //         });
-    //     }
-    // }
+        for (var i = 0; i < itemObject.length; i++) {
+            itemObject[i].addEventListener("click", function () {
+                this.classList.toggle("activeMonsterItem");
+            });
+        }
+    }
 
 //Search Bar input filtering
 function searchIt() {
@@ -220,6 +214,7 @@ function searchIt() {
         }
     }
 }
+
 // import selection to Roster
 function importIt() {
     //get object of potential monsters
@@ -245,6 +240,18 @@ function importIt() {
         roster.appendChild(rosterCharacter);
     });
     sortItem();
+    
+
+    //Unselects monsters after added to roster
+    let selected = document.querySelectorAll(".activeMonsterItem");
+
+    for(let i = 0; i < selected.length; i++){
+        selected[i].classList.remove("activeMonsterItem");
+    }
+
+
+
     //if monsterPlayer has activeMonsterItem active then add to roster
     //else prompt use to make a selection
+    
 }
