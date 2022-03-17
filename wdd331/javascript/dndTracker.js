@@ -53,12 +53,11 @@ function addItem() {
     //add class to new element
     rosterItem.classList.add("list-group-item");
     rosterClose.classList.add("badge");
-    rosterClose.classList.add("closeItem");
+    rosterClose.classList.add("fa fa-trash fa-lg closeItem");
     //add classes to new entries
     rosterItem.classList.add("rosterListItem")
     //set content of new item
     rosterItem.innerHTML = "";
-    rosterClose.innerHTML = "X";
     rosterClose.onclick = () => {deleteItem()};
     rosterInit.innerHTML = init;
     rosterInit.onblur = () => {sortItem()};
@@ -85,7 +84,7 @@ function addItem() {
     rosterHealth.setAttribute("contenteditable", "true");
 
     sortItem();
-    document.getElementById("formId").reset();
+    // document.getElementById("formId").reset();
 }
 
 function deleteItem() {
@@ -235,7 +234,7 @@ function importIt() {
         <span contenteditable="true">${monsterRosterItem.getAttribute("data-name")}</span>
         <span contenteditable="true">${monsterRosterItem.getAttribute("data-armor-class")}</span>
         <span contenteditable="true">${monsterRosterItem.getAttribute("data-hit-points")}</span>
-        <span class="badge closeItem" onclick="deleteItem()">X</span>`;
+        <span class="fa fa-trash fa-lg closeItem" onclick="deleteItem()"></span>`;
         
         roster.appendChild(rosterCharacter);
     });

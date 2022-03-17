@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>D&D Tracker</title>
     <link rel="stylesheet" href="../wdd331/css/dndTracker.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -52,7 +54,7 @@
     <!-- Character Builder -->
     <div class="container well text-center" id="wellAdjustment" name="characterSelection">
         <h2 class="text-center titleDisp">Character Creation</h2>
-        <form class="row formItem" onsubmit="addItem();return false" id="formId">
+        <form class="row formItem" onsubmit="addItem();return false;" id="formId">
             <div class="col-sm-3 formItem">
                 <p>Initiative</p>
                 <input type="number" required id="init" required name="initiative" placeholder="enter initiative...">
@@ -82,19 +84,23 @@
                 <span contenteditable="true" onblur="sortItem()">15</span>
                 <span contenteditable="true">Bard</span>
                 <span contenteditable="true">14</span>
-                <span contenteditable="true">30</span><span class="badge closeItem" onclick="deleteItem()">X</span>
+                <span contenteditable="true">30</span>
+                <span class="fa fa-trash fa-lg closeItem" onclick="deleteItem()"></span>
             </li>
             <li class="list-group-item rosterListItem">
                 <span contenteditable="true" onblur="sortItem()">12</span>
                 <span contenteditable="true">Barbarian</span>
                 <span contenteditable="true">18</span>
-                <span contenteditable="true">57</span><span class="badge closeItem" onclick="deleteItem()">X</span>
+                <span contenteditable="true">57</span>
+                <!-- <span class="badge closeItem" onclick="deleteItem()">X</span> -->
+                <span class="fa fa-trash fa-lg closeItem" onclick="deleteItem()"></span>
             </li>
             <li class="list-group-item rosterListItem">
                 <span contenteditable="true" onblur="sortItem()">20</span>
                 <span contenteditable="true">Wizard</span>
                 <span contenteditable="true">16</span>
-                <span contenteditable="true">79</span><span class="badge closeItem" onclick="deleteItem()">X</span>
+                <span contenteditable="true">79</span>
+                <span class="fa fa-trash fa-lg closeItem" onclick="deleteItem()"></span>
             </li>
         </ul>
         <button type="button" class="btn btn-secondary buttonSpacing" onclick="initOrder()">Turn Tracker</button>
