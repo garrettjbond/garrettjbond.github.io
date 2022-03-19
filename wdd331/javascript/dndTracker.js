@@ -27,7 +27,13 @@ function sortItem() {
     });
 }
 
+// var form = document.getElementById("formId");
+// function handleForm(event) { event.preventDefault(); } 
+// form.addEventListener('submit', handleForm);
+
 function addItem() {
+    console.log("AddItem Calling");
+    event.preventDefault();
     var init = document.getElementById("init").value;
     // console.log(init);
     
@@ -52,8 +58,8 @@ function addItem() {
     var rosterClose = document.createElement("span");
     //add class to new element
     rosterItem.classList.add("list-group-item");
-    rosterClose.classList.add("badge");
-    rosterClose.classList.add("fa fa-trash fa-lg closeItem");
+    // rosterClose.classList.add("fa", "fa-trash", "fa-lg", "closeItem");
+    rosterClose.classList.add("fa", "fa-trash", "fa-lg", "closeItem");
     //add classes to new entries
     rosterItem.classList.add("rosterListItem")
     //set content of new item
