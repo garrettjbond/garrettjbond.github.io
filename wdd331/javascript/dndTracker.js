@@ -1,16 +1,14 @@
-console.log("test");
-
 sortItem();
 // toggleStyle();
 
 function sortItem() {
-    console.log("sortItem");
+    // console.log("sortItem");
     
     var roster = Array.from(document.querySelectorAll(".rosterListItem"));
     // console.log(roster[1].children[0].innerHTML);
-    console.log(roster);
+    // console.log(roster);
     roster.sort(function(a, b){return parseInt(b.firstElementChild.innerText) - parseInt(a.firstElementChild.innerText)});
-    console.log(roster);
+    // console.log("roster" + roster);
 
     //make new elements
     var rosterSort = document.getElementById("roster");
@@ -20,7 +18,7 @@ function sortItem() {
     //add classes to the new elements      
     rosterCharacterSort.classList.add("list-group-item", "rosterListItem");
     //add content to the new
-    console.log(rosterChild);
+    // console.log(rosterChild);
 
     // add to page
     rosterSort.appendChild(rosterChild);
@@ -94,8 +92,44 @@ function addItem() {
 }
 
 function deleteItem() {
-    event.target.parentElement.remove(event.target);
-    sortItem();
+    
+    
+    // const index = [...event.target.parentElement.parentElement.children].indexOf(event.target);
+    // const index = Array.from(event.target.parentElement.parentElement.children).indexOf(event.target);
+    // console.log(index);
+    
+    //get value of item you are trying to delete onclick, show via console log
+    
+    //On Click Row
+    event.target.parentElement.classList.add("delete");
+    
+    
+    //Array of options
+    const dRoster = Array.from(document.querySelectorAll(".rosterListItem"));
+    for(let i = 0; i < dRoster.length; i++){
+        dRoster[i].onclick = function() {
+            let dValue = i;
+            console.log( "dValue: " + dValue);
+            console.log("Counter in dRoster: " + counter);
+            // Issues: Deleting item immediately after tracker causes issues.
+            if(dValue > counter){
+            event.target.parentElement.remove(event.target);
+            sortItem();
+            }    
+            else{
+            event.target.parentElement.remove(event.target);
+            sortItem();
+            counter -= 1;
+            }
+            }
+        }
+
+
+        
+        // console.log(dRoster.findIndex(roster => roster.classList.contains('delete')));
+        // console.log(document.getElementsByClassName("delete"));
+        // console.log(dRoster.indexOf(e.currentTarget));
+
 }
 
 
@@ -103,15 +137,15 @@ function deleteItem() {
 //turn tracker
 var counter = 0;
 function initOrder() {
-    console.log("start: " + counter);
+    console.log("Counter: " + counter);
     
     var roster = document.querySelectorAll(".rosterListItem");
-    console.log('bootReview.js -> %croster:', 'color: red', roster)
+    // console.log('bootReview.js -> %croster:', 'color: red', roster)
     //style
     
     roster[counter].style.backgroundColor = "#EDCF8E";
     roster[counter].style.color = "black";
-    console.log("Counter Style:" + counter);
+    
     
     //unstyle
     if (roster[counter] = "") {
@@ -119,7 +153,7 @@ function initOrder() {
     } else if (counter == 0) {
         roster[roster.length - 1].style.color = "#dd";
         roster[roster.length - 1].style.backgroundColor = "#fff";
-        console.log(roster);
+        // console.log(roster);
     } else {
         roster[counter - 1].style.color = "#dd";
         roster[counter - 1].style.backgroundColor = "#fff";
@@ -158,7 +192,7 @@ const fetchMonsters = () => {
         document.getElementById("monsterBodyId").innerHTML="";
         document.getElementById('monsterBodyId').style.paddingTop = "0%";
         // loading.style.display = "none";
-        console.log(data);
+        // console.log(data);
         const monster = [];
         data.results.map(dataItem => {
             var apiData = {};
