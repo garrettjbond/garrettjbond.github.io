@@ -112,14 +112,16 @@ function deleteItem() {
             console.log( "dValue: " + dValue);
             console.log("Counter in dRoster: " + counter);
             // Issues: Deleting item immediately after tracker causes issues.
-            if(dValue > counter){
-            event.target.parentElement.remove(event.target);
-            sortItem();
-            }    
-            else{
+            if(dValue <= counter){
             event.target.parentElement.remove(event.target);
             sortItem();
             counter -= 1;
+            console.log("IF");
+            }    
+            else{
+            console.log("ELSE");
+            event.target.parentElement.remove(event.target);
+            sortItem();
             }
             }
         }
@@ -162,6 +164,7 @@ function initOrder() {
     
     counter += 1;
     
+    //Makes the tracker wrap around
     if (counter > roster.length - 1) {
         counter = 0;
     }
