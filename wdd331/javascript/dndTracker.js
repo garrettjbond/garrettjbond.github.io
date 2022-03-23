@@ -111,18 +111,21 @@ function deleteItem() {
             let dValue = i;
             console.log( "dValue: " + dValue);
             console.log("Counter in dRoster: " + counter);
+
             // Issues: Deleting item immediately after tracker causes issues.
-            if(dValue <= counter){
-            event.target.parentElement.remove(event.target);
-            sortItem();
+            if(dValue < counter){
             counter -= 1;
             console.log("IF");
-            }    
+            }
+            else if(dValue == dRoster.length-1 && counter == dRoster.length-1){
+                counter = 0;
+                console.log("ELSE IF");
+            }
             else{
             console.log("ELSE");
-            event.target.parentElement.remove(event.target);
-            sortItem();
             }
+                event.target.parentElement.remove(event.target);
+                sortItem();
             }
         }
 
@@ -139,7 +142,6 @@ function deleteItem() {
 //turn tracker
 var counter = 0;
 function initOrder() {
-    console.log("Counter: " + counter);
     
     var roster = document.querySelectorAll(".rosterListItem");
     // console.log('bootReview.js -> %croster:', 'color: red', roster)
@@ -168,6 +170,7 @@ function initOrder() {
     if (counter > roster.length - 1) {
         counter = 0;
     }
+    console.log("Counter: " + counter);
 }
 
 
