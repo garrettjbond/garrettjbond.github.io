@@ -16,7 +16,6 @@ console.log(serv);
 
 
 var tip = pTotal * (serv / 100.00);
-0
 tip.toFixed(2);
 
 console.log(tip);

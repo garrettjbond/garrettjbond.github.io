@@ -20,7 +20,8 @@
 /*1.4 Mix-ins*/
 /* 2. General Stying*/
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -47,7 +48,7 @@ li {
 }
 
 body {
-  font-family: "Helvetica", "Arial", "sans-serif";
+  font-family: 'Helvetica', 'Arial', 'sans-serif';
   font-size: 1.2em;
   margin: 0;
   padding: 0;
@@ -59,13 +60,16 @@ header {
   color: #FAEBD7;
   text-align: right;
 }
+
 header a:link, header a:visited {
   color: #FAEBD7;
   text-decoration: none;
 }
+
 header a:active {
   color: #DEB887;
 }
+
 header a:hover {
   color: white;
   text-decoration: underline;
@@ -73,9 +77,16 @@ header a:hover {
 
 main {
   background-color: #FAEBD7;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 ul {
@@ -103,9 +114,11 @@ h2 a:link, h2 a:visited {
   color: black;
   text-decoration: none;
 }
+
 h2 a:active {
   color: #DEB887;
 }
+
 h2 a:hover {
   color: #6495ED;
   text-decoration: underline;
@@ -133,7 +146,8 @@ article {
   background-color: white;
   padding: 6% 5% 6% 5%;
   margin: 8% 4% 3% 5%;
-  box-shadow: 4px 4px 3px 0px #c4c4c4;
+  -webkit-box-shadow: 4px 4px 3px 0px #c4c4c4;
+          box-shadow: 4px 4px 3px 0px #c4c4c4;
 }
 
 header {
@@ -143,10 +157,14 @@ header {
 /*3. Full Screen Styling*/
 @media screen and (min-width: 500px) {
   body > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
-
   header {
     padding: 4%;
     min-width: 25%;
@@ -154,26 +172,21 @@ header {
     margin-right: auto;
     font-size: 2.25vw;
   }
-
   article {
     width: 80%;
     padding: 6% 5% 6% 5%;
     margin: 4% 6% 1.5% 6%;
     font-size: 1.7vw;
   }
-
   figure {
     width: 70%;
   }
-
   img {
     width: 100%;
   }
-
   figure, img {
     margin-left: auto;
     margin-right: auto;
   }
 }
-
 /*# sourceMappingURL=main.css.map */

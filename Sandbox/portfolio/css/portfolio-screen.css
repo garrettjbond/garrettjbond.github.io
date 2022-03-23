@@ -26,6 +26,7 @@ h6 {
   font-size: 3.5em;
   color: dodgerblue;
 }
+
 h2 span,
 h4 span,
 h5 span,
@@ -47,9 +48,16 @@ main p {
 }
 
 #header_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 a {
@@ -62,19 +70,30 @@ nav div p {
 
 #iLove {
   font-size: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0px;
 }
 
 #header_change {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: baseline;
-  justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 15px;
   margin-top: 25px;
   border: 4px solid #2a2a2a;
   border-radius: 25px;
-  transition: transform 0.3s;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
   cursor: pointer;
 }
 
@@ -84,7 +103,7 @@ div.contact_icons_container {
   padding: 30px;
 }
 
-#contact.div_header {
+div.div_header {
   max-width: 400px;
   margin: auto;
 }
@@ -104,12 +123,16 @@ div.contact_icons_container {
   color: white;
   border: 4px solid #2a2a2a;
   border-radius: 50%;
-  transition: transform 0.3s;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
 }
 
 #header_change:hover .change {
   background-color: deepskyblue;
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 h1 {
@@ -143,11 +166,13 @@ h1 {
 .bar-one,
 .bar-two,
 .bar-three {
-  transition: 0.4s;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 .changeMenu .bar-one {
-  transform: rotate(-45deg) translate(-9px, 6px);
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+          transform: rotate(-45deg) translate(-9px, 6px);
 }
 
 .changeMenu .bar-two {
@@ -155,7 +180,8 @@ h1 {
 }
 
 .changeMenu .bar-three {
-  transform: rotate(45deg) translate(-8px, -8px);
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+          transform: rotate(45deg) translate(-8px, -8px);
 }
 
 .sidenav {
@@ -167,6 +193,7 @@ h1 {
   right: 0;
   background-color: #cacaca;
   overflow-x: hidden;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   padding-top: 60px;
 }
@@ -177,6 +204,7 @@ h1 {
   font-size: 25px;
   color: #2a2a2a;
   display: block;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -215,11 +243,13 @@ html {
 h2 {
   padding-top: 30px;
   text-decoration: underline;
-  text-decoration-color: dodgerblue;
+  -webkit-text-decoration-color: dodgerblue;
+          text-decoration-color: dodgerblue;
 }
 
 #contact h2 {
-  text-decoration-color: white;
+  -webkit-text-decoration-color: white;
+          text-decoration-color: white;
 }
 
 .main_div {
@@ -233,6 +263,7 @@ h2 {
 .div_header {
   margin: 15px;
 }
+
 .div_header h2 {
   margin: 0px;
 }
@@ -248,14 +279,19 @@ h2 {
 
 #grandfather {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   z-index: -1;
 }
 
 #a_here {
   text-decoration: underline;
-  transition: 0.3s;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 #a_here:hover {
@@ -268,7 +304,7 @@ h2 {
   height: 100vh;
   background-color: burlywood;
   top: -50vh;
-  opacity: 0.2;
+  opacity: .2;
   z-index: 0;
 }
 
@@ -281,42 +317,78 @@ h2 {
   border-radius: 50%;
   top: 48.5vh;
   z-index: 2;
-  opacity: 0.2;
+  opacity: .2;
 }
 
 #grandfather {
-  animation: swing 6s infinite;
+  -webkit-animation: swing 6s infinite;
+          animation: swing 6s infinite;
+}
+
+@-webkit-keyframes swing {
+  20% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  40% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+  60% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  80% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
 }
 
 @keyframes swing {
   20% {
-    transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
   }
   40% {
-    transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
   }
   60% {
-    transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
   }
   80% {
-    transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
   }
   100% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
+
 #tile-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .project-tile {
   background-color: transparent;
   width: 300px;
   height: 150px;
-  border: 2 solid #cacaca;
-  perspective: 1000px;
+  border: 2px solid #cacaca;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
 }
 
 .tile-inner {
@@ -324,12 +396,17 @@ h2 {
   width: 100%;
   height: 100%;
   text-align: center;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
   transition: transform 0.8s;
-  transform-style: preserve-3d;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 .project-tile:hover .tile-inner {
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .tile-front,
@@ -337,34 +414,57 @@ h2 {
   position: absolute;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .tile-front {
   background-color: white;
   color: #2a2a2a;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .tile-back {
   background-color: dodgerblue;
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .tile-back p {
   font-size: 1.7em;
   line-height: 1.7;
   color: white;
   margin: 0px 30px 0px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
 }
+
 .tile-back a {
   margin-bottom: 15px;
   cursor: pointer;
@@ -375,8 +475,10 @@ h2 {
   border-radius: 8px;
   padding: 4px;
   font-size: 2em;
-  transition: 0.3s;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
+
 .tile-back a:hover {
   background-color: white;
   color: blue;
@@ -387,16 +489,24 @@ h2 {
   height: 20vh;
   margin-bottom: 30px;
 }
+
 #contact h2 {
   padding-top: 0px;
   color: white;
 }
 
 .contact_icons_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .contact_icons_container .fa {
   padding: 6px;
   font-size: 30px;
@@ -408,20 +518,23 @@ h2 {
   border: 4px solid white;
   cursor: pointer;
 }
+
 .contact_icons_container .fa:hover {
   opacity: 0.7;
 }
 
 footer {
-  bottom: 0.5em;
+  bottom: .5em;
   width: 100%;
   background-color: dodgerblue;
   padding-bottom: 5px;
 }
+
 footer .footer_div {
   padding: 25px 25px 0px 25px;
   border-top: 2px solid #E6ECF8;
 }
+
 footer p {
   color: white;
   text-align: center;
@@ -430,8 +543,12 @@ footer p {
 }
 
 #core-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /*************************
@@ -446,9 +563,15 @@ header {
 }
 
 #navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 60px;
   padding-left: 20px;
   padding-right: 20px;
@@ -458,10 +581,19 @@ header {
 }
 
 #header_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100%;
 }
 
@@ -472,15 +604,21 @@ header {
 }
 
 .project-tile {
-  font-size: 0.5em;
+  font-size: .5em;
   border-radius: 5px;
   border: 2px solid #E6ECF8;
   width: 100%;
   height: 250px;
   margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /*************************
@@ -491,24 +629,21 @@ header {
     height: 300px;
     width: 300px;
   }
-
   .tile-back p {
     font-size: 1.8em;
     line-height: 2;
   }
-
   h1 {
     font-size: 5em;
   }
-
   .contact_icons_container .fa {
     padding: 10px;
   }
-
   #contact {
     padding: 25px 10% 0px 10%;
   }
 }
+
 /*************************
 * Big Tablet Stylings
 *************************/
@@ -517,24 +652,21 @@ header {
     height: 375px;
     width: 375px;
   }
-
   .tile-back p {
     font-size: 2em;
     line-height: 2;
   }
-
   .tile-back a {
     margin-bottom: 40px;
   }
-
   #coreIMG {
     width: 60%;
   }
-
   #tile-container {
     padding-bottom: 25px;
   }
 }
+
 /*************************
 * Full Desktop Stylings
 *************************/
@@ -542,41 +674,32 @@ header {
   .main_div {
     padding: 2% 13% 2% 13%;
   }
-
   .project-tile {
     height: 325px;
     width: 325px;
   }
-
   #coreIMG {
     width: 40%;
   }
-
   .tile-back p {
     font-size: 2em;
     line-height: 2;
   }
-
   .tile-back a {
     margin-bottom: 30px;
   }
-
   #arm {
     width: 3vh;
   }
-
   #ball {
     height: 20vw;
     width: 20vw;
   }
-
   #navbar {
     padding: 0px 13% 0px 13%;
   }
-
   #contact {
     padding: 2% 13% 0% 13%;
   }
 }
-
 /*# sourceMappingURL=portfolio-screen.css.map */

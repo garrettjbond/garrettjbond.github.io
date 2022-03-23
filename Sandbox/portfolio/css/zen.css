@@ -27,10 +27,19 @@ header {
   background-color: darkslateblue;
   height: 100vh;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 h1, h2 {
@@ -48,5 +57,4 @@ h1, h2 {
 .preamble {
   padding: 0vw 5vw 5vw 5vw;
 }
-
 /*# sourceMappingURL=zen.css.map */

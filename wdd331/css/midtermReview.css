@@ -12,30 +12,62 @@ body {
 div input {
   border-radius: 5px;
 }
+
 div p {
   margin-bottom: 0px;
 }
 
 main > .formWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 body > header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
   color: black;
   bottom: 0;
   width: 100%;
   padding: 15px;
+}
+
+::-webkit-input-placeholder {
+  padding-left: 2.5%;
+  padding-top: 2.5%;
+}
+
+:-ms-input-placeholder {
+  padding-left: 2.5%;
+  padding-top: 2.5%;
+}
+
+::-ms-input-placeholder {
+  padding-left: 2.5%;
+  padding-top: 2.5%;
 }
 
 ::placeholder {
@@ -51,11 +83,14 @@ svg {
 }
 
 .center {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
-
-/*# sourceMappingURL=midtermReview.css.map */
-
 /*# sourceMappingURL=midtermReview.css.map */
