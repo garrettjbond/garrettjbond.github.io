@@ -11,22 +11,22 @@
 <body class="bg-slate-200">
     <main class="flex justify-center items-center ">
         <div class="lg:w-1/5 md:w-2/5 sm:w-3/5 h-3/6 rounded-lg py-12 px-10 flex justify-between items-center flex-col bg-white shadow-lg">
-            <h1 class="text-2xl text-black font-semibold">Tip Calculator</h1>
+            <h1 class="text-4xl text-black font-semibold">Tip Calculator</h1>
             <form action="javascript:void(0);" class="flex grow justify-evenly items-center flex-col">
                 <div class="text-left w-3/4 flex justify-around">
                     <label for="bill" class="font-medium text-xl">Bill</label>
-                    <input type="number" class="w-1/3" min="1" step="any" required>
+                    <input type="number" id="befTotal" class="w-1/3 border-4 text-center" min="1" placeholder="$$$$" step="any" required>
                 </div>
                 <div class="text-left w-3/4 flex justify-around">
                     <label for="tip" class="font-medium text-xl">Tip</label>
-                    <output>Filler</output>
+                    <output id="result" class="w-1/3 border-4 text-center">$$$$</output>
                 </div>
             </form>
-            <div class="flex gap-3 justify-between">    
-                <input type="button" class=" card--button hover:bg-red-300 bg-red-400" value="5%">
-                <input type="button" class=" card--button hover:bg-orange-300 bg-orange-400" value="10%">
-                <input type="button" class=" card--button hover:bg-yellow-300 bg-yellow-400" value="15%">
-                <input type="button" class=" card--button hover:bg-green-300 bg-green-400" value="20%">
+            <div id="quaService" class="grid grid-cols-2 gap-8">    
+                <input type="button" onclick="calculateTip(this)" class=" card--button active:border-red-500 hover:border-red-500 bg-red-500" value="5%">
+                <input type="button" onclick="calculateTip(this)" class=" card--button active:border-orange-500 hover:border-orange-500 bg-orange-500" value="10%">
+                <input type="button" onclick="calculateTip(this)" class=" card--button active:border-yellow-500 hover:border-yellow-500 bg-yellow-500" value="15%">
+                <input type="button" onclick="calculateTip(this)" class=" card--button active:border-green-600 hover:border-green-600 bg-green-600" value="20%">
             </div>
         </div>
     </main>
@@ -62,7 +62,7 @@
             </main> -->
             <footer class="footer py-7" >
                 <p>&copy; Garrett Bond, 2019</p>
-    </footer>
+            </footer>
     <script src="./tip.js"></script>
 </body>
 

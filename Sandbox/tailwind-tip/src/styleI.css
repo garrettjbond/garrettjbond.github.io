@@ -28,11 +28,20 @@ input[type=number] {
 
 .card--button{
     border-radius: .5rem;
+    color: white;
     cursor: pointer;
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 4.5rem;
+    height: 4.5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: .5rem;
     padding-right: .5rem;
+    transition: .3s;
+    font-weight: bold;
+}
+
+.card--button:hover, .card--button:active{
+    background-color: white;
+    border-width: 8px;
+    color: black;
 }
