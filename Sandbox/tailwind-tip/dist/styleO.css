@@ -709,13 +709,12 @@ input[type=number] {
 }
 
 @media (min-width: 640px) {
-  .sm\:w-3\/5 {
-    width: 60%;
+  .sm\:h-4\/6 {
+    height: 66.666667%;
   }
 
-  .sm\:py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+  .sm\:w-3\/5 {
+    width: 60%;
   }
 
   .sm\:py-7 {
