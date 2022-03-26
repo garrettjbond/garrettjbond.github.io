@@ -15,11 +15,11 @@
             <form action="javascript:void(0);" class="flex grow justify-evenly py-4 items-center flex-col ">
                 <div class="text-left w-3/4 flex justify-around sm:pb-2">
                     <label for="bill" class="font-medium text-xl">Bill</label>
-                    <input type="text" maxlength="6" id="befTotal" class="w-2/4 border-4 text-center" min="1" placeholder="$$$$" step="any">
+                    <input type="tel" maxlength="6" id="befTotal" class="w-2/4 border-4 text-center mb-4" min="1" placeholder="$$$$" step="any">
                 </div>
                 <div class="text-left w-3/4 flex justify-around">
                     <label for="tip" class="font-medium text-xl">Tip</label>
-                    <output id="result" class="w-2/4 border-4 text-center">$$$$</output>
+                    <output id="result" class="w-2/4 border-4 text-center cursor-default">$$$$</output>
                 </div>
             </form>
             <div id="quaService" class="grid grid-cols-2 gap-6">    
@@ -30,38 +30,8 @@
             </div>
         </div>
     </main>
-        <!-- <main class="flex justify-center align-center">
-            <div class="m-auto rounded shadow-lg">
-
-                
-                <form>
-                    <div>
-                        <h2>Total Before Tip:</h2>
-                        <inputtype="number" id="befTotal" placeholder="">
-                    </div>
-                    <div>
-                        <h2 class="text-center">Quality of Service:</h2>
-                        <input type="number" id="quaService" placeholder="">
-                    </div>
-                    <button type="button" class="" onclick="calculateTip()">Calculate Tip!</button>
-                </form>
-                <div>
-                    <p>Tip:</p>
-                    <span id="result"></span>
-                </div>
-                <div>
-                    <h3 class="text-center">Quality of Service: Reference</h3>
-                    <ul class="m-auto">
-                        <li><b>Poor: </b>5% and up</li>
-                        <li><b>Fair: </b>10% and up</li>
-                        <li><b>Good: </b>15% and up</li>
-                        <li><b>Great:</b> 20% and up</li>
-                    </ul>
-                </div>
-            </div>
-            </main> -->
             <footer class="footer py-7" >
-                <p>&copy; Garrett Bond, 2019</p>
+                <p>&copy; Garrett Bond, 2022</p>
             </footer>
     <script src="./tip.js"></script>
 </body>
