@@ -27,4 +27,5 @@ else{
     document.getElementById("result").innerHTML = "$" + finalTip;
     console.log("ELSE");
 }
+
 }

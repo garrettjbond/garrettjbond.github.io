@@ -480,10 +480,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: grid;
 }
 
-.h-3\/6 {
-  height: 50%;
-}
-
 .w-3\/4 {
   width: 75%;
 }
@@ -524,8 +520,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: space-evenly;
 }
 
-.gap-8 {
-  gap: 2rem;
+.gap-6 {
+  gap: 1.5rem;
 }
 
 .rounded-lg {
@@ -578,6 +574,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .py-7 {
@@ -709,17 +710,8 @@ input[type=number] {
 }
 
 @media (min-width: 640px) {
-  .sm\:h-4\/6 {
-    height: 66.666667%;
-  }
-
   .sm\:w-3\/5 {
     width: 60%;
-  }
-
-  .sm\:py-7 {
-    padding-top: 1.75rem;
-    padding-bottom: 1.75rem;
   }
 
   .sm\:pb-2 {
