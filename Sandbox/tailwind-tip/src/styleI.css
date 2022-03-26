@@ -38,10 +38,11 @@ input[type=tel] {
     padding-right: .5rem;
     transition: .3s;
     font-weight: bold;
-}
-
-.card--button:hover, .card--button:active{
+  }
+  
+  .card--button:hover, .card--button:active{
     background-color: white;
     border-width: 8px;
     color: black;
-}
+  }
+  

@@ -468,10 +468,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
-.m-auto {
-  margin: auto;
-}
-
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -534,10 +530,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .rounded-lg {
   border-radius: 0.5rem;
-}
-
-.rounded {
-  border-radius: 0.25rem;
 }
 
 .border-4 {
@@ -722,10 +714,6 @@ input[type=tel] {
     width: 60%;
   }
 
-  .sm\:w-3\/6 {
-    width: 50%;
-  }
-
   .sm\:pb-2 {
     padding-bottom: 0.5rem;
   }
@@ -742,3 +730,4 @@ input[type=tel] {
     width: 20%;
   }
 }
+  
