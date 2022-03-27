@@ -83,6 +83,11 @@ nav div p {
     margin: 0px;
 }
 
+#avatarImage{
+    position: relative;
+    bottom: 20px;
+}
+
 // .header_hr {
 //     margin: 0px;
 //     background-color: $blue;
@@ -184,8 +189,9 @@ h1 {
     margin: 6px 0px;
 }
 
-// #menu-icon {
-//     cursor: pointer;
+#menu-icon {
+    cursor: pointer;
+}
 //     position: fixed;
 //     right: 13%;
 //     top: 2%;
