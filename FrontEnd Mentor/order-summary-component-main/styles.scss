@@ -1,0 +1,195 @@
+/*************************
+* Imports
+*************************/
+@import url("https://fonts.google.com/specimen/Red+Hat+Display");
+
+/*************************
+* Variables
+*************************/
+// Screen Size
+$mobile: 375px;
+$desktop: 1440px;
+
+// Colors
+    //Primary
+$Paleblue: hsl(225, 100%, 94%);
+$Brightblue: hsl(245, 75%, 52%);
+    //Secondary
+$Verypaleblue: hsl(225, 100%, 98%);
+$Desaturatedblue: hsl(224, 23%, 55%);
+$Darkblue: hsl(223, 47%, 23%);
+
+// Font Details
+$Fontsizeparagraph: 16px;
+$fontWeightS: 500;
+$fontWeightM: 700;
+$fontWeightL: 900;
+
+/*************************
+* Generic Stylings
+*************************/
+//Normalize
+html, body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-size: $Fontsizeparagraph;
+    font-family: 'Red Hat Display', sans-serif;
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-position-x: top;
+    background-position-y: center;
+    background-size: cover;
+}
+
+p, button{
+  font-size: $Fontsizeparagraph;
+}
+
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  //Get it at the bottom!
+  .attribution{
+   position: absolute;
+   bottom: .5em;
+   width: 100%;
+   text-align: center;
+  }
+
+  h1{
+    color: $Darkblue;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .hero_image{
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+  }
+
+  .tile{
+    background-color: white;
+    margin: auto;
+    // margin-left: auto;
+    // margin-right: auto;
+    top: 50%;
+    width: 400px;
+    height: 650px;
+    border-radius: 15px;
+  }
+  
+  #description{
+    text-align: center;
+    line-height: 1.5;
+    margin: 0px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  
+  .content{
+    margin: auto;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0px 50px 0px 50px;
+  }
+
+  p{
+    color: $Desaturatedblue;
+  }
+
+  #plan_title{
+    color:$Darkblue;
+    font-weight: $fontWeightL;
+    padding-bottom: 5px;;
+  }
+
+  .plan{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100px;
+      width: 100%;
+      background-color: $Verypaleblue;
+      border-radius: 15px;
+  }
+
+  .plan_cluster{
+    position: relative;
+    right: 10%;
+    padding-left: 7%;
+    p{
+      margin: 0px;
+    }
+  }
+
+  button{
+      height: 50px;
+      width: 100%;
+      border: 0px;
+      border-radius: 15px;
+      font-weight: $fontWeightM;
+  }
+
+  #proceed{
+    color: white;
+    box-shadow: 0 10px 20px -6px $Brightblue;
+    background-color: $Brightblue;
+    &:hover{
+      background-color: $Desaturatedblue;
+      transition: .3s;
+      box-shadow: 0 10px 20px -6px $Desaturatedblue;
+      cursor: pointer;
+    }
+  }
+  a{
+    color: $Brightblue;
+    font-weight: $fontWeightM;
+  }
+
+  #cancel{
+    color: $Desaturatedblue;
+    background-color: white;
+    text-decoration: none;
+    &:hover{
+      color: $Brightblue;
+      transition: .3s;
+    }
+  }
+
+  .plan a:hover{
+    color: $Desaturatedblue;
+    transition: .3s;
+  }
+
+
+
+  
+  /*************************
+  * Mobile Stylings
+  *************************/
+  @media only screen and (max-width: 600px) {
+
+    .tile{
+      margin: 6%;
+    }
+
+    .plan_cluster{
+      padding-left: 10%;
+    }
+
+    .content{
+      padding: 0px 25px 0px 25px;
+    }
+    #description{
+      padding-left: 6%;
+      padding-right: 6%;
+    }
+
+  }

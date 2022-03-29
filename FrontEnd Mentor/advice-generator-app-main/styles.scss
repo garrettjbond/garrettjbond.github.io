@@ -1,0 +1,211 @@
+/*************************
+* To Do
+*
+* Mount the button to the bottom of the card
+* Fix the button so it's always round
+*
+*
+*
+*
+*****************/
+
+
+/*************************
+* Imports
+*************************/
+@import url("https://fonts.google.com/specimen/Manrope");
+
+/*************************
+* Variables
+*************************/
+// Screen Size
+$mobile: 375px;
+$desktop: 1440px;
+
+// Colors
+    //Primary
+     $lightCyan: hsl(193, 38%, 86%);
+     $neonGreen: hsl(150, 100%, 66%);
+    //Secondary
+     $grayishBlue: hsl(217, 19%, 38%);
+     $darkGrayishBlue: hsl(217, 19%, 24%);
+     $darkBlue: hsl(218, 23%, 16%);
+
+// Font Details
+$fontQuoteSize: 24px;
+$fontWeight: 600;
+
+/*************************
+* Generic Stylings
+*************************/
+//Normalize
+html, body, main{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Manrope', sans-serif;
+}
+
+body{
+    background-color: $darkBlue;
+}
+
+main{
+    display: flex;
+}
+
+footer{
+    position: absolute;
+    bottom: .5em;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 11px;
+}
+.footer--p--source, .footer--p--author{
+    color: white;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: $darkGrayishBlue;
+    width: 75%;
+    height: 40%;
+    margin: auto;
+    border-radius: 15px;
+  
+}
+
+.card--quote{
+    font-size: $fontQuoteSize;
+    color: $lightCyan;
+    font-weight: $fontWeight;
+    text-align: center;
+   }
+
+.card--title{
+    color: $neonGreen;
+    font-size: .35 * $fontQuoteSize;
+    letter-spacing: 5px;
+    padding: 0px;
+  }
+
+  .card--button{
+    background-color: $neonGreen;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*************************
+* Mobile
+*************************/
+@media only screen and (max-width: $mobile) {
+
+    .card{
+        padding: 2em 1.25em 0px 1.25em;
+        width: 80%;
+        height: 31%;
+        justify-content: space-between;
+    }
+        
+    .card--button{
+        width: 65px;
+        height: 65px; 
+        position: relative;
+        top: 32.5px;
+        &:active{
+            box-shadow: 0 0 50px $neonGreen;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+    }
+
+    .card--divider--desktop{
+        display: none;
+    }
+
+    .card--divider--mobile{
+        width: 75%;
+        position: absolute;
+        bottom: 38.5%;
+    }
+    
+    .card--quote{
+        position: relative;
+        top: 10px;
+    }
+    
+    .card--quote, .card--title{
+        margin: 0px;
+    }
+
+    .card--title{
+        position: relative;
+        top: 7px;
+    }
+
+    
+}
+
+/*************************
+* Tablet
+*************************/
+@media only screen and (max-width: 600px) {
+    .card--divider--desktop{
+        width: 75%;
+    }
+}
+
+/*************************
+* Desktop
+*************************/
+@media only screen and (min-width: $mobile) {
+    .card{
+        padding: 0em 2em 0px 2em;
+        max-width: 550px;
+        justify-content: center;
+    }
+    
+    .card--button{
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        bottom: 26%;
+    
+        &:hover{
+            box-shadow: 0 0 50px $neonGreen;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+        
+     }
+     
+    .card--divider--desktop{
+        position: absolute;
+        bottom: 37%;
+    }
+
+    .card--divider--mobile{
+        display: none;
+    }
+
+    .card--quote{
+        font-size: 28px;
+        line-height: 1.3em;
+        width: 85%;
+        position: relative;
+        top: 5px;
+    }
+
+    .card--title{
+        font-size: 16px;
+        position: absolute;
+        top: 34%;
+    }
+}
