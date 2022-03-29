@@ -172,8 +172,8 @@ footer {
   .card--button:hover {
     -webkit-box-shadow: 0 0 50px #52ffa8;
             box-shadow: 0 0 50px #52ffa8;
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
     cursor: pointer;
   }
   .card--divider--desktop {
