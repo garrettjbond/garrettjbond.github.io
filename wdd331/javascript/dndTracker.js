@@ -1,6 +1,6 @@
 sortItem();
 
-//This function makes sure that the items beng added to the encounter table are being sorted in 
+//This function makes sure that the items beng added to the encounter table are being sorted by initiative value
 function sortItem() {
 
     var roster = Array.from(document.querySelectorAll(".rosterListItem"));
