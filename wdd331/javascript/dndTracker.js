@@ -1,5 +1,6 @@
 sortItem();
 
+//This function makes sure that the items beng added to the encounter table are being sorted in 
 function sortItem() {
 
     var roster = Array.from(document.querySelectorAll(".rosterListItem"));
@@ -20,7 +21,6 @@ function sortItem() {
 }
 
 function addItem() {
-    console.log("AddItem Calling");
     event.preventDefault();
     var init = document.getElementById("init").value;
     var name = document.getElementById("name").value;
@@ -71,7 +71,6 @@ function addItem() {
 }
 
 function deleteItem() {
-    //get value of item you are trying to delete onclick, show via console log
 
     //On Click Row
     event.target.parentElement.classList.add("delete");
@@ -81,20 +80,13 @@ function deleteItem() {
     for (let i = 0; i < dRoster.length; i++) {
         dRoster[i].onclick = function () {
             let dValue = i;
-            console.log("dValue: " + dValue);
-            console.log("Counter in dRoster: " + counter);
 
             // Issues: Deleting item immediately after tracker causes issues.
             if (dValue < counter) {
                 counter -= 1;
-                console.log("IF");
             }
             else if (dValue == dRoster.length - 1 && counter == dRoster.length - 1) {
                 counter = 0;
-                console.log("ELSE IF");
-            }
-            else {
-                console.log("ELSE");
             }
             event.target.parentElement.remove(event.target);
             sortItem();
@@ -107,9 +99,8 @@ var counter = 0;
 function initOrder() {
 
     var roster = document.querySelectorAll(".rosterListItem");
-    // console.log('bootReview.js -> %croster:', 'color: red', roster)
-    //style
 
+    //style
     roster[counter].style.backgroundColor = "#EDCF8E";
     roster[counter].style.color = "black";
 
@@ -119,7 +110,6 @@ function initOrder() {
     } else if (counter == 0) {
         roster[roster.length - 1].style.color = "#dd";
         roster[roster.length - 1].style.backgroundColor = "#fff";
-        // console.log(roster);
     } else {
         roster[counter - 1].style.color = "#dd";
         roster[counter - 1].style.backgroundColor = "#fff";
@@ -132,7 +122,6 @@ function initOrder() {
     if (counter > roster.length - 1) {
         counter = 0;
     }
-    console.log("Counter: " + counter);
 }
 
 
@@ -144,23 +133,18 @@ function append(parent, el) {
     return parent.appendChild(el); // Append the second parameter(element) to the first one
 }
 
-const fetchMonsters = () => {
-    //create url variable
+function fetchMonsters(){
     const url = "https://api.open5e.com/monsters/?limit=1086";
     document.getElementById('monsterBodyId').innerHTML = "Loading...";
     document.getElementById('monsterBodyId').style.paddingTop = "20%";
 
-    //make request via fetch
     fetch(url)
-        //accept response/promise
         .then(res => {
             return res.json();
         })
         .then(data => {
             document.getElementById("monsterBodyId").innerHTML = "";
             document.getElementById('monsterBodyId').style.paddingTop = "0%";
-            // loading.style.display = "none";
-            // console.log(data);
             const monster = [];
             data.results.map(dataItem => {
                 var apiData = {};
@@ -191,9 +175,7 @@ const fetchMonsters = () => {
 fetchMonsters();
 //toggle click styling
 function toggleStyle() {
-    console.log("toggleStyle");
     var itemObject = document.getElementsByClassName("monsterItem");
-    console.log(itemObject);
 
     for (var i = 0; i < itemObject.length; i++) {
         itemObject[i].addEventListener("click", function () {
@@ -202,7 +184,7 @@ function toggleStyle() {
     }
 }
 
-//Search Bar input filtering
+//Search Bar input filters API loaded results that are shown in the table
 function searchIt() {
     var input, filter, tr, td, word, i, txtValue;
     input = document.getElementById('myInput');
@@ -222,12 +204,11 @@ function searchIt() {
     }
 }
 
-// import selection to Roster
+// Takes the selected items from the monster table and adds them to the roster.
 function importIt() {
-    //get object of potential monsters
+    //get object of selected monsters
     var monsterRoster = Array.from(document.getElementsByClassName("activeMonsterItem"));
-    console.log("monster roster: ", monsterRoster);
-    //find item in object that has class list activeMonsterItem
+    //For ever item in the array we create a new row for it in the monster table
     monsterRoster.map(monsterRosterItem => {
 
         //make new elements
@@ -246,8 +227,8 @@ function importIt() {
 
         roster.appendChild(rosterCharacter);
     });
-    sortItem();
 
+    sortItem();
 
     //Unselects monsters after added to roster
     let selected = document.querySelectorAll(".activeMonsterItem");
