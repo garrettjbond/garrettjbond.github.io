@@ -26,11 +26,13 @@ body {
 }
 
 //Header tags: ubuntu
-h1, h3{
+h1,
+h3 {
     font-family: Ubuntu;
     font-size: 3.5em;
-    color:$black;
+    color: $black;
 }
+
 h2,
 h4,
 h5,
@@ -38,8 +40,9 @@ h6 {
     font-family: Ubuntu;
     font-size: 3.5em;
     color: $blue;
-    span{
-        color:$black;
+
+    span {
+        color: $black;
     }
 }
 
@@ -83,28 +86,10 @@ nav div p {
     margin: 0px;
 }
 
-#avatarImage{
+#avatarImage {
     position: relative;
     bottom: 20px;
 }
-
-// .header_hr {
-//     margin: 0px;
-//     background-color: $blue;
-//     border: none;
-//     height: 6px;
-
-//     &:nth-of-type(1) {
-//         width: 80%;
-//         margin-top: 25px;
-//         margin-bottom: 10px;
-//     }
-
-//     &:nth-of-type(2) {
-//         margin-top: 15px;
-//         width: 50%;
-//     }
-// }
 
 #header_change {
     display: flex;
@@ -118,20 +103,20 @@ nav div p {
     cursor: pointer;
 }
 
-div.contact_icons_container{
-        max-width: 400px;
-        margin: auto;
-        padding: 30px;
+div.contact_icons_container {
+    max-width: 400px;
+    margin: auto;
+    padding: 30px;
 }
 
-div.div_header{
+div.div_header {
     max-width: 400px;
     margin: auto;
 }
 
-.contactHeader{
-        text-align: center;
-        padding-top: 30px;
+.contactHeader {
+    text-align: center;
+    padding-top: 30px;
 }
 
 .change {
@@ -192,6 +177,7 @@ h1 {
 #menu-icon {
     cursor: pointer;
 }
+
 //     position: fixed;
 //     right: 13%;
 //     top: 2%;
@@ -257,7 +243,7 @@ h1 {
 
 
 
-.sticky{
+.sticky {
     position: fixed;
     top: 0;
     left: 0;
@@ -265,26 +251,27 @@ h1 {
     z-index: 10;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-.footer_div, .main_div{
+.footer_div,
+.main_div {
     padding: 4% 13% 4% 13%;
 }
 
-.tile-front h3{
+.tile-front h3 {
     margin: 5%;
 }
 
-h2{
+h2 {
     // border-bottom: 6px solid $blue;
     padding-top: 30px;
     text-decoration: underline;
     text-decoration-color: $blue;
 }
 
-#contact h2{
+#contact h2 {
     text-decoration-color: white;
 }
 
@@ -304,21 +291,20 @@ h2{
         margin: 0px;
     }
 
-    // hr {
-    //     float: left;
-    //     margin: 0px;
-    //     width: 200px;
-    //     height: 6px;
-    //     border: none;
-    //     background-color: $blue;
-    // }
 }
 
 //AboutMe
 
-#coreIMG{
-    position: relative;
-    width: 100%;
+#imgDisplay {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.coreIMG {
+    width: 200px;      /* fixed width */
+    height: auto;     /* maintain aspect ratio */
+    object-fit: contain;
 }
 
 //Hours
@@ -334,12 +320,12 @@ h2{
     z-index: -1;
 }
 
-#a_here{
+#a_here {
     text-decoration: underline;
     transition: .3s;
 }
 
-#a_here:hover{
+#a_here:hover {
     color: $blue;
 }
 
@@ -443,6 +429,7 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
+
     p {
         font-size: 1.7em;
         line-height: 1.7;
@@ -478,6 +465,7 @@ h2{
     background-color: $blue;
     height: 20vh;
     margin-bottom: 30px;
+
     h2 {
         padding-top: 0px;
         color: white;
@@ -517,11 +505,13 @@ footer {
     width: 100%;
     background-color: $blue;
     padding-bottom: 5px;
-    .footer_div{
+
+    .footer_div {
         padding: 25px 25px 0px 25px;
         border-top: 2px solid #E6ECF8;
     }
-    p{
+
+    p {
         color: white;
         text-align: center;
         padding-bottom: 5px;
@@ -529,7 +519,7 @@ footer {
     }
 }
 
-#core-container{
+#core-container {
     display: flex;
     justify-content: center;
 }
@@ -567,6 +557,11 @@ header {
     height: 100%;
 }
 
+//About
+#imgDisplay{
+    display: none;
+}
+
 //Projects
 #tile-container {
     width: 100%;
@@ -599,17 +594,17 @@ header {
     //     padding: 50px;
     // }
 
-    .project-tile{
+    .project-tile {
         height: 300px;
         width: 300px;
     }
 
     .tile-back p {
-            font-size: 1.8em;
-            line-height: 2;
-        }
+        font-size: 1.8em;
+        line-height: 2;
+    }
 
-    h1{
+    h1 {
         font-size: 5em;
     }
 
@@ -617,7 +612,7 @@ header {
         padding: 10px;
     }
 
-    #contact{
+    #contact {
         padding: 25px 10% 0px 10%;
     }
 }
@@ -627,13 +622,15 @@ header {
 *************************/
 
 @media only screen and (min-width: 700px) {
-    // .main_div {
-    //     padding: 75px;
-    // }
-    .project-tile{
+
+    #imgDisplay{
+    display: flex;
+    }
+    .project-tile {
         height: 375px;
         width: 375px;
     }
+
     .tile-back p {
         font-size: 2em;
         line-height: 2;
@@ -643,10 +640,7 @@ header {
         margin-bottom: 40px;
     }
 
-    #coreIMG{
-        width: 60%;
-    }
-    #tile-container{
+    #tile-container {
         padding-bottom: 25px;
     }
 }
@@ -659,12 +653,9 @@ header {
     .main_div {
         padding: 2% 13% 2% 13%;
     }
-    .project-tile{
+    .project-tile {
         height: 325px;
         width: 325px;
-    }
-    #coreIMG{
-        width: 40%;
     }
 
     .tile-back p {
@@ -676,20 +667,21 @@ header {
         margin-bottom: 30px;
     }
 
-    #arm{
+    #arm {
         width: 3vh;
     }
-    #ball{
+
+    #ball {
         height: 20vw;
         width: 20vw;
     }
 
-    #navbar{
+    #navbar {
         padding: 0px 13% 0px 13%;
     }
 
-    #contact{
+    #contact {
         padding: 2% 13% 0% 13%;
     }
-    
+
 }

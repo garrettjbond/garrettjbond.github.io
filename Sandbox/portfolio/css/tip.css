@@ -20,21 +20,21 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 /*2. General Stylings*/
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 input {
-  border: 0.5px solid #c6c6c6;
+  border: 0.5px solid rgb(198, 198, 198);
 }
 
 input:focus {
-  outline-color: #7d8984;
+  outline-color: rgb(125, 137, 132);
 }
 
 body {
   text-align: center;
   margin: auto;
-  background-color: #fcfbeb;
+  background-color: rgb(252, 251, 235);
 }
 
 header {
@@ -44,7 +44,7 @@ header {
 }
 
 footer {
-  background-color: #896161;
+  background-color: rgb(137, 97, 97);
   color: white;
   position: absolute;
   bottom: 0;
@@ -62,33 +62,20 @@ button {
 }
 
 button:hover {
-  background-color: #f7847c;
+  background-color: rgb(247, 132, 124);
   color: black;
 }
 
 #applicationWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 #mainWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
+  flex-direction: column;
+  align-content: space-between;
 }
 
 ul {
@@ -98,5 +85,4 @@ ul {
 
 #quaService {
   width: 40px;
-}
-/*# sourceMappingURL=tip.css.map */
+}/*# sourceMappingURL=tip.css.map */
