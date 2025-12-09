@@ -104,9 +104,11 @@ nav div p {
 }
 
 div.contact_icons_container {
-    max-width: 250px;
-    margin: auto;
-    padding: 30px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 div.div_header {
